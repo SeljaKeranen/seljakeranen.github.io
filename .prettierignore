@@ -1,0 +1,9 @@
+site/
+.venv/
+.cache/
+# Jinja templates — Prettier would mangle {% %} / {{ }}
+overrides/
+# Hand-authored line-art — precision matters, leave it alone
+*.svg
+# Author's prose keeps its own line breaks
+docs/**/*.md

@@ -1,0 +1,337 @@
+/* ============================================================================
+   components.css — the recurring pieces
+   ----------------------------------------------------------------------------
+   Blog rows, home cards, meta lines, buttons, tags, pagination, figures,
+   search, sidebar/TOC, archive + notes rows. Loaded FIFTH (last). Cards and
+   rows dissolve into hairline-separated editorial rows — no boxes, no shadows.
+   ============================================================================ */
+
+/* ============================================================================
+   Blog index — dissolve the cards into rows
+   ============================================================================ */
+.md-post.md-post--excerpt {
+  margin: 0;
+  padding: 2.6rem 0;
+  border-top: 1px solid var(--border);
+}
+.md-post.md-post--excerpt:first-of-type { border-top: none; padding-top: .5rem; }
+.md-post--excerpt .md-post__header { display: block; margin: 0 0 .6rem; }
+/* Hide the plugin's avatar cluster on the index — the meta line carries it. */
+.md-post--excerpt .md-post__authors { display: none; }
+
+.md-post__meta.md-meta,
+.md-meta__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem .9rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.md-meta__item {
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  text-transform: uppercase;
+  letter-spacing: var(--track-meta);
+  color: var(--text-muted);
+}
+.md-meta__item::before { content: none; }
+.md-meta__link {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+.md-meta__link:hover { color: var(--green-dark); }
+
+.md-post--excerpt .md-post__content > :first-child { margin-top: .2rem; }
+/* The excerpt title (an H2 the plugin renders inside the post content). */
+.md-post--excerpt .md-post__content h1,
+.md-post--excerpt .md-post__content h2:first-of-type {
+  font-size: var(--fs-post);
+  margin: .1em 0 .5rem;
+  font-variation-settings: "opsz" 36, "SOFT" 10, "WONK" 0;
+}
+.md-post--excerpt .md-post__content h1 a,
+.md-post--excerpt .md-post__content h2 a {
+  color: var(--text);
+  text-decoration: none;
+}
+.md-post--excerpt .md-post__content h1 a:hover,
+.md-post--excerpt .md-post__content h2 a:hover {
+  color: var(--green-dark);
+}
+.md-post__action {
+  margin-top: 1rem;
+}
+.md-post__action a {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--fs-nav);
+  color: var(--text);
+  text-decoration: none;
+}
+.md-post__action a::after {
+  content: " →";
+  display: inline-block;
+  transition: transform var(--dur-hover) var(--ease);
+}
+.md-post__action a:hover { color: var(--green-dark); }
+.md-post__action a:hover::after { transform: translateX(4px); }
+
+/* ============================================================================
+   Home "Latest writing" cards
+   ============================================================================ */
+.folio-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.75rem);
+}
+.folio-card {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.folio-card__art {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.25rem;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: var(--bg-alt);
+  border-radius: var(--radius-sm);
+}
+.folio-card .card__meta { margin: 0 0 .7rem; }
+.folio-card__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-post);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: var(--track-serif);
+  font-variation-settings: "opsz" 34, "SOFT" 10, "WONK" 0;
+  margin: 0 0 .6rem;
+}
+.folio-card__title a { color: var(--text); text-decoration: none; }
+.folio-card__title a:hover { color: var(--green-dark); }
+.folio-card__dek {
+  font-size: .9375rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin: 0 0 1rem;
+}
+.folio-card__more {
+  margin-top: auto;
+  color: var(--text-faint);
+  transition: transform var(--dur-hover) var(--ease), color var(--dur-hover) var(--ease);
+}
+.folio-card:hover .folio-card__more { color: var(--green-dark); transform: translateX(4px); }
+
+@media (max-width: 60rem) {
+  .folio-cards { grid-template-columns: 1fr; gap: 0; }
+  .folio-card { padding: 1.75rem 0; }
+}
+
+/* ============================================================================
+   Buttons — bordered, square, no fill (used rarely; text links preferred)
+   ============================================================================ */
+.md-typeset .md-button,
+.md-typeset .md-button--primary {
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  text-transform: uppercase;
+  letter-spacing: var(--track-meta);
+  font-weight: 500;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: .7em 1.2em;
+  box-shadow: none;
+  transition: border-color var(--dur-hover) var(--ease), color var(--dur-hover) var(--ease);
+}
+.md-typeset .md-button:hover,
+.md-typeset .md-button--primary:hover {
+  background: transparent;
+  border-color: var(--green-dark);
+  color: var(--green-dark);
+}
+
+/* ============================================================================
+   Figures + captions (article imagery)
+   ============================================================================ */
+.md-typeset figure {
+  margin: 2.5rem 0;
+  max-width: 100%;
+}
+.md-typeset figure img { border-radius: var(--radius); }
+.md-typeset figcaption {
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  text-transform: uppercase;
+  letter-spacing: var(--track-meta);
+  color: var(--text-muted);
+  margin-top: .8rem;
+  text-align: left;
+}
+
+/* ============================================================================
+   Article page — editorial dateline above the serif title, calm reading column
+   ============================================================================ */
+/* Material's post layout widens .md-content to ~55rem; hold the brief's
+   640–720px reading measure (specificity beats Material's .md-content--post). */
+.md-content.md-content--post {
+  max-width: var(--article-width);
+  margin-inline: auto;
+}
+.md-content--post .article__back {
+  margin: 0 0 2rem;
+}
+.md-content--post .article__meta {
+  margin: 0 0 1rem;
+}
+/* The title (an H1 from the post markdown) sits right under the dateline. */
+.md-content--post .md-typeset > h1 {
+  margin: 0 0 1.4rem;
+  font-size: var(--fs-article);
+  font-variation-settings: "opsz" 132, "SOFT" 22, "WONK" 0;
+}
+.md-content--post .article__foot {
+  margin-top: 3.5rem;
+}
+.md-content--post .article__author {
+  font-size: .9375rem;
+  color: var(--text-muted);
+}
+.md-content--post .article__author a { white-space: nowrap; }
+
+/* ============================================================================
+   Pagination — mono numerals, arrows nudge, no filled buttons
+   ============================================================================ */
+.md-typeset .md-pagination__link,
+.md-pagination__link {
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  color: var(--text-muted);
+  background: transparent;
+  box-shadow: none;
+  border-radius: var(--radius-sm);
+}
+.md-pagination__link:hover { background: transparent; color: var(--green-dark); }
+.md-pagination__current {
+  color: var(--text);
+  background: transparent;
+  position: relative;
+}
+
+/* ============================================================================
+   Search — a paper field, no glow
+   ============================================================================ */
+.md-search__form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: none;
+}
+.md-search__form:hover,
+[data-md-toggle=search]:checked ~ .md-header .md-search__form {
+  background: var(--surface);
+}
+.md-search__input { font-family: var(--font-sans); }
+.md-search__input::placeholder { font-family: var(--font-mono); font-size: .8em; letter-spacing: .08em; text-transform: uppercase; }
+.md-search__output { border-radius: var(--radius); }
+.md-search-result__meta { font-family: var(--font-mono); }
+
+/* ============================================================================
+   Sidebar nav + TOC — de-emphasised, sage markers not pills
+   ============================================================================ */
+.md-nav { font-size: var(--fs-nav); }
+.md-nav__link--active,
+.md-nav__link:focus,
+.md-nav__link:hover { color: var(--green-dark); }
+.md-nav__item .md-nav__link--active { font-weight: 600; }
+.md-sidebar--secondary .md-nav__list { border-left: 1px solid var(--border); }
+.md-sidebar--secondary .md-nav__link--active { color: var(--green-dark); }
+
+/* ============================================================================
+   Archive + Notes rows (year headings · date · title · arrow)
+   ============================================================================ */
+.folio-archive__year {
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  text-transform: uppercase;
+  letter-spacing: var(--track-meta);
+  color: var(--text-faint);
+  margin: 3rem 0 .5rem;
+  padding-bottom: .6rem;
+  border-bottom: 1px solid var(--border);
+}
+.folio-rows { list-style: none; margin: 0; padding: 0; }
+.folio-row {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr auto;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border-soft);
+}
+.folio-row:first-child { border-top: none; }
+.folio-row__date {
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  text-transform: uppercase;
+  letter-spacing: var(--track-meta);
+  color: var(--text-muted);
+}
+.folio-row__title {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+}
+.folio-row__title a { color: var(--text); text-decoration: none; }
+.folio-row__title a:hover { color: var(--green-dark); }
+.folio-row__arrow {
+  color: var(--text-faint);
+  transition: transform var(--dur-hover) var(--ease), color var(--dur-hover) var(--ease);
+}
+.folio-row:hover .folio-row__arrow { color: var(--green-dark); transform: translateX(4px); }
+
+@media (max-width: 40rem) {
+  .folio-row { grid-template-columns: 1fr auto; }
+  .folio-row__date { grid-column: 1 / -1; }
+}
+
+/* ============================================================================
+   Admonitions — quiet, hairline, no heavy colour
+   ============================================================================ */
+.md-typeset .admonition,
+.md-typeset details {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: none;
+  background: var(--bg-alt);
+  font-size: .95em;
+}
+.md-typeset .admonition-title,
+.md-typeset summary {
+  background: transparent;
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  text-transform: uppercase;
+  letter-spacing: var(--track-meta);
+}
+
+/* ============================================================================
+   Fade-in on scroll (progressive; opacity handled by reveal.js adding .is-in)
+   ============================================================================ */
+/* Only hide when JS is active (reveal.js sets .js on <html>) — no-JS = visible. */
+.js .reveal { opacity: 0; transform: translateY(8px); }
+.js .reveal.is-in {
+  opacity: 1;
+  transform: none;
+  transition: opacity var(--dur-fade) var(--ease), transform var(--dur-fade) var(--ease);
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal, .js .reveal.is-in { opacity: 1; transform: none; transition: none; }
+}

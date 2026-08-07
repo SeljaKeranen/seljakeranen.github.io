@@ -1,0 +1,65 @@
+/* ============================================================================
+   theme-overrides.css — remap Material's engine onto the survey palette
+   ----------------------------------------------------------------------------
+   Material for MkDocs is driven by --md-* custom properties. We point those at
+   our tokens instead of restyling component-by-component. Loaded SECOND, after
+   tokens.css and after Material's own compiled bundle, so these win by source
+   order over the `primary: black` palette (which otherwise forces a near-black
+   masthead and an indigo link colour). See risks note #1 — never move this
+   ahead of Material's stylesheet.
+   ============================================================================ */
+
+:root,
+[data-md-color-scheme="default"],
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color:            var(--bg);
+  --md-default-fg-color:            var(--text);
+  --md-default-fg-color--light:     var(--text-muted);
+  --md-default-fg-color--lighter:   var(--text-faint);
+  --md-default-fg-color--lightest:  var(--border-soft);
+
+  --md-typeset-color:               var(--text);
+  --md-typeset-a-color:             var(--text);        /* links are ink, never indigo */
+  --md-typeset-mark-color:          var(--mark);
+
+  --md-primary-fg-color:            var(--bg);          /* masthead dissolves into paper */
+  --md-primary-fg-color--light:     var(--bg);
+  --md-primary-fg-color--dark:      var(--bg);
+  --md-primary-bg-color:            var(--text);        /* masthead text + icons = ink   */
+  --md-primary-bg-color--light:     var(--text-muted);
+
+  --md-accent-fg-color:             var(--green-dark);  /* interactive hover = evergreen */
+  --md-accent-fg-color--transparent: var(--wash-sage);
+
+  --md-code-bg-color:               var(--warm-paper);
+  --md-code-fg-color:               var(--text);
+  --md-code-hl-color:               var(--wash-sage);
+
+  --md-footer-bg-color:             var(--bg);          /* no dark footer bar */
+  --md-footer-bg-color--dark:       var(--bg);
+  --md-footer-fg-color:             var(--text-muted);
+  --md-footer-fg-color--light:      var(--text-muted);
+  --md-footer-fg-color--lighter:    var(--text-faint);
+
+  /* The page should feel printed, not stacked out of floating cards. */
+  --md-shadow-z1: none;
+  --md-shadow-z2: none;
+  --md-shadow-z3: none;
+}
+
+/* Paint the document surface even before Material's rules resolve. */
+body,
+.md-main,
+.md-container {
+  background-color: var(--bg);
+}
+
+/* The `primary: black` palette ships a descendant rule
+   `[data-md-color-primary=black] .md-header { background: hsla(...,9%) }`
+   (specificity 0,2,0) that would otherwise force a near-black masthead. Match
+   its specificity so the header dissolves into the paper in both schemes. */
+[data-md-color-primary="black"] .md-header,
+[data-md-color-primary="black"] .md-tabs {
+  background-color: var(--bg);
+  color: var(--text);
+}

@@ -1,0 +1,20 @@
+{#-
+  Site-wide head seam. Extends Material's base (via the auto-generated main.html
+  chain) purely to add the editorial type families. `theme.font: false` in
+  mkdocs.yml disables Material's built-in single-family loader, so we load all
+  three families ourselves in one request. This block is ADDITIVE — `super()`
+  keeps everything Material would normally emit.
+
+  Type system:
+    Fraunces      display serif (variable: opsz 9-144, wght, SOFT, italic)
+    Inter         body + UI
+    IBM Plex Mono editorial metadata + code
+-#}
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,0..100;1,9..144,400..600,0..100&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap">
+{% endblock %}

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 420" fill="none"
+     role="img" aria-label="A single classical arch fragment standing in mist"
+     stroke-linecap="round" stroke-linejoin="round">
+  <style>
+    .contour{stroke:rgba(115,128,117,.34);stroke-width:1.2}
+    .faint{stroke:rgba(23,26,24,.16);stroke-width:1}
+    .mid{stroke:rgba(23,26,24,.34);stroke-width:1}
+    .ink{stroke:rgba(23,26,24,.72);stroke-width:1.25}
+    .leaf{fill:rgba(115,128,117,.14)}
+    @media (prefers-color-scheme:dark){
+      .contour{stroke:rgba(138,150,140,.36)}
+      .faint{stroke:rgba(233,228,217,.15)}
+      .mid{stroke:rgba(233,228,217,.32)}
+      .ink{stroke:rgba(233,228,217,.7)}
+      .leaf{fill:rgba(138,150,140,.18)}
+    }
+  </style>
+
+  <!-- a single window / arch fragment, much negative space around it -->
+  <g class="ink">
+    <path d="M150 320V176a30 30 0 0 1 60 0v144"/>
+    <path class="faint" d="M164 320V178a16 16 0 0 1 32 0v142"/>
+    <path d="M138 320h84"/>
+    <path d="M150 176h60"/>
+    <!-- keystone + impost ticks -->
+    <path class="mid" d="M180 142v-14M156 160l-12-8M204 160l12-8"/>
+  </g>
+
+  <!-- a botanical sprig at the base -->
+  <g class="ink">
+    <path d="M210 320c14-8 22-22 24-42s-2-38-12-52"/>
+    <path d="M226 288c14 2 24-2 32-14M222 256c12-2 20-10 24-24"/>
+  </g>
+  <g class="leaf">
+    <path d="M258 274c-12 2-22-2-28-12 12-6 24-2 28 12Z"/>
+    <path d="M246 232c-10-4-16-14-14-26 12 4 18 14 14 26Z"/>
+  </g>
+
+  <!-- ground contours in mist -->
+  <g class="contour">
+    <path d="M0 344c110-14 190-6 240-14s90-2 120 6"/>
+    <path d="M0 372c120-10 200-2 250-10s80 0 110 6"/>
+  </g>
+</svg>

@@ -1,0 +1,250 @@
+/* ============================================================================
+   base.css — the type system + element defaults
+   ----------------------------------------------------------------------------
+   Three voices: Fraunces (display serif, titles + major headings only), Inter
+   (body + UI), IBM Plex Mono (all metadata + code). Fraunces is a variable face
+   with an optical-size axis; each heading level sets its own `opsz` so one
+   family blooms into engraved-plate display at the hero and drops to a sturdier
+   text cut at the small headings. Loaded THIRD.
+   ============================================================================ */
+
+:root {
+  --fs-hero:    clamp(3rem, 6vw, 6rem);          /* home statement   48 → 96 */
+  --fs-article: clamp(2.6rem, 5vw, 4.5rem);      /* article title    42 → 72 */
+  --fs-section: clamp(2rem, 3.4vw, 2.75rem);     /* H2               32 → 44 */
+  --fs-post:    clamp(1.625rem, 2.4vw, 2.125rem);/* H3 / post title  26 → 34 */
+  --fs-lead:    clamp(1.25rem, 1.5vw, 1.5rem);   /* lead / dek       20 → 24 */
+  --fs-body:    clamp(1.0625rem, .95rem + .35vw, 1.1875rem);/* body       17 → 19 */
+  --fs-nav:     .875rem;                          /* nav / UI         14 */
+  --fs-meta:    .75rem;                           /* mono metadata    12 */
+
+  --lh-hero: 1.02;
+  --lh-heading: 1.08;
+  --lh-body: 1.72;
+  --track-serif: -.014em;
+  --track-meta:  .14em;
+  --track-nav:   .02em;
+}
+
+/* -- Body ------------------------------------------------------------------ */
+.md-typeset {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--text);
+}
+.md-typeset p { margin: 0 0 1.35em; }
+
+/* -- Serif display: titles + major headings only --------------------------- */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.folio-hero__title,
+.plate-title {
+  font-family: var(--font-serif);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  letter-spacing: var(--track-serif);
+  line-height: var(--lh-heading);
+  color: var(--text);
+  text-wrap: balance;
+}
+.md-typeset h1 {
+  font-size: var(--fs-article);
+  font-weight: 600;
+  line-height: var(--lh-hero);
+  margin: 0 0 .4em;
+  font-variation-settings: "opsz" 132, "SOFT" 22, "WONK" 0;
+}
+.md-typeset h2 {
+  font-size: var(--fs-section);
+  margin: 3.5em 0 .55em;
+  font-variation-settings: "opsz" 64, "SOFT" 14, "WONK" 0;
+}
+.md-typeset h3 {
+  font-size: var(--fs-post);
+  margin: 2.2em 0 .45em;
+  font-variation-settings: "opsz" 36, "SOFT" 10, "WONK" 0;
+}
+.md-typeset h4 {
+  font-size: var(--fs-lead);
+  font-weight: 600;
+  margin: 1.8em 0 .4em;
+  font-variation-settings: "opsz" 22, "SOFT" 6, "WONK" 0;
+}
+.folio-hero__title {
+  font-size: var(--fs-hero);
+  font-weight: 600;
+  line-height: var(--lh-hero);
+  font-variation-settings: "opsz" 144, "SOFT" 24, "WONK" 0;
+}
+
+/* -- Lead / subtitle: sans, muted, held to a short measure ----------------- */
+.md-typeset .lead,
+.folio-hero__lede,
+.article__dek {
+  font-family: var(--font-sans);
+  font-size: var(--fs-lead);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-muted);
+  max-width: 34ch;
+}
+
+/* -- Metadata: mono, uppercase, tracked (the survey annotation voice) ------- */
+.folio-kicker,
+.article__meta,
+.card__meta,
+.figure__label,
+.md-typeset .meta {
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--track-meta);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* -- Nav / UI -------------------------------------------------------------- */
+.md-header__title,
+.md-nav__link,
+.folio-nav__link {
+  font-family: var(--font-sans);
+  font-size: var(--fs-nav);
+  letter-spacing: var(--track-nav);
+}
+
+/* -- Reading measure ------------------------------------------------------- */
+/* The site is wide; the reading column is not. This contrast is the point. */
+.md-content {
+  max-width: var(--article-width);
+  margin: 0 auto;
+}
+
+/* -- Body links: ink + hairline underline, never blue ---------------------- */
+.md-typeset a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--border-strong);
+  text-underline-offset: 2px;
+  transition: color var(--dur-hover) var(--ease),
+              text-decoration-color var(--dur-hover) var(--ease);
+}
+.md-typeset a:hover {
+  color: var(--green-dark);
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--green-dark);
+}
+
+/* Visible, on-brand focus ring for keyboard users. */
+:focus-visible {
+  outline: 2px solid var(--green-dark);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* -- Drop cap ------------------------------------------------------------- */
+/* Automatic on the opening paragraph of a journal post; opt-in elsewhere via
+   a .dropcap wrapper. Editorial, not ornamental — one per piece. */
+.md-content--post .md-typeset > h1 + p::first-letter,
+.md-typeset .dropcap > p:first-of-type::first-letter {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-variation-settings: "opsz" 144, "SOFT" 22, "WONK" 0;
+  float: left;
+  font-size: 3.4em;
+  line-height: .82;
+  margin: .02em .1em 0 0;
+  color: var(--green-dark);
+}
+
+/* -- Pull quote: thin sage rule + Fraunces italic, no giant quote glyph ---- */
+.md-typeset blockquote {
+  border-left: 2px solid var(--green);
+  margin: 2em 0;
+  padding: .1em 0 .1em 1.4em;
+  color: var(--text);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.375rem, 2vw, 1.75rem);
+  line-height: 1.35;
+}
+.md-typeset blockquote p { margin: 0 0 .5em; }
+.md-typeset blockquote cite,
+.md-typeset blockquote footer {
+  display: block;
+  margin-top: .7em;
+  font: 500 var(--fs-meta)/1 var(--font-mono);
+  letter-spacing: var(--track-meta);
+  text-transform: uppercase;
+  font-style: normal;
+  color: var(--text-muted);
+}
+
+/* -- Code: pressed into the paper, subdued highlighting -------------------- */
+.md-typeset code,
+.md-typeset pre { font-family: var(--font-mono); }
+.md-typeset code {
+  background: var(--warm-paper);
+  border-radius: var(--radius-sm);
+  padding: .12em .38em;
+  font-size: .86em;
+}
+.md-typeset pre > code {
+  display: block;
+  padding: 0;
+  background: none;
+  font-size: .9rem;
+  line-height: 1.62;
+}
+.md-typeset pre {
+  background: var(--warm-paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  box-shadow: none;
+}
+.highlight .filename,
+.md-typeset .highlighttable { border-radius: var(--radius); }
+
+/* -- Horizontal rule: a quiet hairline (the datum-line is its own element) -- */
+.md-typeset hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5em 0;
+}
+
+/* -- Tables read like a plate legend --------------------------------------- */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: .9rem;
+}
+.md-typeset table:not([class]) th {
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  text-transform: uppercase;
+  letter-spacing: var(--track-meta);
+  font-weight: 500;
+  background: var(--bg-alt);
+  color: var(--text-muted);
+}
+
+/* Mobile body ceiling. */
+@media (max-width: 48rem) {
+  .md-typeset { font-size: 1.0625rem; }
+}
+
+/* Honour reduced motion everywhere (mirrored defensively in reveal.js). */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

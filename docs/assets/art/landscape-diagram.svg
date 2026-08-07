@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" fill="none"
+     role="img" aria-label="Topographic contours overlaid with a triangulation survey network"
+     stroke-linecap="round" stroke-linejoin="round">
+  <style>
+    .grid{stroke:rgba(23,26,24,.06);stroke-width:1}
+    .contour{stroke:rgba(115,128,117,.34);stroke-width:1.2}
+    .faint{stroke:rgba(23,26,24,.16);stroke-width:1}
+    .mid{stroke:rgba(23,26,24,.34);stroke-width:1}
+    .ink{stroke:rgba(23,26,24,.72);stroke-width:1.1}
+    .node{fill:#F4F2EB;stroke:rgba(23,26,24,.5);stroke-width:1.1}
+    .bench{fill:#A66F5B}
+    .label{fill:rgba(23,26,24,.5);font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;letter-spacing:1.3px}
+    @media (prefers-color-scheme:dark){
+      .grid{stroke:rgba(233,228,217,.06)}
+      .contour{stroke:rgba(138,150,140,.36)}
+      .faint{stroke:rgba(233,228,217,.15)}
+      .mid{stroke:rgba(233,228,217,.32)}
+      .ink{stroke:rgba(233,228,217,.7)}
+      .node{fill:#161A17;stroke:rgba(233,228,217,.5)}
+      .bench{fill:#C08466}
+      .label{fill:rgba(233,228,217,.5)}
+    }
+  </style>
+
+  <path class="grid" d="M112 0V320M224 0V320M336 0V320M448 0V320M0 80H560M0 160H560M0 240H560"/>
+
+  <!-- layered contours: hills and a lake -->
+  <g class="contour">
+    <path d="M0 96C120 70 200 92 300 66S520 60 560 92"/>
+    <path d="M0 140C130 116 210 138 320 110S520 108 560 136"/>
+    <path d="M0 188C140 166 230 188 340 158S520 160 560 184"/>
+    <path d="M0 236C150 216 240 236 360 208S520 214 560 232"/>
+    <path d="M330 210c60-14 150-8 176 12s-18 34-96 40-150-8-160-28 20-18 80-24Z"/>
+  </g>
+
+  <!-- triangulation network: hollow nodes joined by thin lines -->
+  <g class="ink">
+    <path d="M96 108L232 150 128 214 300 176 96 108M232 150 428 118 300 176M428 118 452 220 300 176"/>
+  </g>
+  <g class="node">
+    <circle cx="96" cy="108" r="4.5"/>
+    <circle cx="232" cy="150" r="4.5"/>
+    <circle cx="128" cy="214" r="4.5"/>
+    <circle cx="300" cy="176" r="4.5"/>
+    <circle cx="428" cy="118" r="4.5"/>
+    <circle cx="452" cy="220" r="4.5"/>
+  </g>
+
+  <!-- compass / north tick -->
+  <g class="mid">
+    <circle cx="502" cy="58" r="20"/>
+    <path d="M502 40v36M484 58h36"/>
+  </g>
+  <path class="ink" d="M502 40l4 10h-8z" stroke="none" fill="rgba(23,26,24,.55)"/>
+
+  <!-- coordinate ticks + the one clay benchmark -->
+  <path class="mid" d="M60 236h8M64 232v8"/>
+  <path class="bench" d="M300 176l6 11h-12z" transform="translate(0,-14)"/>
+  <text x="312" y="168" class="label">BM 60.17N</text>
+</svg>

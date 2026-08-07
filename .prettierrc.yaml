@@ -1,0 +1,6 @@
+# Prettier governs CSS / JS / JSON / YAML / Markdown formatting. Jinja HTML
+# templates and hand-authored SVGs are excluded (see .prettierignore) — Prettier
+# mangles Jinja tags and rewrites SVG path precision.
+printWidth: 100
+singleQuote: false
+proseWrap: preserve

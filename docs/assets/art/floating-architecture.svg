@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" fill="none"
+     role="img" aria-label="A glasshouse pavilion floating above a misty ridgeline"
+     stroke-linecap="round" stroke-linejoin="round">
+  <style>
+    .grid{stroke:rgba(23,26,24,.06);stroke-width:1}
+    .contour{stroke:rgba(115,128,117,.34);stroke-width:1.2}
+    .faint{stroke:rgba(23,26,24,.16);stroke-width:1}
+    .mid{stroke:rgba(23,26,24,.34);stroke-width:1.1}
+    .ink{stroke:rgba(23,26,24,.72);stroke-width:1.25}
+    .bench{fill:#A66F5B}
+    @media (prefers-color-scheme:dark){
+      .grid{stroke:rgba(233,228,217,.06)}
+      .contour{stroke:rgba(138,150,140,.36)}
+      .faint{stroke:rgba(233,228,217,.15)}
+      .mid{stroke:rgba(233,228,217,.32)}
+      .ink{stroke:rgba(233,228,217,.7)}
+      .bench{fill:#C08466}
+    }
+  </style>
+
+  <path class="grid" d="M120 0V360M240 0V360M360 0V360M0 120H480M0 240H480"/>
+
+  <g class="mid">
+    <circle cx="372" cy="104" r="66"/>
+    <circle cx="372" cy="104" r="44"/>
+  </g>
+
+  <g class="contour">
+    <path d="M0 262c96-20 150-8 236-26s180-10 244 6"/>
+    <path d="M0 292c110-16 168-4 250-20s170-4 230 8"/>
+  </g>
+
+  <g class="ink">
+    <path d="M176 244V150l64-40 64 40v94"/>
+    <path d="M176 150l64-40 64 40"/>
+    <path d="M224 110l16-10 16 10v14h-32z"/>
+    <path d="M176 178h128M176 208h128"/>
+    <path d="M200 244V160M240 244V128M280 244V160"/>
+    <path d="M232 244v-28h16v28"/>
+  </g>
+  <path class="faint" d="M190 258h100"/>
+
+  <!-- vine tendrils off the right corner -->
+  <g class="ink">
+    <path d="M304 236c18 6 28 20 30 40M334 276c-8-2-15-8-18-16M334 276c8-4 12-12 12-22"/>
+    <path d="M316 300c14 4 22 14 24 30"/>
+  </g>
+
+  <path class="bench" d="M240 250l6 11h-12z"/>
+</svg>

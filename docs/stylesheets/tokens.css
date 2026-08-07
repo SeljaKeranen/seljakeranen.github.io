@@ -1,0 +1,108 @@
+/* ============================================================================
+   tokens.css — the palette and the vocabulary
+   ----------------------------------------------------------------------------
+   "Contour Survey": an 1890s survey folio someone quietly attached AI-
+   engineering essays to. Limestone paper, iron-gall ink, wet evergreen, one
+   rare clay benchmark. A near-monochrome page where colour comes from the
+   line-art, not the interface.
+
+   This is the ONLY stylesheet that holds raw colour literals. Every other file
+   references these custom properties (enforced by tests/test_design_invariants).
+   Loaded FIRST so the variables exist before anything consumes them.
+   ============================================================================ */
+
+:root,
+[data-md-color-scheme="default"] {
+  /* -- Surfaces (~60% of every view) ------------------------------------- */
+  --bg:          #F4F2EB;   /* limestone / warm off-white — never pure white */
+  --bg-alt:      #F1EFE8;   /* a half-tone cooler, for quiet banding         */
+  --surface:     #EBE8DF;   /* raised paper (search field, insets)           */
+  --warm-paper:  #E9E4D9;   /* code + pressed-in surfaces                    */
+
+  /* -- Ink --------------------------------------------------------------- */
+  --text:        #171A18;   /* charcoal, not pure black                      */
+  --text-muted:  #5C635C;   /* metadata, leads, secondary                    */
+  --text-faint:  #656D66;   /* tertiary text — AA (4.77:1) on the paper      */
+
+  /* -- Greens (~10%: depth + structure) ---------------------------------- */
+  --green-dark:  #39463E;   /* evergreen — link hover, drop cap, emphasis    */
+  --green:       #738075;   /* sage — quote rule, line highlight             */
+  --green-mist:  #9EA8A2;   /* fog                                           */
+
+  /* -- Stone (~5%) ------------------------------------------------------- */
+  --stone:       #D7D5CC;
+  --stone-dark:  #ABA7A0;
+
+  /* -- Accent (~5%, spent once per view): clay benchmark ▲ ---------------- */
+  --accent:      #A66F5B;
+
+  /* -- Hairlines + cartographic line-art (SVGs inherit these) ------------ */
+  --border:        rgba(23, 26, 24, .14);
+  --border-soft:   rgba(23, 26, 24, .08);
+  --border-strong: rgba(23, 26, 24, .26);
+  --line-ink:      rgba(23, 26, 24, .72);
+  --line-mid:      rgba(23, 26, 24, .34);
+  --line-faint:    rgba(23, 26, 24, .16);
+  --grid-line:     rgba(23, 26, 24, .06);
+  --contour:       rgba(115, 128, 117, .34);
+  --wash-sage:     rgba(115, 128, 117, .10);
+  --mark:          rgba(115, 128, 117, .24);   /* ==mark== highlight        */
+
+  /* -- Type families ----------------------------------------------------- */
+  /* Re-declared because theme.font:false stops Material emitting them.      */
+  --md-text-font: "Inter";
+  --md-code-font: "IBM Plex Mono";
+  --font-serif: "Fraunces", "Georgia", "Times New Roman", serif;
+  --font-sans:  "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono:  "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+  /* -- Layout / geometry / motion ---------------------------------------- */
+  --page-width:   1240px;
+  --article-width: 44rem;
+  --pad-x:        clamp(20px, 5vw, 72px);
+  --section-gap:  clamp(96px, 12vw, 160px);
+  --radius:       3px;
+  --radius-sm:    2px;
+  --ease:         cubic-bezier(.22, .61, .36, 1);
+  --dur-fade:     560ms;
+  --dur-hover:    240ms;
+
+  color-scheme: light;
+}
+
+/* ----------------------------------------------------------------------------
+   SLATE — wet evergreen at dusk. The line-art re-inks from these variables
+   with no edits to any SVG; the whole palette simply inverts around the paper.
+   ---------------------------------------------------------------------------- */
+[data-md-color-scheme="slate"] {
+  --bg:          #161A17;
+  --bg-alt:      #191D19;
+  --surface:     #1E2320;
+  --warm-paper:  #222824;
+
+  --text:        #E7E3D7;
+  --text-muted:  #A7AEA6;
+  --text-faint:  #8A928B;   /* tertiary text — AA (5.50:1) on the dark paper */
+
+  --green-dark:  #A7B4A9;   /* greens lift so they stay legible on dark ink  */
+  --green:       #8A968C;
+  --green-mist:  #6E786F;
+
+  --stone:       #2A302B;
+  --stone-dark:  #3A423C;
+
+  --accent:      #C08466;
+
+  --border:        rgba(233, 228, 217, .14);
+  --border-soft:   rgba(233, 228, 217, .08);
+  --border-strong: rgba(233, 228, 217, .26);
+  --line-ink:      rgba(233, 228, 217, .70);
+  --line-mid:      rgba(233, 228, 217, .32);
+  --line-faint:    rgba(233, 228, 217, .15);
+  --grid-line:     rgba(233, 228, 217, .06);
+  --contour:       rgba(138, 150, 140, .36);
+  --wash-sage:     rgba(138, 150, 140, .12);
+  --mark:          rgba(138, 150, 140, .22);
+
+  color-scheme: dark;
+}

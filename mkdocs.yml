@@ -9,8 +9,14 @@ repo_url: https://github.com/SeljaKeranen/seljakeranen.github.io/
 edit_uri: edit/main/docs/
 copyright: Copyright &copy; 2026 Selja Keränen
 
+# Documentation for the art system — not a site page.
+exclude_docs: |
+  assets/art/README.md
+
 theme:
   name: material
+  custom_dir: overrides
+  favicon: assets/favicon.svg
   icon:
     repo: fontawesome/brands/github
     edit: material/pencil
@@ -45,15 +51,17 @@ theme:
     - search.highlight
     - search.suggest
     - toc.follow
-  font:
-    text: Inter
-    code: Roboto Mono
+  # Fonts are loaded ourselves in overrides/main.html (one request, all three
+  # families with the weights + axes the design needs). Disabling Material's
+  # built-in loader avoids a second, redundant, under-specified request.
+  font: false
 
 nav:
   - Home: index.md
-  - Blog:
+  - Journal:
     - blog/index.md
-  - Writing: writing-samples.md
+  - About: about.md
+  - Archive: archive.md
 
 markdown_extensions:
   - abbr
@@ -86,6 +94,11 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
+# Build hook: injects the three latest posts (with rotating line-art) into the
+# homepage, and tags each post with its category's hero art. Pure stdlib.
+hooks:
+  - hooks/hero_art.py
+
 plugins:
   - search
   - minify:
@@ -107,5 +120,15 @@ extra:
       link: https://www.linkedin.com/in/selja-ker%C3%A4nen-95b4b1150/
       name: LinkedIn
 
+# Order is load-bearing: tokens must define the variables before anything
+# consumes them, and the whole chain must load after Material's own bundle so
+# our attribute-scoped --md-* remaps win by source order.
 extra_css:
-  - stylesheets/extra.css
+  - stylesheets/tokens.css          # palette + font stacks (only file with colour literals)
+  - stylesheets/theme-overrides.css # remap Material --md-* onto the tokens
+  - stylesheets/base.css            # type scale, reading measure, links, code, quotes
+  - stylesheets/layout.css          # masthead, home hero, datum-line, footer
+  - stylesheets/components.css      # blog rows, cards, buttons, pagination, archive
+
+extra_javascript:
+  - javascripts/reveal.js           # scroll fade-in; no-ops under reduced-motion
