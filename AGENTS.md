@@ -42,6 +42,10 @@ The rest of the post.
 The first paragraph (before `<!-- more -->`) is the excerpt — make it earn the
 click. `description` drives the homepage card and the `<meta>` description.
 
+**Drafts:** add `draft: true` (or `make new … ` then edit, or `scripts/new_post.py
+--draft`). Draft posts show on `mkdocs serve` but are excluded from the production
+build, so you can work on a piece without publishing it.
+
 ### Categories (closed set)
 
 `Systems`, `Evals`, `Tools`, `Field`, `Craft`, `Notes`. The set is enforced by
@@ -85,3 +89,5 @@ tests/           pytest: strict build, link/alt checks, frontmatter, design inva
 - Don't add runtime dependencies to `requirements-doc.txt` without a reason;
   that file is the deploy surface and is pinned deliberately.
 - Editorial voice: quiet, concrete, honest. No hype, no emoji.
+- Preserve Selja's voice. When editing a draft, make light punctuation and
+  grammar fixes only — don't rewrite unless explicitly asked.

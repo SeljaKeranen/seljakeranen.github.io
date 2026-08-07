@@ -25,6 +25,7 @@ TEMPLATE = """\
 date: {date}
 authors: [selja]
 categories: [{category}]
+draft: {draft}
 description: One sentence on what this covers — it becomes the excerpt and meta description.
 ---
 
@@ -52,6 +53,11 @@ def main(argv: list[str] | None = None) -> int:
         "--date", default=dt.date.today().isoformat(), help="ISO date (default: today)"
     )
     parser.add_argument("--slug", help="Override the auto-generated slug")
+    parser.add_argument(
+        "--draft",
+        action="store_true",
+        help="Mark as draft (visible on `mkdocs serve`, excluded from the build)",
+    )
     args = parser.parse_args(argv)
 
     slug = args.slug or slugify(args.title)
@@ -65,7 +71,12 @@ def main(argv: list[str] | None = None) -> int:
         return 1
 
     path.write_text(
-        TEMPLATE.format(date=args.date, category=args.category, title=args.title),
+        TEMPLATE.format(
+            date=args.date,
+            category=args.category,
+            title=args.title,
+            draft=str(args.draft).lower(),
+        ),
         encoding="utf-8",
     )
     rel = path.relative_to(Path.cwd()) if path.is_relative_to(Path.cwd()) else path
