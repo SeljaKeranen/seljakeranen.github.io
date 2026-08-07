@@ -1,0 +1,7 @@
+# Development + CI tooling. Never installed on the deploy runner — the site
+# build only needs requirements-doc.txt. Install with:  make install
+-r requirements-doc.txt
+
+pytest==8.4.2
+ruff==0.14.4
+pre-commit==4.4.0

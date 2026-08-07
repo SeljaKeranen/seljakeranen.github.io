@@ -1,0 +1,27 @@
+{#-
+  overrides/404.html — replaces Material's default 404. Built as a theme
+  template (site/404.html), which is what GitHub Pages serves for missing URLs.
+  There is no `page` context here, so everything is static.
+-#}
+{% extends "main.html" %}
+
+{% block content %}
+<div class="folio-notfound md-typeset">
+  <p class="folio-kicker">Error · 404 · Off the map</p>
+  <h1>Off the map</h1>
+  <figure>
+    <img src="{{ 'assets/art/architectural-fragment.svg' | url }}" alt=""
+         width="220" loading="lazy">
+    <figcaption>Fig. — a fragment, standing where a page used to be</figcaption>
+  </figure>
+  <p class="lead">
+    There's nothing here — a moved post, a mistyped address, or a link that has
+    aged out. No harm done.
+  </p>
+  <p>
+    Try the <a href="{{ 'blog/' | url }}">journal</a>,
+    the <a href="{{ 'archive/' | url }}">archive</a>, or head back
+    <a href="{{ nav.homepage.url | url }}">home</a>.
+  </p>
+</div>
+{% endblock %}

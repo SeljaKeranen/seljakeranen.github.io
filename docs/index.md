@@ -1,4 +1,5 @@
 ---
+template: home.html
 description: >-
   Selja Keränen. AI engineer in Helsinki, building production AI systems and
   writing about what it takes to keep them working.
@@ -6,15 +7,6 @@ hide:
   - navigation
   - toc
 ---
-
-# I build production AI systems
-
-I'm an AI engineer based in Helsinki. Most of my work is the full path from an idea to something running in production: RAG pipelines, document extraction from messy technical documents, agentic workflows, and the evaluation work that keeps them honest.
-
-I build what I design. And I pay attention to the part most demos skip, which is what happens once real users get hold of the thing and start doing what nobody planned for.
-
-[Get in touch](mailto:seljaww@gmail.com){ .md-button .md-button--primary }
-[Read the blog](blog/index.md){ .md-button }
 
 ## What I work on
 
@@ -35,4 +27,4 @@ A few problems I keep coming back to:
 
 If you're working on something in this space, or you just want to compare notes, send me a message.
 
-[Get in touch](mailto:seljaww@gmail.com){ .md-button .md-button--primary }
+[Get in touch](mailto:seljaww@gmail.com){ .md-button }

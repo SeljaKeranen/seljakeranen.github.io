@@ -1,0 +1,6 @@
+# Normalise line endings; keep binary/vector assets from being diffed as text.
+* text=auto eol=lf
+*.svg text eol=lf
+*.png binary
+*.jpg binary
+*.woff2 binary

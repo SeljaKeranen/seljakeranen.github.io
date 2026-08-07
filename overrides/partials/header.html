@@ -1,0 +1,59 @@
+{#-
+  Editorial masthead (forked from Material's partials/header.html).
+
+  Material cannot place inline top-right section links without navigation.tabs,
+  so we fork: a wordmark on the left, the four sections on the right, and we keep
+  Material's palette toggle, search, and repo source untouched. The nav wraps to
+  a second row on narrow screens (it never hides behind an empty drawer).
+-#}
+{%- set purl = page.url if page else "" -%}
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner folio-masthead" aria-label="{{ lang.t('header') }}">
+
+    <a class="folio-brand" href="{{ nav.homepage.url | url }}" title="{{ config.site_name | e }}"
+       data-md-component="logo" aria-label="{{ config.site_name }}">
+      <span class="folio-brand__name">Selja Keränen</span>
+      <span class="folio-brand__coord">60.17°N&nbsp;·&nbsp;24.94°E</span>
+    </a>
+
+    <nav class="folio-nav" aria-label="Sections">
+      <a class="folio-nav__link" data-section="journal" href="{{ 'blog/' | url }}"
+         {% if purl.startswith('blog') and 'category' not in purl %}aria-current="page"{% endif %}>Journal</a>
+      <a class="folio-nav__link" data-section="notes" href="{{ 'blog/category/notes/' | url }}"
+         {% if 'category/notes' in purl %}aria-current="page"{% endif %}>Notes</a>
+      <a class="folio-nav__link" data-section="about" href="{{ 'about/' | url }}"
+         {% if purl.startswith('about') %}aria-current="page"{% endif %}>About</a>
+      <a class="folio-nav__link" data-section="archive" href="{{ 'archive/' | url }}"
+         {% if purl.startswith('archive') %}aria-current="page"{% endif %}>Archive</a>
+    </nav>
+
+    {#- Palette toggle (kept as Material renders it) -#}
+    {% if config.theme.palette %}
+      {% if not config.theme.palette is mapping %}
+        {% include "partials/palette.html" %}
+      {% endif %}
+    {% endif %}
+    {% if not config.theme.palette is mapping %}
+      {% include "partials/javascripts/palette.html" %}
+    {% endif %}
+
+    {#- Search -#}
+    {% if "material/search" in config.plugins %}
+      {% set search = config.plugins["material/search"] | attr("config") %}
+      {% if search.enabled %}
+        <label class="md-header__button md-icon" for="__search">
+          {% set icon = config.theme.icon.search or "material/magnify" %}
+          {% include ".icons/" ~ icon ~ ".svg" %}
+        </label>
+        {% include "partials/search.html" %}
+      {% endif %}
+    {% endif %}
+
+    {#- Repository source link -#}
+    {% if config.repo_url %}
+      <div class="md-header__source">
+        {% include "partials/source.html" %}
+      </div>
+    {% endif %}
+  </nav>
+</header>

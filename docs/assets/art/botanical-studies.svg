@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 400" fill="none"
+     role="img" aria-label="A pressed botanical specimen with measurement guides"
+     stroke-linecap="round" stroke-linejoin="round">
+  <style>
+    .faint{stroke:rgba(23,26,24,.16);stroke-width:1}
+    .mid{stroke:rgba(23,26,24,.34);stroke-width:1}
+    .ink{stroke:rgba(23,26,24,.72);stroke-width:1.2}
+    .leaf{fill:rgba(115,128,117,.14)}
+    .dash{stroke:rgba(23,26,24,.2);stroke-width:1;stroke-dasharray:2 6}
+    .label{fill:rgba(23,26,24,.5);font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;letter-spacing:1.3px}
+    @media (prefers-color-scheme:dark){
+      .faint{stroke:rgba(233,228,217,.15)}
+      .mid{stroke:rgba(233,228,217,.32)}
+      .ink{stroke:rgba(233,228,217,.7)}
+      .leaf{fill:rgba(138,150,140,.18)}
+      .dash{stroke:rgba(233,228,217,.2)}
+      .label{fill:rgba(233,228,217,.5)}
+    }
+  </style>
+
+  <!-- measurement guides -->
+  <path class="dash" d="M56 60V344M264 60V344"/>
+  <path class="mid" d="M56 60h-6M56 152h-6M56 244h-6M56 344h-6"/>
+
+  <!-- the specimen: a single stem, a few leaves, one seed head -->
+  <g class="ink">
+    <path d="M160 344V128c0-26 4-46 14-64"/>
+    <path d="M160 300c-26-4-44-18-52-42M160 300c24-6 40-20 46-42"/>
+    <path d="M160 244c-28-4-48-20-56-46M160 244c26-6 44-22 50-46"/>
+    <path d="M160 190c-22-2-40-14-48-34M160 190c22-6 36-20 42-40"/>
+  </g>
+  <g class="leaf">
+    <path d="M108 258c-24-4-42-18-50-42 26-2 46 14 50 42Z"/>
+    <path d="M206 262c24-6 40-22 44-46-26 0-44 18-44 46Z"/>
+    <path d="M112 200c-22-2-38-14-44-32 22-2 40 12 44 32Z"/>
+  </g>
+
+  <!-- seed head -->
+  <g class="ink">
+    <path d="M174 64c8-10 22-12 30-6-4 12-16 18-30 14"/>
+    <path d="M174 78c10-8 24-8 32 0-6 10-20 14-32 6"/>
+    <circle cx="182" cy="58" r="6" class="mid"/>
+  </g>
+
+  <!-- magnifier detail circle -->
+  <g class="mid">
+    <circle cx="238" cy="150" r="30"/>
+    <path d="M238 138v24M226 150h24"/>
+    <path d="M260 172l16 16" class="ink"/>
+  </g>
+
+  <text x="56" y="374" class="label">FIG. 3 · FOLIUM</text>
+</svg>

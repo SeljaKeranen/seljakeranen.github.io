@@ -1,40 +1,48 @@
 # seljakeranen.github.io
 
-Personal site and blog, built with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
-and deployed to GitHub Pages.
+Personal editorial site and journal for **Selja Keränen** — built with
+[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) and deployed
+to GitHub Pages. Quiet, text-first, with a hand-drawn survey-plate visual system.
 
-## Local preview
+## Quick start
 
 ```bash
-uv venv                                   # once
-uv pip install -r requirements-doc.txt    # once
-uv run mkdocs serve                        # live preview at http://127.0.0.1:8000
+make install     # venv + dependencies (uv)
+make serve       # live preview at http://127.0.0.1:8000
+make build       # strict production build
+make test        # strict build + frontmatter + design-invariant checks
+make new TITLE="A new post" CATEGORY=Notes
 ```
 
-## Writing a post
+Run `make` on its own for the full list.
 
-Add a Markdown file under `docs/blog/posts/`. Front matter drives the date,
-author, and excerpt cut:
+## Writing
 
-```markdown
----
-date: 2026-08-07
-authors:
-  - selja
-categories:
-  - Notes
----
+Posts live in `docs/blog/posts/`. `make new` scaffolds one with valid front
+matter; the full authoring contract (front matter, the closed category set, the
+design-token rules, the art system) is in **[AGENTS.md](AGENTS.md)**.
 
-# Post title
+## Layout
 
-First paragraph shows up as the excerpt on the blog index.
-
-<!-- more -->
-
-The rest of the post.
 ```
+docs/          content — index, about, archive, blog/, stylesheets/, javascripts/, assets/
+overrides/     forked Material templates (masthead, home, archive, 404, footer, inline art)
+hooks/         build hooks — hero_art.py: homepage cards, archive groups, per-post art
+scripts/       author tooling — new_post.py
+tests/         pytest — strict build, link + alt checks, front matter, design invariants
+```
+
+## Design
+
+- Colour literals live only in `docs/stylesheets/tokens.css`; everything else
+  references tokens. Type is Fraunces (display) / Inter (body) / IBM Plex Mono
+  (metadata), loaded once in `overrides/main.html`.
+- The recurring **datum line** — a hairline, graduated ticks, one clay
+  benchmark ▲ — is the site's signature. See [AGENTS.md](AGENTS.md) and
+  `docs/assets/art/README.md`.
 
 ## Deploy
 
-Push to `main`. The `Deploy site` GitHub Action builds with `mkdocs build --strict`
-and publishes to GitHub Pages automatically. Nothing to do by hand.
+Push to `main`. `.github/workflows/deploy.yml` builds with
+`mkdocs build --strict` and publishes to GitHub Pages. `ci.yml` runs lint +
+tests on every push and pull request. Nothing to do by hand.

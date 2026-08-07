@@ -1,2 +1,8 @@
-mkdocs-material
-mkdocs-minify-plugin
+# Runtime dependencies for building the site. This file is the single source of
+# truth for the GitHub Pages deploy (see .github/workflows/deploy.yml).
+#
+# Pinned exactly: the theme is customised through forked Material templates
+# (overrides/), which can break across Material releases, so upgrades are done
+# deliberately — bump the pin, re-diff the forks, rebuild, then commit.
+mkdocs-material==9.7.7
+mkdocs-minify-plugin==0.8.0

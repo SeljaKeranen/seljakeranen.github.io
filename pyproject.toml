@@ -1,0 +1,14 @@
+# Tooling config only — the site is built by MkDocs, not packaged. Keeping ruff
+# and pytest settings here (instead of scattered dotfiles) is the whole point.
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = ["site", ".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" fill="none"
+     role="img" aria-label="A stone arch half-reclaimed by climbing vines"
+     stroke-linecap="round" stroke-linejoin="round">
+  <style>
+    .grid{stroke:rgba(23,26,24,.06);stroke-width:1}
+    .contour{stroke:rgba(115,128,117,.34);stroke-width:1.2}
+    .faint{stroke:rgba(23,26,24,.16);stroke-width:1}
+    .mid{stroke:rgba(23,26,24,.34);stroke-width:1.1}
+    .ink{stroke:rgba(23,26,24,.72);stroke-width:1.25}
+    .leaf{fill:rgba(115,128,117,.16)}
+    @media (prefers-color-scheme:dark){
+      .grid{stroke:rgba(233,228,217,.06)}
+      .contour{stroke:rgba(138,150,140,.36)}
+      .faint{stroke:rgba(233,228,217,.15)}
+      .mid{stroke:rgba(233,228,217,.32)}
+      .ink{stroke:rgba(233,228,217,.7)}
+      .leaf{fill:rgba(138,150,140,.2)}
+    }
+  </style>
+
+  <!-- light trellis grid across the scene -->
+  <path class="grid" d="M96 40V300M168 40V300M312 40V300M384 40V300M60 108H420M60 180H420"/>
+
+  <!-- the stone arch -->
+  <g class="ink">
+    <path d="M168 300V150a72 72 0 0 1 144 0v150"/>
+    <path class="faint" d="M192 300V150a48 48 0 0 1 96 0v150"/>
+    <path d="M150 300h180"/>
+    <!-- voussoir ticks around the arch head -->
+    <path class="mid" d="M198 96l-10-16M240 82v-18M282 96l10-16M170 132l-16-10M310 132l16-10"/>
+  </g>
+
+  <!-- climbing vines reclaiming the left jamb -->
+  <g class="ink">
+    <path d="M168 300c-14-30-8-64 6-96s10-64-4-92"/>
+    <path d="M176 236c-20-2-32-12-36-30M180 188c18-4 26-16 26-34M172 140c-18 0-30-8-36-24"/>
+  </g>
+  <g class="leaf">
+    <path d="M140 206c8-10 22-12 30-4-8 10-22 12-30 4Z"/>
+    <path d="M206 154c-10-8-12-22-4-30 10 8 12 22 4 30Z"/>
+    <path d="M136 116c8-10 22-12 30-4-8 10-22 12-30 4Z"/>
+  </g>
+
+  <!-- potted forms at the base -->
+  <g class="mid">
+    <path d="M330 300v-22l24-6v28M356 300v-30l18 6v24"/>
+    <path d="M336 250c2-14 10-22 12-30M366 256c-2-12 2-22 8-28"/>
+  </g>
+
+  <!-- ground contour -->
+  <path class="contour" d="M0 322c120-14 200-6 300-16s150-2 180 6"/>
+</svg>

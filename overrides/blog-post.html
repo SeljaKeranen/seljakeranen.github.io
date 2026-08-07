@@ -1,0 +1,49 @@
+{#-
+  Editorial single-post layout (forked from Material's blog-post.html).
+
+  The brief's article page: calm, reading-first, with an editorial dateline
+  (category · date · read time) ABOVE the serif title, a narrow reading column,
+  a drop cap on the opening paragraph (see base.css), and a quiet close. We drop
+  Material's docs-style left meta sidebar in favour of that dateline.
+-#}
+{% extends "main.html" %}
+
+{% block container %}
+<div class="md-content md-content--post" data-md-component="content">
+  <article class="md-content__inner md-typeset">
+
+    <nav class="article__back">
+      <a href="{{ page.parent.url | url }}" class="folio-link">&larr;&nbsp;The journal</a>
+    </nav>
+
+    <p class="article__meta">
+      {%- if page.categories -%}
+        {%- for category in page.categories -%}
+          {{ category.title }}{% if not loop.last %} · {% endif %}
+        {%- endfor %} · {% endif -%}
+      <time datetime="{{ page.config.date.created }}">{{ page.config.date.created | date }}</time>
+      {%- if page.config.readtime %} ·
+        {%- if page.config.readtime == 1 %} 1 min read
+        {%- else %} {{ page.config.readtime }} min read{% endif -%}
+      {%- endif -%}
+    </p>
+
+    {% block content %}
+      {% include "partials/content.html" %}
+    {% endblock %}
+
+    <footer class="article__foot">
+      <hr class="datum-line datum-line--start" />
+      {% if page.authors %}
+        {% for author in page.authors %}
+          <p class="article__author">
+            Written by <strong>{{ author.name }}</strong>{% if author.description %} — {{ author.description }}{% endif %}.
+            {% if author.url %}<a href="{{ author.url }}">More&nbsp;→</a>{% endif %}
+          </p>
+        {% endfor %}
+      {% endif %}
+    </footer>
+
+  </article>
+</div>
+{% endblock %}

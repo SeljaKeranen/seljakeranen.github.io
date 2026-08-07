@@ -1,0 +1,26 @@
+{#-
+  Archive — every post, grouped by year into editorial rows. `archive_years` is
+  supplied by hooks/hero_art.py. The page's own markdown (heading + intro from
+  docs/archive.md) renders first via {{ page.content }}.
+-#}
+{% extends "main.html" %}
+
+{% block content %}
+  {{ page.content }}
+  {% for group in archive_years %}
+    <div class="folio-archive__year">{{ group.year }}</div>
+    <ol class="folio-rows">
+      {% for post in group.posts %}
+        <li class="folio-row">
+          <span class="folio-row__date">
+            <time datetime="{{ post.date_iso }}">{{ post.label }}</time>
+          </span>
+          <span class="folio-row__title">
+            <a href="{{ post.url | url }}">{{ post.title }}</a>
+          </span>
+          <span class="folio-row__arrow" aria-hidden="true">→</span>
+        </li>
+      {% endfor %}
+    </ol>
+  {% endfor %}
+{% endblock %}
