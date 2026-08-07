@@ -1,8 +1,8 @@
 site_name: Selja Keränen
 site_author: Selja Keränen
 site_description: >-
-  AI-native consulting — helping teams turn AI from demos into
-  systems they can actually run in production.
+  Selja Keränen. AI engineer in Helsinki, building production AI systems
+  and writing about what it takes to keep them working.
 site_url: https://seljakeranen.github.io/
 repo_name: seljakeranen.github.io
 repo_url: https://github.com/SeljaKeranen/seljakeranen.github.io/
@@ -104,7 +104,7 @@ extra:
       link: https://github.com/SeljaKeranen
       name: GitHub
     - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/seljakeranen/
+      link: https://www.linkedin.com/in/selja-ker%C3%A4nen-95b4b1150/
       name: LinkedIn
 
 extra_css:

@@ -5,35 +5,25 @@ authors:
 categories:
   - Notes
 description: >-
-  Why I'm starting a blog, and what I intend to actually put in it.
+  A first post. What I plan to write about here, and why it won't be
+  another "AI changes everything" feed.
 ---
 
-# Starting where the demos end
+# Starting a blog, mostly to think out loud
 
-There is no shortage of AI content. There is a considerable shortage of AI
-content that survives contact with a production system.
-
-So the bar for this blog is simple: I'll write about things I've actually seen
-break, and what it took to fix them.
+At least my feed (maybe it is just me) is full of posts explaining that AI changes everything. I wanted a quieter place to write about the part I actually spend my days on, which is getting these systems to work and then keep working.
 
 <!-- more -->
 
-Most of my work starts at the point where a demo stops being impressive — when a
-prototype that dazzled in a meeting meets real data, real load, and users who do
-things no one designed for. That gap is where the interesting problems live, and
-it's what I want to write about here:
+I build production AI systems for a living. RAG pipelines, document extraction, agents, and a lot of evaluation. The interesting problems almost never show up in the demo. They show up three weeks later, when the real data turns out messier than the sample, the users ask things nobody planned for, and "it feels better" turns out to be a very expensive way to decide whether a change actually helped.
 
-- **Evaluation that you can trust** — how to know a change is actually better
-  before you ship it, instead of "it feels better."
-- **Cost and latency** — where the money and the milliseconds really go, and
-  what's worth optimising versus what just feels slow.
-- **Reliability** — the unglamorous work of making a system dependable on a
-  Tuesday afternoon, not just in a launch demo.
-- **Hype, minus the hype** — what's worth building now, what to wait on, and
-  what to quietly ignore.
+So this is where I want to write about that. A few things I expect to keep coming back to:
 
-I'll keep the format honest: short, specific, and backed by something I can point
-to. If a post claims a number, there'll be a reason to believe it.
+- Evals. How you decide what "good" means before you start tuning prompts, and why a golden set built with someone who knows the domain beats a nice-looking demo every time.
+- The unglamorous production work. Chunking, document headings (there are more ways to store a heading than you would believe), latency, cost, and the errors you only find once something is live.
+- Tools I've actually run. Not the feature list from the announcement, but what happened when I took the thing for a walk and where it stopped being fun.
+- Where the hype is ahead of the evidence, and the occasional case where it isn't.
 
-That's the plan. We'll see how the plan survives contact with reality — which is,
-after all, the whole theme.
+I'll try to keep it concrete and honest, including the parts that didn't work. A lot of this field still feels quite rough round the edges, and I think that is more useful to read about than another victory lap.
+
+That is the plan. What would you actually want to read more about, the eval side or the messy production details?

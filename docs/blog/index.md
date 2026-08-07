@@ -1,9 +1,9 @@
 ---
-description: Notes on building AI systems that hold up in production.
+description: Notes on building AI systems that make it to production and stay there.
 ---
 
 # Blog
 
-Notes on building AI systems that hold up in production — evaluation, cost,
-reliability, and the occasional opinion about where the hype is ahead of the
-evidence.
+Notes from building AI systems for real: evals, document workflows, the tools I've tried, and the occasional post about where the hype has run ahead of the evidence.
+
+I try to keep it concrete and honest, including the parts that didn't work.

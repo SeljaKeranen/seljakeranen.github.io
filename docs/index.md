@@ -1,52 +1,38 @@
 ---
 description: >-
-  AI-native consulting — turning AI from impressive demos into systems teams
-  can actually run in production.
+  Selja Keränen. AI engineer in Helsinki, building production AI systems and
+  writing about what it takes to keep them working.
 hide:
   - navigation
   - toc
 ---
 
-# AI that survives contact with production
+# I build production AI systems
 
-Most AI projects demo beautifully and fall apart three weeks later. I help teams
-close that gap — turning promising prototypes into systems that are reliable,
-measurable, and still maintainable once the launch excitement wears off.
+I'm an AI engineer based in Helsinki. Most of my work is the full path from an idea to something running in production: RAG pipelines, document extraction from messy technical documents, agentic workflows, and the evaluation work that keeps them honest.
 
-I work the way I write: evidence first, no hand-waving, the smallest solution
-that actually holds up.
+I build what I design. And I pay attention to the part most demos skip, which is what happens once real users get hold of the thing and start doing what nobody planned for.
 
-[Book a call](https://cal.com/seljakeranen){ .md-button .md-button--primary }
+[Get in touch](mailto:seljaww@gmail.com){ .md-button .md-button--primary }
 [Read the blog](blog/index.md){ .md-button }
 
-## Where I usually help
+## What I work on
 
-- **From demo to production** — the prototype works; making it dependable under
-  real load, real data, and real users is the hard part.
-- **Measuring quality** — replacing "it feels better" with evaluations you can
-  actually trust before you ship a change.
-- **Cost and latency** — production systems that are too slow or too expensive to
-  keep running, and figuring out where the money and milliseconds actually go.
-- **Cutting through the hype** — deciding what's worth building now, what to wait
-  on, and what to ignore entirely.
+A few problems I keep coming back to:
+
+- **From proof of concept to production.** The demo is the easy part. Making a genAI system reliable enough to put in front of real users, and keeping it that way, is the actual job.
+- **Evals before prompts.** I start by defining what "good" means and building a golden set with the people who know the domain. If you're picking your vector database before you've agreed on the success metric, the hard decisions are still ahead of you.
+- **Document-heavy workflows.** Turning messy technical documents (specs, contracts, drawings, logs) into outputs a business can actually trust. There are more ways to store a document heading than you would believe.
+- **AI-native ways of working.** How teams and coding agents split the work, and how you structure knowledge so it compounds across projects instead of getting rediscovered every time.
 
 ## How I work
 
-- **Evidence over vibes.** Decisions come with a measurement behind them, not a
-  vendor's slide.
-- **Small and robust beats clever.** The maintainable version is usually the
-  right one.
-- **I leave you more capable, not more dependent.** The goal is a team that can
-  keep going without me.
+- I start from the business outcome and trace the technical decisions back to it.
+- I'd rather ship something simple that works than something clever I can't maintain. Simple and efficient, if enough.
+- I write down what I learn, so the next project starts further along than the last one.
 
-<!--
-  TODO (Selja): add real proof before sharing widely — one or two anonymised
-  client outcomes, a short testimonial, or links to shipped work. Keep it
-  specific and true; no invented numbers.
--->
+## Get in touch
 
-## Let's talk
+If you're working on something in this space, or you just want to compare notes, send me a message.
 
-If any of the above sounds like your week, get in touch.
-
-[Book a call](https://cal.com/seljakeranen){ .md-button .md-button--primary }
+[Get in touch](mailto:seljaww@gmail.com){ .md-button .md-button--primary }
