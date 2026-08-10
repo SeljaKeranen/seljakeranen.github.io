@@ -125,6 +125,7 @@ extra:
 # consumes them, and the whole chain must load after Material's own bundle so
 # our attribute-scoped --md-* remaps win by source order.
 extra_css:
+  - stylesheets/fonts.css           # self-hosted @font-face (no Google Fonts request); load first
   - stylesheets/tokens.css          # palette + font stacks (only file with colour literals)
   - stylesheets/theme-overrides.css # remap Material --md-* onto the tokens
   - stylesheets/base.css            # type scale, reading measure, links, code, quotes
