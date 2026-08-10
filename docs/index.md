@@ -1,8 +1,8 @@
 ---
 template: home.html
 description: >-
-  Selja Keränen. AI engineer in Helsinki, building production AI systems and
-  writing about what it takes to keep them working.
+  Selja Keränen. I build AI systems and lead the people and agents who build
+  them with me, and write about keeping them honest.
 hide:
   - navigation
   - toc
