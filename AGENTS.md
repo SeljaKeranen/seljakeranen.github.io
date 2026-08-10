@@ -63,9 +63,12 @@ how Selja works, under `docs/notes/`).
   `docs/stylesheets/tokens.css`. The other four stylesheets reference tokens
   only — `test_design_invariants.py` fails on a stray hex. Add a token; don't
   hard-code.
-- **Load order is fixed:** tokens → theme-overrides → base → layout → components
-  (see `extra_css` in `mkdocs.yml`). Material's compiled CSS loads first; our
-  `--md-*` remaps win by source order.
+- **Load order is fixed:** fonts → tokens → theme-overrides → base → layout →
+  components (see `extra_css` in `mkdocs.yml`). `fonts.css` only declares the
+  self-hosted `@font-face` faces, so it sits ahead of the token-remap chain
+  without disturbing it; tokens still define the variables before anything
+  consumes them. Material's compiled CSS loads first; our `--md-*` remaps win
+  by source order.
 - **Three type roles:** Fraunces (display serif, headings only), Inter (body /
   UI), IBM Plex Mono (metadata / code). Fonts are loaded once in
   `overrides/main.html`; `theme.font` is `false` on purpose.
