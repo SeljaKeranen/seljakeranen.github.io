@@ -1,0 +1,57 @@
+/* ============================================================================
+   fonts.css — self-hosted @font-face for the three editorial families.
+   ----------------------------------------------------------------------------
+   Replaces the former Google Fonts hot-link (was in overrides/main.html). The
+   files live in ../assets/fonts/ (SIL OFL 1.1 — see assets/fonts/OFL.txt), so
+   the site makes NO third-party font request: no visitor IP leaks to Google,
+   and there is one fewer render-blocking origin. This matches the same "nothing
+   leaks to a public asset URL" reasoning the inlined hero art already follows.
+
+   Fraunces and Inter are variable faces carrying the exact axes the type system
+   drives — Fraunces opsz/SOFT/WONK/wght (see the font-variation-settings in
+   base/layout/components.css), Inter wght. IBM Plex Mono ships static 400/500
+   (no italic: the design never renders mono italic — only Fraunces italic, in
+   pull quotes). `theme.font: false` in mkdocs.yml keeps Material from emitting
+   its own loader; loaded FIRST in extra_css so the faces exist before use.
+   ============================================================================ */
+
+/* -- Fraunces — display serif (variable: opsz 9–144, wght, SOFT, WONK, ital) - */
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../assets/fonts/fraunces-latin-full-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fraunces";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../assets/fonts/fraunces-latin-full-italic.woff2") format("woff2");
+}
+
+/* -- Inter — body + UI (variable weight) ----------------------------------- */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../assets/fonts/inter-latin-wght-normal.woff2") format("woff2");
+}
+
+/* -- IBM Plex Mono — metadata + code (static 400 / 500) -------------------- */
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/ibm-plex-mono-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../assets/fonts/ibm-plex-mono-latin-500-normal.woff2") format("woff2");
+}
