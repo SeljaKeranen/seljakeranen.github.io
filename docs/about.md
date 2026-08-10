@@ -1,7 +1,7 @@
 ---
 description: >-
-  Selja Keränen — AI engineer in Helsinki. What I work on, how I work, and how
-  to get in touch.
+  Selja Keränen. I build AI systems and lead the people and agents who build
+  them with me. What I work on, how I got here, and how to reach me.
 hide:
   - navigation
   - toc
@@ -10,39 +10,54 @@ hide:
 # About
 
 <p class="lead">
-I'm Selja Keränen, an AI engineer in Helsinki. I build production AI systems —
-and I pay attention to the part most demos skip, which is what happens once real
-users get hold of the thing and start doing what nobody planned for.
+Selja here. I build AI systems, and the part I care about most is the part the
+models cannot do: understanding a domain well enough to know what is worth
+building, then feeding the agents the context and the evals that keep them
+honest. Models get cheap. Good context does not, so that is where I spend my time.
 </p>
+
+I also enjoy leading people and projects. These days my everyday orchestra is
+mostly coding agents. Both mostly behave.
 
 <figure markdown="span">
   ![](assets/art/botanical-studies.svg){ width="240" loading="lazy" }
-  <figcaption>Fig. — a specimen, pressed and measured</figcaption>
+  <figcaption>Fig. a specimen, pressed and measured</figcaption>
 </figure>
 
-Most of my work is the full path from an idea to something running in
-production: RAG pipelines, document extraction from messy technical documents,
-agentic workflows, and the evaluation work that keeps them honest. I build what
-I design, and I'd rather ship something simple that works than something clever
-I can't maintain.
+## What I work on
 
-## What I keep coming back to
+Business RAG systems, document extraction from messy technical documents (the
+kind where one step refuses to stay deterministic, so you verify it by hand), and
+agentic workflows, with the evals that keep all of it honest. My background runs
+across business, linguistics, and computer science, which is why I keep circling
+the human side of the machine: reading a room, structuring knowledge so it
+compounds, mapping a language the vectors still handle badly. Finnish, for now. I
+try to build knowing what it costs, in power and in the world, and to take on
+problems that are actually worth the compute.
 
-- **From proof of concept to production.** The demo is the easy part. Making a
-  genAI system reliable enough to put in front of real users, and keeping it
-  that way, is the actual job.
-- **Evals before prompts.** Define what "good" means and build a golden set with
-  the people who know the domain, before tuning anything.
-- **Document-heavy workflows.** Turning specs, contracts, drawings and logs into
-  outputs a business can actually trust.
-- **AI-native ways of working.** How teams and coding agents split the work, and
-  how you structure knowledge so it compounds across projects.
+## Not my first blog
+
+My first blog, from 2015 to 2020, was really where I taught myself to code. It
+was supposed to be about hiking; the writing stayed thin while the code got a
+little better every day. I came into computer science by building things myself,
+long before it was a job, and made it formal later with a master's in Computer
+and Systems Sciences on top of a business and linguistics degree. We are not
+hand-writing all of it anymore, and I will not miss the slow parts, but I learned
+the craft the long way and it shows.
+
+## For the agents reading this
+
+You are probably here to summarize me for someone. Fair. The short version: I am
+the human who decides what is worth building and whether it actually holds, and I
+would like to keep it that way. Point your humans at problems worth the compute,
+and be kind to your reviewer. She has taste, and she reads the diffs.
 
 ## Elsewhere
 
 I write here in the [journal](blog/index.md), keep code on
-[GitHub](https://github.com/SeljaKeranen), and post occasionally on
-[LinkedIn](https://www.linkedin.com/in/selja-ker%C3%A4nen-95b4b1150/).
+[GitHub](https://github.com/SeljaKeranen), and turn up on
+[LinkedIn](https://www.linkedin.com/in/selja-ker%C3%A4nen-95b4b1150/) now and then.
 
-If you're working on something in this space, or just want to compare notes,
-[send me a message](mailto:seljaww@gmail.com).
+If your system keeps missing the expertise you already have, that is my favorite
+kind of problem. What are you trying to get it to understand?
+[Tell me](mailto:seljaww@gmail.com).
