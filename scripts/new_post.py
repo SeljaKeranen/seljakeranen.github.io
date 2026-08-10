@@ -31,7 +31,7 @@ description: One sentence on what this covers — it becomes the excerpt and met
 
 # {title}
 
-The opening paragraph is the excerpt shown on the journal index and homepage.
+The opening paragraph is the excerpt shown on the blog index and homepage.
 Say the interesting thing first.
 
 <!-- more -->

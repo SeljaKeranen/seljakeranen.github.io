@@ -1,5 +1,8 @@
 ---
 description: Notes on building AI systems that make it to production and stay there.
+hide:
+  - navigation
+  - toc
 ---
 
 # Blog

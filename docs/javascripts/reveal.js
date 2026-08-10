@@ -41,10 +41,8 @@ document$.subscribe(function () {
 document$.subscribe(function () {
   var p = location.pathname;
   var section = "";
-  if (/^\/about(\/|$)/.test(p)) section = "about";
-  else if (/^\/archive(\/|$)/.test(p)) section = "archive";
-  else if (/\/category\/notes/.test(p)) section = "notes";
-  else if (/^\/blog(\/|$)/.test(p)) section = "journal";
+  if (/^\/notes(\/|$)/.test(p)) section = "notes";
+  else if (/^\/blog(\/|$)/.test(p)) section = "blog";
 
   document.querySelectorAll(".folio-nav__link").forEach(function (link) {
     if (link.getAttribute("data-section") === section) {
