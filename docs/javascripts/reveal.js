@@ -40,9 +40,16 @@ document$.subscribe(function () {
 // aria-current would otherwise go stale. Re-derived from the URL on every swap.
 document$.subscribe(function () {
   var p = location.pathname;
+  // Anchor every marker at the root so nothing spurious lights up: the Home
+  // link is current only on the actual landing ("/" or "/index.html"), matching
+  // the strict build-time aria-current in header.html — so 404 and any future
+  // top-level page correctly highlight nothing rather than defaulting to Home.
+  // The /blog and /notes anchors also stop a post slug containing "notes"/"blog"
+  // from hijacking the marker.
   var section = "";
   if (/^\/notes(\/|$)/.test(p)) section = "notes";
   else if (/^\/blog(\/|$)/.test(p)) section = "blog";
+  else if (p === "/" || p === "/index.html") section = "home";
 
   document.querySelectorAll(".folio-nav__link").forEach(function (link) {
     if (link.getAttribute("data-section") === section) {

@@ -4,7 +4,7 @@
   mkdocs.yml disables Material's built-in loader; the three families are defined
   as self-hosted @font-face in stylesheets/fonts.css (files in assets/fonts/,
   SIL OFL 1.1). Nothing is fetched from Google — no visitor IP leaks and there
-  is one fewer render-blocking origin, matching the inlined hero art's reasoning.
+  is one fewer render-blocking origin.
   This block is ADDITIVE — `super()` keeps everything Material would emit.
 
   Here we only PRELOAD the two above-the-fold faces (Fraunces display + Inter
