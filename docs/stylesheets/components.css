@@ -291,6 +291,20 @@
 }
 .folio-row__title a { color: var(--text); text-decoration: none; }
 .folio-row__title a:hover { color: var(--green-dark); }
+/* A one-line dek under a row title — used on the Notes hub. */
+.folio-row__dek {
+  display: block;
+  margin-top: .35rem;
+  font-size: .9375rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+/* Notes rows carry a dek, so align the columns to the top, not the baseline,
+   and give the label column room for a two-word tag like "Ways of working". */
+.folio-rows--notes .folio-row {
+  align-items: start;
+  grid-template-columns: 9.5rem 1fr auto;
+}
 .folio-row__arrow {
   color: var(--text-faint);
   transition: transform var(--dur-hover) var(--ease), color var(--dur-hover) var(--ease);

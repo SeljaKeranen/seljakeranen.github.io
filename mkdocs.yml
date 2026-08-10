@@ -57,11 +57,14 @@ theme:
   font: false
 
 nav:
-  - Home: index.md
-  - Journal:
+  - About: index.md
+  - Blog:
     - blog/index.md
-  - About: about.md
-  - Archive: archive.md
+  - Notes:
+    - notes/index.md
+    - Evals before prompts: notes/evals-before-prompts.md
+    - From proof of concept to production: notes/poc-to-production.md
+    - AI-native ways of working: notes/ai-native-ways-of-working.md
 
 markdown_extensions:
   - abbr

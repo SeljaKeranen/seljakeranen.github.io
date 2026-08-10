@@ -25,12 +25,15 @@ design-token rules, the art system) is in **[AGENTS.md](AGENTS.md)**.
 ## Layout
 
 ```
-docs/          content — index, about, archive, blog/, stylesheets/, javascripts/, assets/
-overrides/     forked Material templates (masthead, home, archive, 404, footer, inline art)
-hooks/         build hooks — hero_art.py: homepage cards, archive groups, per-post art
+docs/          content — index (the About landing), blog/, notes/, stylesheets/, javascripts/, assets/
+overrides/     forked Material templates (masthead, home, 404, footer, inline art)
+hooks/         build hooks — hero_art.py: homepage cards, per-post art
 scripts/       author tooling — new_post.py
 tests/         pytest — strict build, link + alt checks, front matter, design invariants
 ```
+
+The wordmark links home (`index.md`), which is the About page; the two sections
+are **Blog** (`/blog/`) and **Notes** (`/notes/`, evergreen how-I-work pages).
 
 ## Design
 

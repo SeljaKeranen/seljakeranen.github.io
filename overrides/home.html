@@ -3,8 +3,9 @@
 
   Extends main.html so it inherits the font wiring in {% block extrahead %}.
   The hero block is the true full-bleed slot (outside the 61rem content grid);
-  we fill it with hero + latest writing + the author's retained prose, and empty
-  the default {% block container %} so there is no duplicate H1 or sidebar.
+  we fill it with hero + latest writing + the About prose (this page IS the
+  About page), and empty the default {% block container %} so there is no
+  duplicate H1 or sidebar.
 
   `recent_posts` is supplied by hooks/hero_art.py on the homepage only.
 -#}
@@ -19,15 +20,15 @@
     {# ---------- Two-column editorial hero ---------- #}
     <div class="folio-hero">
       <div class="folio-hero__text">
-        <p class="folio-kicker">AI Engineer · Helsinki · 60°N</p>
+        <p class="folio-kicker">AI systems · evals · document workflows</p>
         <h1 class="folio-hero__title">I build production AI&nbsp;systems</h1>
         <p class="folio-hero__lede">
           Most of my work is the full path from an idea to something running in
-          production — RAG pipelines, document extraction, agents, and the
+          production: RAG pipelines, document extraction, agents, and the
           evaluation work that keeps them honest.
         </p>
         <p class="folio-hero__actions">
-          <a class="folio-link" href="{{ 'blog/' | url }}">Enter the journal&nbsp;→</a>
+          <a class="folio-link" href="{{ 'blog/' | url }}">Read the blog&nbsp;→</a>
           <a class="folio-link folio-link--muted" href="mailto:seljaww@gmail.com">Get in touch</a>
         </p>
       </div>
@@ -116,7 +117,7 @@
     <hr class="datum-line" />
     {% endif %}
 
-    {# ---------- The author's own prose (## What I work on / ## How I work) ---------- #}
+    {# ---------- The About prose (the landing page is the About page) ---------- #}
     <div class="folio-prose md-typeset">
       {{ page.content }}
     </div>

@@ -49,10 +49,10 @@ def _exists(target: Path) -> bool:
 
 def test_expected_pages_built(site: Path):
     for rel in [
-        "index.html",
-        "about/index.html",
-        "archive/index.html",
+        "index.html",  # the landing page — this IS the About page
         "blog/index.html",
+        "notes/index.html",
+        "notes/evals-before-prompts/index.html",
         "404.html",
     ]:
         assert (site / rel).is_file(), f"missing built page: {rel}"
@@ -89,13 +89,30 @@ def test_home_has_hero_and_latest(site: Path):
 
 
 def test_notes_category_page_exists(site: Path):
-    # The masthead links to /blog/category/notes/ on every page; if the last
-    # Notes-tagged post ever loses that category the link would 404. Fail here,
-    # at build time, instead of silently in production.
+    # Every post dateline links its categories to /blog/category/<name>/. The
+    # 'Notes' category (distinct from the top-nav Notes *section* at /notes/) is
+    # the one most likely to lose its last post; if it does, those chips 404.
+    # Fail here, at build time, instead of silently in production.
     assert (site / "blog" / "category" / "notes" / "index.html").is_file(), (
-        "no Notes category page — the header 'Notes' link would 404; "
+        "no Notes category page — post 'Notes' category chips would 404; "
         "keep at least one post categorised Notes"
     )
+
+
+def test_landing_is_the_about_page(site: Path):
+    # The root page carries the About prose (folded in from the old about.md),
+    # so there is no separate /about/ page to drift out of sync.
+    html = (site / "index.html").read_text(encoding="utf-8")
+    assert "For the agents reading this" in html
+    assert not (site / "about" / "index.html").is_file(), (
+        "an /about/ page exists again — the landing page is the About page"
+    )
+
+
+def test_notes_hub_lists_the_notes(site: Path):
+    html = (site / "notes" / "index.html").read_text(encoding="utf-8")
+    for slug in ("evals-before-prompts", "poc-to-production", "ai-native-ways-of-working"):
+        assert slug in html, f"Notes hub does not link {slug}"
 
 
 def test_post_has_editorial_dateline_above_title(site: Path):

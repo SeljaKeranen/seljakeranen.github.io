@@ -32,7 +32,7 @@ description: One sentence (≤ ~160 chars) — this is the excerpt and the meta 
 
 # Post title
 
-The opening paragraph is the excerpt shown on the journal index and homepage.
+The opening paragraph is the excerpt shown on the blog index and homepage.
 
 <!-- more -->
 
@@ -51,8 +51,11 @@ build, so you can work on a piece without publishing it.
 `Systems`, `Evals`, `Tools`, `Field`, `Craft`, `Notes`. The set is enforced by
 `tests/test_frontmatter.py` and `scripts/new_post.py`, and each maps to a piece
 of line-art on the homepage (see `hooks/hero_art.py` → `CATEGORY_ART`). To add a
-category, update all three. `Notes` is the short-form category surfaced in the
-header nav — keep at least one Notes post so `/blog/category/notes/` resolves.
+category, update all three. Keep at least one post categorised `Notes` so the
+`/blog/category/notes/` page (linked from post datelines) resolves —
+`test_notes_category_page_exists` guards this. Note this blog *category* `Notes`
+is distinct from the top-nav **Notes** *section* at `/notes/` (evergreen pages on
+how Selja works, under `docs/notes/`).
 
 ## The design system (don't fight it)
 
@@ -75,12 +78,18 @@ header nav — keep at least one Notes post so `/blog/category/notes/` resolves.
 ## Structure
 
 ```
-docs/            content (index, about, archive, blog/, stylesheets/, javascripts/, assets/)
-overrides/       forked Material templates (main, home, archive, 404, partials/header, footer, art/)
-hooks/           build hooks (hero_art.py: homepage cards, archive groups, per-post art)
+docs/            content (index = the About landing, blog/, notes/, stylesheets/, javascripts/, assets/)
+overrides/       forked Material templates (main, home, 404, partials/header, footer, art/)
+hooks/           build hooks (hero_art.py: homepage cards, per-post art)
 scripts/         author tooling (new_post.py)
 tests/           pytest: strict build, link/alt checks, frontmatter, design invariants
 ```
+
+Nav is three sections: the wordmark links **home** (`index.md`, rendered with
+`overrides/home.html`), which *is* the About page; **Blog** (`/blog/`); and
+**Notes** (`/notes/`, evergreen how-I-work pages). The header lives in
+`overrides/partials/header.html`; `docs/javascripts/reveal.js` re-derives the
+active-section marker across instant navigation, so keep the two in sync.
 
 ## House rules
 

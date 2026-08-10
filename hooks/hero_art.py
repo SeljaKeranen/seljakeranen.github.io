@@ -9,6 +9,8 @@ Two small, related jobs, kept in one file so there are no cross-hook imports:
 2. On every blog post, stamp ``page.meta["hero_art"]`` with the post's
    category art so a template (or an author) can reference it later.
 
+``_iso`` is retained as a small shared date helper for ``_card``.
+
 The art is atmospheric, not semantic: each content category maps to one of the
 five line-art motifs purely so the homepage rotates through the visual universe
 instead of repeating one drawing. Pure standard library; runs at ``mkdocs
@@ -82,38 +84,12 @@ def _card(post) -> dict:
     }
 
 
-def _archive(posts) -> list[dict]:
-    """Group all posts by year (newest first) for the archive page."""
-    years: dict[int, list[dict]] = {}
-    for post in posts:
-        created = getattr(getattr(getattr(post, "config", None), "date", None), "created", None)
-        year = getattr(created, "year", 0)
-        try:
-            label = created.strftime("%d %b").upper()
-        except AttributeError:
-            label = ""
-        years.setdefault(year, []).append(
-            {
-                "title": getattr(post, "title", None) or "Untitled",
-                "url": getattr(post, "url", ""),
-                "date_iso": _iso(created),
-                "label": label,
-            }
-        )
-    return [{"year": y, "posts": years[y]} for y in sorted(years, reverse=True)]
-
-
 def on_page_context(context, *, page, config, nav):
-    """Inject homepage cards + archive groups; stamp hero art on posts."""
+    """Inject homepage cards; stamp hero art on posts."""
     posts = _blog_posts(config)
-    url = getattr(page, "url", "") or ""
 
     if getattr(page, "is_homepage", False):
         context["recent_posts"] = [_card(p) for p in posts[:3]]
-        return context
-
-    if url.startswith("archive"):
-        context["archive_years"] = _archive(posts)
         return context
 
     if page in posts:
