@@ -132,7 +132,7 @@ extra_css:
   - stylesheets/theme-overrides.css # remap Material --md-* onto the tokens
   - stylesheets/base.css            # type scale, reading measure, links, code, quotes
   - stylesheets/layout.css          # masthead, home hero, datum-line, footer
-  - stylesheets/components.css      # blog rows, cards, buttons, pagination, archive
+  - stylesheets/components.css      # blog rows, cards, buttons, pagination, notes rows
 
 extra_javascript:
   - javascripts/reveal.js           # scroll fade-in; no-ops under reduced-motion

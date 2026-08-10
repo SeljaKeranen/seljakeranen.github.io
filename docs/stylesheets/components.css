@@ -2,7 +2,7 @@
    components.css — the recurring pieces
    ----------------------------------------------------------------------------
    Blog rows, home cards, meta lines, buttons, tags, pagination, figures,
-   search, sidebar/TOC, archive + notes rows. Loaded FIFTH (last). Cards and
+   search, sidebar/TOC, notes rows. Loaded FIFTH (last). Cards and
    rows dissolve into hairline-separated editorial rows — no boxes, no shadows.
    ============================================================================ */
 
@@ -256,18 +256,8 @@
 .md-sidebar--secondary .md-nav__link--active { color: var(--green-dark); }
 
 /* ============================================================================
-   Archive + Notes rows (year headings · date · title · arrow)
+   Notes rows (label · title · arrow) — the hub listing on /notes/
    ============================================================================ */
-.folio-archive__year {
-  font-family: var(--font-mono);
-  font-size: var(--fs-meta);
-  text-transform: uppercase;
-  letter-spacing: var(--track-meta);
-  color: var(--text-faint);
-  margin: 3rem 0 .5rem;
-  padding-bottom: .6rem;
-  border-bottom: 1px solid var(--border);
-}
 .folio-rows { list-style: none; margin: 0; padding: 0; }
 .folio-row {
   display: grid;
@@ -312,7 +302,8 @@
 .folio-row:hover .folio-row__arrow { color: var(--green-dark); transform: translateX(4px); }
 
 @media (max-width: 40rem) {
-  .folio-row { grid-template-columns: 1fr auto; }
+  .folio-row,
+  .folio-rows--notes .folio-row { grid-template-columns: 1fr auto; }
   .folio-row__date { grid-column: 1 / -1; }
 }
 
