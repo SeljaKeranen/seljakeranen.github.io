@@ -1,20 +1,26 @@
 {#-
   Site-wide head seam. Extends Material's base (via the auto-generated main.html
-  chain) purely to add the editorial type families. `theme.font: false` in
-  mkdocs.yml disables Material's built-in single-family loader, so we load all
-  three families ourselves in one request. This block is ADDITIVE — `super()`
-  keeps everything Material would normally emit.
+  chain) purely to preload the editorial type families. `theme.font: false` in
+  mkdocs.yml disables Material's built-in loader; the three families are defined
+  as self-hosted @font-face in stylesheets/fonts.css (files in assets/fonts/,
+  SIL OFL 1.1). Nothing is fetched from Google — no visitor IP leaks and there
+  is one fewer render-blocking origin, matching the inlined hero art's reasoning.
+  This block is ADDITIVE — `super()` keeps everything Material would emit.
+
+  Here we only PRELOAD the two above-the-fold faces (Fraunces display + Inter
+  body) so first paint doesn't reflow; the mono + Fraunces-italic faces load on
+  demand via fonts.css. Font preloads need `crossorigin` even same-origin, or
+  the browser fetches the file twice.
 
   Type system:
-    Fraunces      display serif (variable: opsz 9-144, wght, SOFT, italic)
-    Inter         body + UI
+    Fraunces      display serif (variable: opsz 9-144, wght, SOFT, WONK, italic)
+    Inter         body + UI (variable weight)
     IBM Plex Mono editorial metadata + code
 -#}
 {% extends "base.html" %}
 
 {% block extrahead %}
   {{ super() }}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,0..100;1,9..144,400..600,0..100&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap">
+  <link rel="preload" href="{{ 'assets/fonts/fraunces-latin-full-normal.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ 'assets/fonts/inter-latin-wght-normal.woff2' | url }}" as="font" type="font/woff2" crossorigin>
 {% endblock %}

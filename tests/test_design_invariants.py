@@ -56,8 +56,33 @@ def test_reduced_motion_is_respected():
     assert "prefers-reduced-motion" in combined
 
 
-def test_main_html_wires_all_three_families_and_preconnect():
+def test_fonts_are_self_hosted_not_google():
+    """All three families load from local @font-face — no third-party font CDN.
+
+    Fonts are vendored under docs/assets/fonts/ and declared in fonts.css, so
+    the site makes no request to Google (no visitor IP leak, one fewer
+    render-blocking origin). This guards against a regression back to the
+    hot-linked Google Fonts stylesheet.
+    """
     head = (ROOT / "overrides" / "main.html").read_text(encoding="utf-8")
-    for needle in ["Fraunces", "Inter", "IBM+Plex+Mono", "fonts.gstatic.com"]:
-        assert needle in head, f"overrides/main.html does not load {needle}"
-    assert head.count("preconnect") >= 2, "expected two font preconnects"
+    fonts_css = (STYLES / "fonts.css").read_text(encoding="utf-8")
+    combined = head + fonts_css
+
+    # No hot-link to Google, anywhere in the head or the font stylesheet.
+    for banned in ["fonts.googleapis.com", "fonts.gstatic.com"]:
+        assert banned not in combined, f"{banned} must not appear — fonts are self-hosted"
+
+    # Every family has a real @font-face in fonts.css.
+    for family in ['"Fraunces"', '"Inter"', '"IBM Plex Mono"']:
+        assert family in fonts_css, f"fonts.css declares no @font-face for {family}"
+    assert fonts_css.count("@font-face") >= 5, "expected @font-face for every vendored face"
+
+    # Above-the-fold faces are preloaded so first paint doesn't reflow.
+    assert head.count("rel=\"preload\"") >= 2, "expected the two font preloads in main.html"
+
+    # Every woff2 the CSS or head references actually exists on disk.
+    referenced = set(re.findall(r"assets/fonts/([\w.-]+\.woff2)", combined))
+    assert referenced, "no vendored woff2 referenced"
+    fonts_dir = ROOT / "docs" / "assets" / "fonts"
+    for name in referenced:
+        assert (fonts_dir / name).is_file(), f"missing vendored font: {name}"
