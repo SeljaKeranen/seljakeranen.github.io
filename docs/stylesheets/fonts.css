@@ -4,8 +4,7 @@
    Replaces the former Google Fonts hot-link (was in overrides/main.html). The
    files live in ../assets/fonts/ (SIL OFL 1.1 — see assets/fonts/OFL.txt), so
    the site makes NO third-party font request: no visitor IP leaks to Google,
-   and there is one fewer render-blocking origin. This matches the same "nothing
-   leaks to a public asset URL" reasoning the inlined hero art already follows.
+   and there is one fewer render-blocking origin.
 
    Fraunces and Inter are variable faces carrying the exact axes the type system
    drives — Fraunces opsz/SOFT/WONK/wght (see the font-variation-settings in

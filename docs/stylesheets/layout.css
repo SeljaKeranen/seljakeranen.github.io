@@ -1,8 +1,8 @@
 /* ============================================================================
    layout.css — the page architecture
    ----------------------------------------------------------------------------
-   Masthead, the full-bleed editorial home (hero + latest writing + prose), the
-   signature .datum-line, and the publication footer. Loaded FOURTH.
+   Masthead, the full-bleed editorial home (greeting/prose + latest writing),
+   the signature .datum-line, and the publication footer. Loaded FOURTH.
    ============================================================================ */
 
 /* ---- Page frame ---------------------------------------------------------- */
@@ -165,42 +165,17 @@
    Full-bleed editorial home
    ============================================================================ */
 .folio-home {
-  padding: 0 var(--pad-x) var(--section-gap);
+  /* Opens with the greeting now (the old hero carried its own top padding), so
+     give the prose room to breathe below the masthead. */
+  padding: clamp(2.5rem, 6vw, 4.5rem) var(--pad-x) var(--section-gap);
 }
 .folio-home__inner {
   max-width: var(--page-width);
   margin: 0 auto;
 }
 
-/* ---- Two-column hero ----------------------------------------------------- */
-.folio-hero {
-  display: grid;
-  grid-template-columns: 1.12fr .88fr;
-  gap: clamp(2rem, 5vw, 4.5rem);
-  align-items: center;
-  padding: clamp(3.5rem, 9vw, 8rem) 0 clamp(2.5rem, 6vw, 5rem);
-}
-.folio-hero__text { max-width: 32ch; }
+/* ---- Section kicker (the mono eyebrow above "Latest writing") ------------- */
 .folio-kicker { margin: 0 0 1.4rem; }
-.folio-hero__title { margin: 0 0 1.1rem; }
-.folio-hero__lede { margin: 0 0 2rem; }
-.folio-hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 1.75rem;
-}
-.folio-hero__art {
-  align-self: center;
-  width: 100%;
-}
-.folio-hero__art svg {
-  display: block;
-  width: 100%;
-  height: auto;
-  /* Print, don't float. */
-  filter: none;
-}
 
 /* ---- Latest writing ------------------------------------------------------ */
 .folio-latest { padding-top: .5rem; }
@@ -225,7 +200,6 @@
   text-decoration: none;
   white-space: nowrap;
 }
-.folio-link--muted { color: var(--text-muted); }
 .folio-link:hover { color: var(--green-dark); }
 
 /* ============================================================================
@@ -302,16 +276,8 @@
 }
 
 /* ============================================================================
-   Responsive: hero collapses text-first, everything breathes on mobile
+   Responsive: everything breathes on mobile
    ============================================================================ */
-@media (max-width: 60rem) {
-  .folio-hero {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-  .folio-hero__text { max-width: 42ch; order: 1; }
-  .folio-hero__art { order: 2; max-width: 26rem; }
-}
 @media (max-width: 40rem) {
   .folio-footer__grid { flex-direction: column; gap: 1.5rem; }
 }

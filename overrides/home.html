@@ -3,9 +3,11 @@
 
   Extends main.html so it inherits the font wiring in {% block extrahead %}.
   The hero block is the true full-bleed slot (outside the 61rem content grid);
-  we fill it with hero + latest writing + the About prose (this page IS the
-  About page), and empty the default {% block container %} so there is no
-  duplicate H1 or sidebar.
+  we open it with the "Selja here…" greeting + About prose (this page IS the
+  landing), then close with the latest-writing snippet, and empty the default
+  {% block container %} (its auto H1 + sidebar would duplicate ours). The design
+  opens with the greeting rather than a visible headline, so we carry the page's
+  single required <h1> ourselves as a visually-hidden title.
 
   `recent_posts` is supplied by hooks/hero_art.py on the homepage only.
 -#}
@@ -17,78 +19,19 @@
 <section class="folio-home">
   <div class="folio-home__inner">
 
-    {# ---------- Two-column editorial hero ---------- #}
-    <div class="folio-hero">
-      <div class="folio-hero__text">
-        <p class="folio-kicker">AI systems · evals · document workflows</p>
-        <h1 class="folio-hero__title">I build production AI&nbsp;systems</h1>
-        <p class="folio-hero__lede">
-          Most of my work is the full path from an idea to something running in
-          production: RAG pipelines, document extraction, agents, and the
-          evaluation work that keeps them honest.
-        </p>
-        <p class="folio-hero__actions">
-          <a class="folio-link" href="{{ 'blog/' | url }}">Read the blog&nbsp;→</a>
-          <a class="folio-link folio-link--muted" href="mailto:seljaww@gmail.com">Get in touch</a>
-        </p>
-      </div>
-      {# Inlined (not <img>, not an include) so it re-inks on the palette toggle,
-         not just the OS scheme — and so nothing leaks to a public asset URL. #}
-      <div class="folio-hero__art reveal" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 720" aria-hidden="true"
-             preserveAspectRatio="xMidYMid meet" fill="none"
-             stroke-linecap="round" stroke-linejoin="round">
-          <g stroke="var(--grid-line)" stroke-width="1">
-            <path d="M80 0V720M160 0V720M240 0V720M320 0V720M400 0V720M480 0V720M560 0V720"/>
-            <path d="M0 80H640M0 160H640M0 240H640M0 320H640M0 400H640M0 480H640M0 560H640M0 640H640"/>
-          </g>
-          <g stroke="var(--line-mid)" stroke-width="1.1">
-            <circle cx="560" cy="150" r="150"/>
-            <circle cx="560" cy="150" r="112"/>
-            <path d="M560 24V64M560 236V276M410 150h40M670 150h-40"/>
-          </g>
-          <g stroke="var(--contour)" stroke-width="1.2">
-            <path d="M0 512C120 486 210 500 320 470S540 452 640 486"/>
-            <path d="M0 548C150 520 250 542 360 512S560 500 640 528"/>
-            <path d="M0 588C140 566 250 586 380 556S580 552 640 576"/>
-            <path d="M0 628C160 612 260 628 400 604S590 606 640 622"/>
-            <path d="M150 596c56-16 150-10 176 8s-8 34-84 40-150-6-160-24 12-18 68-24Z"/>
-            <path d="M182 600c40-10 106-6 124 6s-6 22-58 26-108-4-114-16 8-14 48-22Z"/>
-          </g>
-          <g stroke="var(--line-ink)" stroke-width="1.25">
-            <path d="M196 452V336l100-58 100 58v116"/>
-            <path d="M196 336l100-58 100 58"/>
-            <path d="M270 292l26-15 26 15v20h-52z"/>
-            <path d="M296 262v15"/>
-            <path d="M196 372h200M196 412h200"/>
-            <path d="M232 452V352M268 452V330M296 452V300M324 452V330M360 452V352"/>
-            <path d="M232 352l64-52M360 352l-64-52"/>
-            <path d="M282 452v-40h28v40"/>
-          </g>
-          <path d="M214 470h164" stroke="var(--line-faint)" stroke-width="1"/>
-          <g stroke="var(--line-ink)" stroke-width="1.1">
-            <path d="M436 0c6 40-2 78-6 112s2 60 10 84"/>
-            <path d="M430 44c-18-6-30-18-34-34M430 44c14-10 20-24 20-42"/>
-            <path d="M426 92c-20-4-34-14-40-30M426 92c16-8 24-22 26-40"/>
-            <path d="M430 140c-18-2-32-10-40-24"/>
-          </g>
-          <g stroke="var(--line-mid)" stroke-width="1">
-            <path d="M76 384h8M80 380v8M156 464h8M160 460v8"/>
-          </g>
-          <path d="M300 486l7 12h-14z" fill="var(--accent)" stroke="none"/>
-          <text x="316" y="498" fill="var(--text-faint)"
-                font-family="var(--font-mono)" font-size="11" letter-spacing="1.4">BM 24.9</text>
-          <g stroke="var(--line-mid)" stroke-width="1.2">
-            <path d="M24 44V24h20M596 24h20v20M616 676v20h-20M44 696H24v-20"/>
-          </g>
-        </svg>
-      </div>
+    {# The page's single semantic H1. Hidden because the design opens with the
+       "Selja here…" greeting, not a visible headline — but assistive tech and
+       search engines still get a real title. #}
+    <h1 class="folio-visually-hidden">Selja Keränen</h1>
+
+    {# ---------- The greeting + About prose (the landing opens with "Selja here…") ---------- #}
+    <div class="folio-prose md-typeset">
+      {{ page.content }}
     </div>
 
-    <hr class="datum-line" />
-
-    {# ---------- Latest writing ---------- #}
+    {# ---------- Latest writing (kept last, per the greeting-first order) ---------- #}
     {% if recent_posts %}
+    <hr class="datum-line" />
     <section class="folio-latest">
       <p class="folio-kicker folio-latest__label">Latest writing</p>
       <ol class="folio-cards">
@@ -114,13 +57,7 @@
         <a class="folio-link" href="{{ 'blog/' | url }}">All writing&nbsp;→</a>
       </p>
     </section>
-    <hr class="datum-line" />
     {% endif %}
-
-    {# ---------- The About prose (the landing page is the About page) ---------- #}
-    <div class="folio-prose md-typeset">
-      {{ page.content }}
-    </div>
 
   </div>
 </section>

@@ -20,13 +20,11 @@ All pieces are drawn from the same marks, so they read as one hand:
 
 ## Theming
 
-- The **homepage hero** SVG is written *inline* in `overrides/home.html`, so its
-  strokes use the page's CSS variables (`--line-ink`, `--contour`, `--accent`, …)
-  and re-ink on the light/dark **palette toggle** (not just the OS scheme).
 - The five card motifs here are loaded via `<img>`, so they are self-contained
   documents that re-ink by the viewer's **OS colour scheme** via an internal
-  `@media (prefers-color-scheme: dark)` block. (An `<img>` cannot see the site's
-  toggle — an accepted limitation.)
+  `@media (prefers-color-scheme: dark)` block. An `<img>` cannot see the site's
+  own light/dark **palette toggle** — an accepted limitation. (There is no longer
+  any inline-SVG art on the site that would track the toggle live.)
 
 ## The five motifs (category → art, see `hooks/hero_art.py`)
 
