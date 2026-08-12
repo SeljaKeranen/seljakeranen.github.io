@@ -146,7 +146,7 @@
   font-weight: 500;
   color: var(--text);
   background: transparent;
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--underline);
   border-radius: var(--radius-sm);
   padding: .7em 1.2em;
   box-shadow: none;

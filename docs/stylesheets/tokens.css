@@ -40,6 +40,7 @@
   --border:        rgba(23, 26, 24, .14);
   --border-soft:   rgba(23, 26, 24, .08);
   --border-strong: rgba(23, 26, 24, .26);
+  --underline:     rgba(23, 26, 24, .50);   /* link underline + button border — ~3.3:1, clears WCAG 1.4.11 (3:1) */
   --line-ink:      rgba(23, 26, 24, .72);
   --line-mid:      rgba(23, 26, 24, .34);
   --line-faint:    rgba(23, 26, 24, .16);
@@ -96,6 +97,7 @@
   --border:        rgba(233, 228, 217, .14);
   --border-soft:   rgba(233, 228, 217, .08);
   --border-strong: rgba(233, 228, 217, .26);
+  --underline:     rgba(233, 228, 217, .45);   /* link underline + button border — clears WCAG 1.4.11 (3:1) on dark */
   --line-ink:      rgba(233, 228, 217, .70);
   --line-mid:      rgba(233, 228, 217, .32);
   --line-faint:    rgba(233, 228, 217, .15);
