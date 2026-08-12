@@ -2,10 +2,11 @@
   overrides/home.html — the full-bleed editorial home.
 
   Extends main.html so it inherits the font wiring in {% block extrahead %}.
-  The hero block is the true full-bleed slot (outside the 61rem content grid);
-  we open it with the "Selja here…" greeting + About prose (this page IS the
-  landing), then close with the latest-writing snippet, and empty the default
-  {% block container %} (its auto H1 + sidebar would duplicate ours). The design
+  We render the greeting + About prose (this page IS the landing) and close with
+  the latest-writing snippet. This lives in {% block container %} — i.e. INSIDE
+  Material's <main> landmark — so "skip to content", landmark navigation, and
+  assistive tech reach the real content; layout.css lifts the md-grid width on
+  the wrapper (`:has(> .folio-home)`) so it still reads full-bleed. The design
   opens with the greeting rather than a visible headline, so we carry the page's
   single required <h1> ourselves as a visually-hidden title.
 
@@ -13,9 +14,7 @@
 -#}
 {% extends "main.html" %}
 
-{% block container %}{% endblock %}
-
-{% block hero %}
+{% block container %}
 <section class="folio-home">
   <div class="folio-home__inner">
 
