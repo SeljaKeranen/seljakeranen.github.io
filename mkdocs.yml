@@ -42,7 +42,11 @@ theme:
     - content.action.edit
     - content.action.view
     - content.code.copy
-    - navigation.footer
+    # navigation.footer intentionally OFF: this is an editorial site, not a
+    # linear document sequence. The Material footer pager chained Home→Blog→
+    # Notes→posts into one "book" (e.g. "Next: Notes" on the blog index,
+    # "Previous: 2026 / Next: Evals before prompts" on the Notes hub), which
+    # reads as broken navigation. Sections are reached from the masthead.
     - navigation.indexes
     - navigation.instant
     - navigation.instant.prefetch

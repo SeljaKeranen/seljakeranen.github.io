@@ -131,7 +131,7 @@
   color: var(--text);
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  text-decoration-color: var(--border-strong);
+  text-decoration-color: var(--underline);
   text-underline-offset: 2px;
   transition: color var(--dur-hover) var(--ease),
               text-decoration-color var(--dur-hover) var(--ease);

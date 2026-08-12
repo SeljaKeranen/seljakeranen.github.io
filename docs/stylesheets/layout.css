@@ -9,6 +9,25 @@
 .md-grid { max-width: var(--page-width); }
 .md-main__inner { margin-top: 1.5rem; }
 
+/* Navigation lives in the masthead; the Material documentation sidebars (left
+   nav tree + right table-of-contents) are never used here. Hand-authored pages
+   hide them via `hide: [navigation, toc]`; hide them on the plugin-generated
+   archive/category pages and the 404 too, so the editorial full-width layout
+   stays consistent instead of collapsing into a three-column docs page.
+   Specificity (0,3,0) is deliberate: it must beat Material's own
+   `.md-sidebar--secondary:not([hidden])` (0,2,0), which otherwise re-shows the
+   TOC on pages that carry one (e.g. the blog archive). */
+.md-grid > .md-sidebar[data-md-component="sidebar"] { display: none; }
+
+/* The home greeting now lives inside <main> (a real landmark, reachable by the
+   skip link and assistive tech) — but it must still read full-bleed, so lift
+   the md-grid max-width and gutters on the wrapper that holds it. */
+.md-main__inner:has(> .folio-home) {
+  max-width: none;
+  margin-top: 0;
+  padding: 0;
+}
+
 /* ============================================================================
    Masthead (forked overrides/partials/header.html)
    ============================================================================ */
