@@ -6,7 +6,7 @@ categories:
   - Notes
 description: >-
   A first post. What I plan to write about here, and why it won't be
-  another "AI changes everything" feed.
+  another “AI changes everything” feed.
 ---
 
 # Starting a blog, mostly to think out loud

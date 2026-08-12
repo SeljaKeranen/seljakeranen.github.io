@@ -37,8 +37,8 @@
       {% if page.authors %}
         {% for author in page.authors %}
           <p class="article__author">
-            Written by <strong>{{ author.name }}</strong>{% if author.description %} — {{ author.description }}{% endif %}.
-            {% if author.url %}<a href="{{ author.url }}">More&nbsp;→</a>{% endif %}
+            Written by <strong>{{ author.name }}</strong>{% if author.description %} — {{ author.description }}{% else %}.{% endif %}
+            {% if author.url %}<a href="{{ author.url }}" aria-label="{{ author.name }} on GitHub">More&nbsp;→</a>{% endif %}
           </p>
         {% endfor %}
       {% endif %}
