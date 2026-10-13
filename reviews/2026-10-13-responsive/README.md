@@ -1,6 +1,6 @@
 # Responsive layout evidence — 13 October 2026
 
-Before: `c7c10b8af0ddf2ef633696e57063b9630eb2676a`. After: the source committed with this report, bound by [SHA-256 hashes](source-sha256.json). Both were built locally with the repository's unchanged dependency pins. No deployed files were edited.
+Before: `c7c10b8af0ddf2ef633696e57063b9630eb2676a`. After: `9f2d2f9ce463b7feea0208b92f88579ae9ca607f`, bound by [SHA-256 hashes](source-sha256.json). These hashes identify the captured source before subsequent formatter-only changes. Both were built locally with the repository's unchanged dependency pins. No deployed files were edited.
 
 | Approved fix | Before | After |
 | --- | --- | --- |

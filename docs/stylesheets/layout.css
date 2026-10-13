@@ -6,8 +6,12 @@
    ============================================================================ */
 
 /* ---- Page frame ---------------------------------------------------------- */
-.md-grid { max-width: var(--page-width); }
-.md-main__inner { margin-top: 1.5rem; }
+.md-grid {
+  max-width: var(--page-width);
+}
+.md-main__inner {
+  margin-top: 1.5rem;
+}
 
 /* Navigation lives in the masthead; the Material documentation sidebars (left
    nav tree + right table-of-contents) are never used here. Hand-authored pages
@@ -17,7 +21,9 @@
    Specificity (0,3,0) is deliberate: it must beat Material's own
    `.md-sidebar--secondary:not([hidden])` (0,2,0), which otherwise re-shows the
    TOC on pages that carry one (e.g. the blog archive). */
-.md-grid > .md-sidebar[data-md-component="sidebar"] { display: none; }
+.md-grid > .md-sidebar[data-md-component="sidebar"] {
+  display: none;
+}
 
 /* The home greeting now lives inside <main> (a real landmark, reachable by the
    skip link and assistive tech) — but it must still read full-bleed, so lift
@@ -58,9 +64,9 @@
   grid-template-columns: 1fr auto;
   grid-template-areas: "brand actions" "nav nav";
   align-items: center;
-  gap: .5rem clamp(.25rem, 2vw, 1rem);
+  gap: 0.5rem clamp(0.25rem, 2vw, 1rem);
   min-height: 72px;
-  padding-block: .6rem;
+  padding-block: 0.6rem;
 }
 .folio-brand {
   grid-area: brand;
@@ -75,16 +81,16 @@
 .folio-brand__name {
   font-family: var(--font-sans);
   font-weight: 600;
-  font-size: calc(.9375 * var(--type-unit));
-  letter-spacing: .11em;
+  font-size: calc(0.9375 * var(--type-unit));
+  letter-spacing: 0.11em;
   text-transform: uppercase;
 }
 .folio-brand__coord {
   font-family: var(--font-mono);
-  font-size: .625rem;
-  letter-spacing: .16em;
+  font-size: 0.625rem;
+  letter-spacing: 0.16em;
   color: var(--text-faint);
-  margin-top: .3em;
+  margin-top: 0.3em;
 }
 .folio-nav {
   grid-area: nav;
@@ -97,10 +103,11 @@
   position: relative;
   color: var(--text-muted);
   text-decoration: none;
-  padding: .35em 0;
+  padding: 0.35em 0;
   transition: color var(--dur-hover) var(--ease);
 }
-.folio-nav__link::after {   /* the survey-tick underline, drawn from the left */
+.folio-nav__link::after {
+  /* the survey-tick underline, drawn from the left */
   content: "";
   position: absolute;
   left: 0;
@@ -112,17 +119,25 @@
   transform-origin: left;
   transition: transform var(--dur-hover) var(--ease);
 }
-.folio-nav__link:hover { color: var(--text); }
+.folio-nav__link:hover {
+  color: var(--text);
+}
 .folio-nav__link:hover::after,
-.folio-nav__link[aria-current]::after { transform: scaleX(1); }
-.folio-nav__link[aria-current] { color: var(--text); }
-.folio-nav__link[aria-current]::before {   /* clay benchmark on the active page */
+.folio-nav__link[aria-current]::after {
+  transform: scaleX(1);
+}
+.folio-nav__link[aria-current] {
+  color: var(--text);
+}
+.folio-nav__link[aria-current]::before {
+  /* clay benchmark on the active page */
   content: "";
   position: absolute;
-  left: -.85em;
+  left: -0.85em;
   top: 50%;
   transform: translateY(-50%);
-  width: 0; height: 0;
+  width: 0;
+  height: 0;
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
   border-bottom: 5px solid var(--accent);
@@ -132,30 +147,41 @@
   grid-area: actions;
   display: flex;
   align-items: center;
-  gap: .2rem;
+  gap: 0.2rem;
 }
 .folio-actions .md-header__option,
-.folio-actions .md-search { margin: 0; }
-.folio-actions .md-header__button { margin: 0; }
+.folio-actions .md-search {
+  margin: 0;
+}
+.folio-actions .md-header__button {
+  margin: 0;
+}
 .folio-actions .folio-search-trigger:focus-visible {
   outline: 2px solid var(--green-dark);
   outline-offset: 2px;
 }
 .folio-masthead .md-header__source,
-.no-js .folio-actions .folio-search-trigger { display: none; }
+.no-js .folio-actions .folio-search-trigger {
+  display: none;
+}
 
 /* Search becomes an inline field at Material's own 60em breakpoint. */
 @media (min-width: 60em) {
-  .folio-actions .folio-search-trigger { display: none; }
+  .folio-actions .folio-search-trigger {
+    display: none;
+  }
 }
 /* Allow enough room for the unbroken name, navigation and search field. */
 @media (min-width: 64em) {
   .folio-masthead {
     grid-template-columns: auto 1fr auto;
     grid-template-areas: "brand nav actions";
-    padding-block: .4rem;
+    padding-block: 0.4rem;
   }
-  .folio-nav { justify-self: end; gap: 1.25rem; }
+  .folio-nav {
+    justify-self: end;
+    gap: 1.25rem;
+  }
 }
 @media (min-width: 80em) {
   .folio-masthead {
@@ -183,7 +209,8 @@
   margin: clamp(3rem, 6vw, 4.75rem) 0;
   overflow: visible;
 }
-.datum-line::before {   /* graduated ticks, centred */
+.datum-line::before {
+  /* graduated ticks, centred */
   content: "";
   position: absolute;
   left: 50%;
@@ -191,22 +218,24 @@
   transform: translateX(-50%);
   width: 132px;
   height: 7px;
-  background: repeating-linear-gradient(90deg,
-    var(--line-mid) 0 1px, transparent 1px 22px);
+  background: repeating-linear-gradient(90deg, var(--line-mid) 0 1px, transparent 1px 22px);
 }
-.datum-line::after {    /* the clay benchmark ▲ */
+.datum-line::after {
+  /* the clay benchmark ▲ */
   content: "";
   position: absolute;
   left: 50%;
   top: -6px;
   transform: translateX(-50%);
-  width: 0; height: 0;
+  width: 0;
+  height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-bottom: 8px solid var(--accent);
 }
 .datum-line--start::before,
-.datum-line--start::after {   /* variant: marks pinned to the left margin */
+.datum-line--start::after {
+  /* variant: marks pinned to the left margin */
   left: 66px;
 }
 
@@ -222,20 +251,35 @@
 }
 
 /* ---- Section kicker (the mono eyebrow above "Latest writing") ------------- */
-.folio-kicker { margin: 0 0 1.4rem; }
+.folio-kicker {
+  margin: 0 0 1.4rem;
+}
 
 /* ---- Latest writing ------------------------------------------------------ */
-.folio-latest { padding-top: .5rem; }
-.folio-latest__label { margin: 0 0 2rem; }
-.folio-latest__all { margin: 2.5rem 0 0; }
+.folio-latest {
+  padding-top: 0.5rem;
+}
+.folio-latest__label {
+  margin: 0 0 2rem;
+}
+.folio-latest__all {
+  margin: 2.5rem 0 0;
+}
 
 /* ---- Retained prose (Selja's "What I work on" / "How I work") ------------- */
 .folio-prose {
   max-width: var(--article-width);
 }
-.folio-intro-links { margin-bottom: 1.35em; }
-.folio-intro-links a { display: inline-block; padding-block: .25em; }
-.folio-prose > h2:first-child { margin-top: 0; }
+.folio-intro-links {
+  margin-bottom: 1.35em;
+}
+.folio-intro-links a {
+  display: inline-block;
+  padding-block: 0.25em;
+}
+.folio-prose > h2:first-child {
+  margin-top: 0;
+}
 
 /* ============================================================================
    Text links with a nudging arrow (the button-substitute)
@@ -249,12 +293,16 @@
   text-decoration: none;
   white-space: nowrap;
 }
-.folio-link:hover { color: var(--green-dark); }
+.folio-link:hover {
+  color: var(--green-dark);
+}
 
 /* ============================================================================
    Publication footer (paper, not a dark bar)
    ============================================================================ */
-.md-footer { background: var(--bg); }
+.md-footer {
+  background: var(--bg);
+}
 .md-footer-meta {
   background: var(--bg);
   color: var(--text-muted);
@@ -263,7 +311,9 @@
   padding-top: 2.5rem;
   padding-bottom: 3rem;
 }
-.folio-footer__top { margin-top: clamp(5rem, 10vw, 8rem); }
+.folio-footer__top {
+  margin-top: clamp(5rem, 10vw, 8rem);
+}
 .folio-footer__grid {
   display: flex;
   flex-wrap: wrap;
@@ -276,7 +326,10 @@
   font-family: var(--font-serif);
   font-weight: 600;
   font-size: 1.375rem;
-  font-variation-settings: "opsz" 40, "SOFT" 12, "WONK" 0;
+  font-variation-settings:
+    "opsz" 40,
+    "SOFT" 12,
+    "WONK" 0;
   color: var(--text);
 }
 .folio-footer__coord {
@@ -284,7 +337,7 @@
   font-size: var(--fs-meta);
   letter-spacing: var(--track-meta);
   color: var(--text-faint);
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 .folio-footer__links {
   display: flex;
@@ -299,21 +352,25 @@
   color: var(--text-muted);
   text-decoration: none;
 }
-.folio-footer__links a:hover { color: var(--green-dark); }
+.folio-footer__links a:hover {
+  color: var(--green-dark);
+}
 .folio-footer__fine {
   display: flex;
   align-items: center;
-  gap: .75rem;
+  gap: 0.75rem;
   font-family: var(--font-mono);
-  font-size: .6875rem;
-  letter-spacing: .1em;
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
   color: var(--text-faint);
   padding-top: 1.25rem;
 }
-.folio-footer__fine::after {   /* the closing benchmark ▲ */
+.folio-footer__fine::after {
+  /* the closing benchmark ▲ */
   content: "";
   margin-left: auto;
-  width: 0; height: 0;
+  width: 0;
+  height: 0;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-bottom: 6px solid var(--accent);
@@ -323,5 +380,8 @@
    Responsive: everything breathes on mobile
    ============================================================================ */
 @media (max-width: 40rem) {
-  .folio-footer__grid { flex-direction: column; gap: 1.5rem; }
+  .folio-footer__grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }
