@@ -9,11 +9,14 @@ hide:
 ---
 
 <p class="lead">
-Selja here. I build AI systems, and the part I care about most is the part the
-models cannot do: understanding a domain well enough to know what is worth
-building, then feeding the agents the context and the evals that keep them
-honest. Models get cheap. Good context does not, so that is where I spend my time.
+Selja here — I build AI systems. I care most about understanding a domain well
+enough to know what is worth building, then giving agents the context and evals
+that keep them honest.
 </p>
+
+<div class="folio-intro-links" markdown>
+[Read the blog](blog/index.md) · [How I work](notes/index.md)
+</div>
 
 I also enjoy leading people and projects. These days my everyday orchestra is
 mostly coding agents. Both mostly behave.

@@ -1,0 +1,10 @@
+{
+  "docs/index.md": "1ec9b48c046a6bc4b8a22cf93094a9c315a7c3b81ceafa4151c3d7311d904933",
+  "docs/javascripts/reveal.js": "e17403932738a1bace277a4e84bb7dbfd21c40ebc804052a9f2b2da1d794bb18",
+  "docs/stylesheets/base.css": "6e59c41df93134b806328331e9c3e1864ed61bcf681888b135b028935d418375",
+  "docs/stylesheets/components.css": "c6ab789e1c57280b0d3f048499d742bbd225e5e473e0f4645c6a41fad091ded8",
+  "docs/stylesheets/layout.css": "97ba18a400e6b64bd6f0d839a63aa612569bc61bfc3ad72e6d5af0060e89f5d2",
+  "docs/stylesheets/tokens.css": "1aace4aad07ed5370aad720d7461f037d12f1803dd9dee72b8abd331fda5718c",
+  "overrides/partials/header.html": "67d27547389dbe4d4fe3211c9db84a836745d6d58509dbe44d485dcd5d1955df",
+  "tests/test_responsive_contract.py": "fc94e9f01da5208a74571359958df7e599461f3fed61d3b593dd3e4501c2aa84"
+}

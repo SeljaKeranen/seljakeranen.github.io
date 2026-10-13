@@ -14,59 +14,64 @@
 :root,
 [data-md-color-scheme="default"] {
   /* -- Surfaces (~60% of every view) ------------------------------------- */
-  --bg:          #F4F2EB;   /* limestone / warm off-white — never pure white */
-  --bg-alt:      #F1EFE8;   /* a half-tone cooler, for quiet banding         */
-  --surface:     #EBE8DF;   /* raised paper (search field, insets)           */
-  --warm-paper:  #E9E4D9;   /* code + pressed-in surfaces                    */
+  --bg: #f4f2eb; /* limestone / warm off-white — never pure white */
+  --bg-alt: #f1efe8; /* a half-tone cooler, for quiet banding         */
+  --surface: #ebe8df; /* raised paper (search field, insets)           */
+  --warm-paper: #e9e4d9; /* code + pressed-in surfaces                    */
 
   /* -- Ink --------------------------------------------------------------- */
-  --text:        #171A18;   /* charcoal, not pure black                      */
-  --text-muted:  #5C635C;   /* metadata, leads, secondary                    */
-  --text-faint:  #656D66;   /* tertiary text — AA (4.77:1) on the paper      */
+  --text: #171a18; /* charcoal, not pure black                      */
+  --text-muted: #5c635c; /* metadata, leads, secondary                    */
+  --text-faint: #656d66; /* tertiary text — AA (4.77:1) on the paper      */
 
   /* -- Greens (~10%: depth + structure) ---------------------------------- */
-  --green-dark:  #39463E;   /* evergreen — link hover, drop cap, emphasis    */
-  --green:       #738075;   /* sage — quote rule, line highlight             */
-  --green-mist:  #9EA8A2;   /* fog                                           */
+  --green-dark: #39463e; /* evergreen — link hover, drop cap, emphasis    */
+  --green: #738075; /* sage — quote rule, line highlight             */
+  --green-mist: #9ea8a2; /* fog                                           */
 
   /* -- Stone (~5%) ------------------------------------------------------- */
-  --stone:       #D7D5CC;
-  --stone-dark:  #ABA7A0;
+  --stone: #d7d5cc;
+  --stone-dark: #aba7a0;
 
   /* -- Accent (~5%, spent once per view): clay benchmark ▲ ---------------- */
-  --accent:      #A66F5B;
+  --accent: #a66f5b;
 
   /* -- Hairlines + cartographic line-art (SVGs inherit these) ------------ */
-  --border:        rgba(23, 26, 24, .14);
-  --border-soft:   rgba(23, 26, 24, .08);
-  --border-strong: rgba(23, 26, 24, .26);
-  --underline:     rgba(23, 26, 24, .50);   /* link underline + button border — ~3.3:1, clears WCAG 1.4.11 (3:1) */
-  --line-ink:      rgba(23, 26, 24, .72);
-  --line-mid:      rgba(23, 26, 24, .34);
-  --line-faint:    rgba(23, 26, 24, .16);
-  --grid-line:     rgba(23, 26, 24, .06);
-  --contour:       rgba(115, 128, 117, .34);
-  --wash-sage:     rgba(115, 128, 117, .10);
-  --mark:          rgba(115, 128, 117, .24);   /* ==mark== highlight        */
+  --border: rgba(23, 26, 24, 0.14);
+  --border-soft: rgba(23, 26, 24, 0.08);
+  --border-strong: rgba(23, 26, 24, 0.26);
+  --underline: rgba(
+    23,
+    26,
+    24,
+    0.5
+  ); /* link underline + button border — ~3.3:1, clears WCAG 1.4.11 (3:1) */
+  --line-ink: rgba(23, 26, 24, 0.72);
+  --line-mid: rgba(23, 26, 24, 0.34);
+  --line-faint: rgba(23, 26, 24, 0.16);
+  --grid-line: rgba(23, 26, 24, 0.06);
+  --contour: rgba(115, 128, 117, 0.34);
+  --wash-sage: rgba(115, 128, 117, 0.1);
+  --mark: rgba(115, 128, 117, 0.24); /* ==mark== highlight        */
 
   /* -- Type families ----------------------------------------------------- */
   /* Re-declared because theme.font:false stops Material emitting them.      */
   --md-text-font: "Inter";
   --md-code-font: "IBM Plex Mono";
   --font-serif: "Fraunces", "Georgia", "Times New Roman", serif;
-  --font-sans:  "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-mono:  "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  --font-sans: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
 
   /* -- Layout / geometry / motion ---------------------------------------- */
-  --page-width:   1240px;
-  --article-width: 44rem;
-  --pad-x:        clamp(20px, 5vw, 72px);
-  --section-gap:  clamp(96px, 12vw, 160px);
-  --radius:       3px;
-  --radius-sm:    2px;
-  --ease:         cubic-bezier(.22, .61, .36, 1);
-  --dur-fade:     560ms;
-  --dur-hover:    240ms;
+  --page-width: 1240px;
+  --article-width: calc(36 * var(--type-unit));
+  --pad-x: clamp(20px, 5vw, 72px);
+  --section-gap: clamp(96px, 12vw, 160px);
+  --radius: 3px;
+  --radius-sm: 2px;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur-fade: 560ms;
+  --dur-hover: 240ms;
 
   color-scheme: light;
 }
@@ -76,35 +81,40 @@
    with no edits to any SVG; the whole palette simply inverts around the paper.
    ---------------------------------------------------------------------------- */
 [data-md-color-scheme="slate"] {
-  --bg:          #161A17;
-  --bg-alt:      #191D19;
-  --surface:     #1E2320;
-  --warm-paper:  #222824;
+  --bg: #161a17;
+  --bg-alt: #191d19;
+  --surface: #1e2320;
+  --warm-paper: #222824;
 
-  --text:        #E7E3D7;
-  --text-muted:  #A7AEA6;
-  --text-faint:  #8A928B;   /* tertiary text — AA (5.50:1) on the dark paper */
+  --text: #e7e3d7;
+  --text-muted: #a7aea6;
+  --text-faint: #8a928b; /* tertiary text — AA (5.50:1) on the dark paper */
 
-  --green-dark:  #A7B4A9;   /* greens lift so they stay legible on dark ink  */
-  --green:       #8A968C;
-  --green-mist:  #6E786F;
+  --green-dark: #a7b4a9; /* greens lift so they stay legible on dark ink  */
+  --green: #8a968c;
+  --green-mist: #6e786f;
 
-  --stone:       #2A302B;
-  --stone-dark:  #3A423C;
+  --stone: #2a302b;
+  --stone-dark: #3a423c;
 
-  --accent:      #C08466;
+  --accent: #c08466;
 
-  --border:        rgba(233, 228, 217, .14);
-  --border-soft:   rgba(233, 228, 217, .08);
-  --border-strong: rgba(233, 228, 217, .26);
-  --underline:     rgba(233, 228, 217, .45);   /* link underline + button border — clears WCAG 1.4.11 (3:1) on dark */
-  --line-ink:      rgba(233, 228, 217, .70);
-  --line-mid:      rgba(233, 228, 217, .32);
-  --line-faint:    rgba(233, 228, 217, .15);
-  --grid-line:     rgba(233, 228, 217, .06);
-  --contour:       rgba(138, 150, 140, .36);
-  --wash-sage:     rgba(138, 150, 140, .12);
-  --mark:          rgba(138, 150, 140, .22);
+  --border: rgba(233, 228, 217, 0.14);
+  --border-soft: rgba(233, 228, 217, 0.08);
+  --border-strong: rgba(233, 228, 217, 0.26);
+  --underline: rgba(
+    233,
+    228,
+    217,
+    0.45
+  ); /* link underline + button border — clears WCAG 1.4.11 (3:1) on dark */
+  --line-ink: rgba(233, 228, 217, 0.7);
+  --line-mid: rgba(233, 228, 217, 0.32);
+  --line-faint: rgba(233, 228, 217, 0.15);
+  --grid-line: rgba(233, 228, 217, 0.06);
+  --contour: rgba(138, 150, 140, 0.36);
+  --wash-sage: rgba(138, 150, 140, 0.12);
+  --mark: rgba(138, 150, 140, 0.22);
 
   color-scheme: dark;
 }
