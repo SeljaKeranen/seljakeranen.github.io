@@ -47,7 +47,8 @@ document$.subscribe(function () {
   // The /blog and /notes anchors also stop a post slug containing "notes"/"blog"
   // from hijacking the marker.
   var section = "";
-  if (/^\/notes(\/|$)/.test(p)) section = "notes";
+  if (/^\/books(\/|$)/.test(p)) section = "books";
+  else if (/^\/notes(\/|$)/.test(p)) section = "notes";
   else if (/^\/blog(\/|$)/.test(p)) section = "blog";
   else if (p === "/" || p === "/index.html") section = "home";
 

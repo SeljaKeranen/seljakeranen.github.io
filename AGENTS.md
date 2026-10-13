@@ -93,12 +93,13 @@ scripts/         author tooling (new_post.py)
 tests/           pytest: strict build, link/alt checks, frontmatter, design invariants
 ```
 
-Nav is three sections, and the wordmark also links **Home**: **Home**
+Nav is four sections, and the wordmark also links **Home**: **Home**
 (`index.md`, rendered with `overrides/home.html` — the "Selja here…" greeting +
 personal prose, closing with the latest-writing snippet); **Blog** (`/blog/`);
-and **Notes** (`/notes/`, evergreen how-I-work pages). The header lives in
+**Notes** (`/notes/`, evergreen how-I-work pages); and **Books** (`/books/`,
+reading notes connected by theme). The header lives in
 `overrides/partials/header.html`; `docs/javascripts/reveal.js` re-derives the
-active-section marker (`home` / `blog` / `notes`) across instant navigation, so
+active-section marker (`home` / `blog` / `notes` / `books`) across instant navigation, so
 keep the two in sync.
 
 ## House rules

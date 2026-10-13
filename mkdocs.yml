@@ -69,6 +69,7 @@ nav:
     - Evals before prompts: notes/evals-before-prompts.md
     - From proof of concept to production: notes/poc-to-production.md
     - AI-native ways of working: notes/ai-native-ways-of-working.md
+  - Books: books/index.md
 
 markdown_extensions:
   - abbr
@@ -106,6 +107,7 @@ markdown_extensions:
 # homepage, and tags each post with its category's hero art. Pure stdlib.
 hooks:
   - hooks/hero_art.py
+  - hooks/books.py
 
 plugins:
   - search
@@ -141,3 +143,4 @@ extra_css:
 
 extra_javascript:
   - javascripts/reveal.js           # scroll fade-in; no-ops under reduced-motion
+  - javascripts/books.js            # theme filter and book-note anchors
