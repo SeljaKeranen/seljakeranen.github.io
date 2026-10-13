@@ -25,16 +25,18 @@ design-token rules, the art system) is in **[AGENTS.md](AGENTS.md)**.
 ## Layout
 
 ```
-docs/          content — index (the Home landing), blog/, notes/, stylesheets/, javascripts/, assets/
-overrides/     forked Material templates (masthead, home, 404, footer)
-hooks/         build hooks — hero_art.py: homepage cards, per-post art
+docs/          content — index (the Home landing), blog/, notes/, books/, stylesheets/, javascripts/, assets/
+data/          curated public reading shelf — books.json
+overrides/     forked Material templates (masthead, home, 404, footer, reading shelf)
+hooks/         build hooks — hero_art.py: homepage cards, per-post art; books.py: reading shelf
 scripts/       author tooling — new_post.py
 tests/         pytest — strict build, link + alt checks, front matter, design invariants
 ```
 
-The top nav has three sections — **Home** (`index.md`, the "Selja here…" greeting
-+ latest-writing landing), **Blog** (`/blog/`), and **Notes** (`/notes/`,
-evergreen how-I-work pages); the wordmark also links Home.
+The top nav has four sections — **Home** (`index.md`, the "Selja here…" greeting
++ latest-writing landing), **Blog** (`/blog/`), **Notes** (`/notes/`,
+evergreen how-I-work pages), and **Books** (`/books/`, reading notes connected
+by theme); the wordmark also links Home.
 
 ## Design
 

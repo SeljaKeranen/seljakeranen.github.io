@@ -85,22 +85,10 @@ how Selja works, under `docs/notes/`).
 
 ## Structure
 
-```
-docs/            content (index = the Home landing: greeting + prose + latest writing; blog/, notes/, stylesheets/, javascripts/, assets/)
-overrides/       forked Material templates (main, home, 404, partials/header, footer, art/)
-hooks/           build hooks (hero_art.py: homepage cards, per-post art)
-scripts/         author tooling (new_post.py)
-tests/           pytest: strict build, link/alt checks, frontmatter, design invariants
-```
-
-Nav is four sections, and the wordmark also links **Home**: **Home**
-(`index.md`, rendered with `overrides/home.html` — the "Selja here…" greeting +
-personal prose, closing with the latest-writing snippet); **Blog** (`/blog/`);
-**Notes** (`/notes/`, evergreen how-I-work pages); and **Books** (`/books/`,
-reading notes connected by theme). The header lives in
-`overrides/partials/header.html`; `docs/javascripts/reveal.js` re-derives the
-active-section marker (`home` / `blog` / `notes` / `books`) across instant navigation, so
-keep the two in sync.
+See [README.md](README.md#layout) for the repository layout and site sections.
+The header in `overrides/partials/header.html` sets the active-section marker;
+`docs/javascripts/reveal.js` re-derives it across instant navigation. Keep their
+section matching in sync.
 
 ## House rules
 

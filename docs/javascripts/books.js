@@ -36,12 +36,18 @@
         groups.forEach(function (group) {
           group.hidden = filter.value !== "all" && group.dataset.bookTheme !== filter.value;
         });
-        var visible = Array.from(shelf.querySelectorAll("[data-book-note]")).filter(function (note) {
-          return !note.closest("[data-book-theme]").hidden;
-        });
-        var books = visible.filter(function (note) { return note.dataset.kind === "book"; }).length;
+        var visible = Array.from(shelf.querySelectorAll("[data-book-note]")).filter(
+          function (note) {
+            return !note.closest("[data-book-theme]").hidden;
+          },
+        );
+        var books = visible.filter(function (note) {
+          return note.dataset.kind === "book";
+        }).length;
         var videos = visible.length - books;
-        count.textContent = books + (books === 1 ? " book" : " books") +
+        count.textContent =
+          books +
+          (books === 1 ? " book" : " books") +
           (videos ? " · " + videos + (videos === 1 ? " video note" : " video notes") : "");
       }
       filter.addEventListener("change", update);
@@ -50,8 +56,15 @@
       // move focus back to the body after we focus the note summary.
       shelf.addEventListener("click", function (event) {
         var link = event.target.closest("a[data-book-link]");
-        if (!link || event.button !== 0 || event.metaKey || event.ctrlKey ||
-            event.shiftKey || event.altKey) return;
+        if (
+          !link ||
+          event.button !== 0 ||
+          event.metaKey ||
+          event.ctrlKey ||
+          event.shiftKey ||
+          event.altKey
+        )
+          return;
         event.preventDefault();
         event.stopPropagation();
         if (link.hash !== location.hash) location.hash = link.hash;
