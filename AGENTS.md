@@ -42,6 +42,11 @@ The rest of the post.
 The first paragraph (before `<!-- more -->`) is the excerpt — make it earn the
 click. `description` drives the homepage card and the `<meta>` description.
 
+For a retrospective notebook entry, `date` is the date of the source notes.
+Set `notebook_date: true` and `written: YYYY-MM-DD` to show the write-up date
+separately on the homepage, archive excerpts and article. Never use the notebook
+date to imply an earlier publication. Ordinary posts keep the existing dateline.
+
 **Drafts:** add `draft: true` (or `make new … ` then edit, or `scripts/new_post.py
 --draft`). Draft posts show on `mkdocs serve` but are excluded from the production
 build, so you can work on a piece without publishing it.
