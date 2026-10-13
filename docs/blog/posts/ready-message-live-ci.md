@@ -31,7 +31,7 @@ Running checks mean the answer is still pending. Failing checks give a concrete 
 
 An unavailable result needs its own treatment. If the service cannot be reached, the workflow has failed to establish the answer. Treating that as success would turn a temporary visibility problem into permission to proceed.
 
-There is another quiet case: no checks appear at all. Perhaps the project genuinely has no applicable automated checks, or perhaps the expected workflow never started. A blanket “green” would conceal that difference. The project needs an explicit rule for what evidence is required, including any legitimate exception.
+There is another quiet case: no checks appear at all. Perhaps the project has no applicable automated checks, or perhaps the expected workflow never started. A blanket “green” would conceal that difference. The project needs an explicit rule for what evidence is required, including any legitimate exception.
 
 This is the behaviour I was asking for, rather than evidence that every project already enforced it. It also leaves room for different delivery stages. Code can be ready for someone to read while it is still waiting for the checks required before merging.
 

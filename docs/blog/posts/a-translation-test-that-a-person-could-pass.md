@@ -9,7 +9,7 @@ description: A difficult translation example needs enough context for a person t
 
 # Making a translation test that a person could pass
 
-Finding a sentence that makes a strong translation model fail took more thinking than I expected. Making a sentence strange is easy. Keeping it natural enough that a person would understand it, while still exposing a model's limitation, is a more demanding writing exercise.
+Finding a sentence that makes a strong translation model fail took quite a bit of thinking. Making a sentence strange is easy. Keeping it natural enough that a person would understand it, while still exposing a model's limitation, is a more demanding writing exercise.
 
 <!-- more -->
 
