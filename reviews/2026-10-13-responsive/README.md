@@ -21,7 +21,7 @@ Before: `c7c10b8af0ddf2ef633696e57063b9630eb2676a`. After: `9f2d2f9ce463b7feea02
 | 1440 | [Before](before-home-1440.png) / [After](after-home-1440.png) | [Before](before-cards-1440.png) / [After](after-cards-1440.png) |
 | 1920 | [Before](before-home-1920.png) / [After](after-home-1920.png) | [Before](before-cards-1920.png) / [After](after-cards-1920.png) |
 
-[Computed measurements](measurements.json) accompany the captures. Chrome 152, DPR 1, light theme; viewport heights respectively 800/844/1024/768/900/1080px. These are desktop-browser viewport simulations.
+[Computed measurements](measurements.json) accompany the captures. Chrome 152, DPR 1, light theme; viewport heights respectively 800/844/1024/768/900/1080px. These are desktop-browser viewport simulations. The three largest 1920 × 1080 PNG captures (`after-home-1920.png`, `before-cards-1920.png`, and `after-cards-1920.png`) use lossless recompression to meet the 200 KiB asset limit; dimensions and decoded image data are unchanged. Original capture files and their SHA-256 manifest are retained privately in the lint worktree’s ignored `.cache/responsive-originals/` directory.
 
 ## Verification and limits
 
