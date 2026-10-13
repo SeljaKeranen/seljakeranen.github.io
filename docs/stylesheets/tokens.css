@@ -59,7 +59,7 @@
 
   /* -- Layout / geometry / motion ---------------------------------------- */
   --page-width:   1240px;
-  --article-width: 44rem;
+  --article-width: calc(36 * var(--type-unit));
   --pad-x:        clamp(20px, 5vw, 72px);
   --section-gap:  clamp(96px, 12vw, 160px);
   --radius:       3px;

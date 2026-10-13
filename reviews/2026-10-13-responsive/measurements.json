@@ -1,0 +1,2464 @@
+{
+  "360": {
+    "before": {
+      "width": 360,
+      "height": 800,
+      "dpr": 1,
+      "zoom": 1,
+      "scrollWidth": 360,
+      "root": "20px",
+      "nameLines": 1,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 183.25,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "brand": {
+        "x": 20,
+        "y": 21.5,
+        "w": 180.078125,
+        "h": 35,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "nav": {
+        "x": 20,
+        "y": 135,
+        "w": 320,
+        "h": 33.25,
+        "font": 16.25,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "prose": {
+        "x": 20,
+        "y": 234.25,
+        "w": 320,
+        "h": 3970.9375,
+        "font": 21.25,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "lead": {
+        "x": 20,
+        "y": 234.25,
+        "w": 320,
+        "h": 487.5,
+        "font": 25,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "heading": {
+        "x": 20,
+        "y": 1078.234375,
+        "w": 320,
+        "h": 43.1875,
+        "font": 40,
+        "marginTop": 140,
+        "display": "block"
+      },
+      "footer": {
+        "x": 20,
+        "y": 6869.84375,
+        "w": 288.609375,
+        "h": 47.296875,
+        "font": 27.5,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "latest": {
+        "x": 20,
+        "y": 4326.1875,
+        "w": 320,
+        "h": 2290.40625,
+        "font": 10,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "columns": 1,
+      "links": [],
+      "art": [
+        {
+          "x": 20,
+          "y": 4442.6875,
+          "w": 320,
+          "h": 240,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": null
+        },
+        {
+          "x": 20,
+          "y": 5115.640625,
+          "w": 320,
+          "h": 240,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": null
+        },
+        {
+          "x": 20,
+          "y": 5870.640625,
+          "w": 320,
+          "h": 240,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": null
+        }
+      ],
+      "controls": [
+        {
+          "name": "Selja Ker\u00e4nen",
+          "x": 20,
+          "y": 21.5,
+          "w": 180.078125,
+          "h": 35,
+          "font": 10,
+          "marginTop": 0,
+          "display": "flex"
+        },
+        {
+          "name": "Home",
+          "x": 20,
+          "y": 135,
+          "w": 50.4375,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Blog",
+          "x": 95.4375,
+          "y": 135,
+          "w": 38.328125,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Notes",
+          "x": 158.765625,
+          "y": 135,
+          "w": 50.421875,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Switch to dark mode",
+          "x": 240.078125,
+          "y": 183.25,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        },
+        {
+          "name": "",
+          "x": 239.078125,
+          "y": 19,
+          "w": 40,
+          "h": 40,
+          "font": 10,
+          "marginTop": 4,
+          "display": "block"
+        },
+        {
+          "name": "Switch to light mode",
+          "x": 240.078125,
+          "y": 183.25,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        }
+      ]
+    },
+    "after": {
+      "width": 360,
+      "height": 800,
+      "dpr": 1,
+      "zoom": 1,
+      "scrollWidth": 360,
+      "root": "20px",
+      "nameLines": 1,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 107.25,
+        "font": 10,
+        "marginTop": 0,
+        "display": "grid"
+      },
+      "brand": {
+        "x": 20,
+        "y": 14.5,
+        "w": 224.8125,
+        "h": 35,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "nav": {
+        "x": 20,
+        "y": 62,
+        "w": 320,
+        "h": 33.25,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "prose": {
+        "x": 20,
+        "y": 148.25,
+        "w": 320,
+        "h": 2226.078125,
+        "font": 17,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "lead": {
+        "x": 20,
+        "y": 148.25,
+        "w": 320,
+        "h": 180,
+        "font": 20,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "heading": {
+        "x": 20,
+        "y": 562.859375,
+        "w": 320,
+        "h": 34.546875,
+        "font": 32,
+        "marginTop": 30,
+        "display": "block"
+      },
+      "footer": {
+        "x": 20,
+        "y": 4830.640625,
+        "w": 250.125,
+        "h": 47.296875,
+        "font": 27.5,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "latest": {
+        "x": 20,
+        "y": 2495.328125,
+        "w": 320,
+        "h": 2103.3125,
+        "font": 10,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "columns": 1,
+      "links": [
+        {
+          "text": "Read the blog",
+          "x": 20,
+          "y": 355.25,
+          "w": 110.96875,
+          "h": 37.734375,
+          "font": 17,
+          "marginTop": 0,
+          "display": "inline-block"
+        },
+        {
+          "text": "How I work",
+          "x": 145.4375,
+          "y": 355.25,
+          "w": 90.359375,
+          "h": 37.734375,
+          "font": 17,
+          "marginTop": 0,
+          "display": "inline-block"
+        }
+      ],
+      "art": [
+        {
+          "x": 20,
+          "y": 2608.828125,
+          "w": 320,
+          "h": 240,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 20,
+          "y": 3226.890625,
+          "w": 320,
+          "h": 240,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 20,
+          "y": 3913.578125,
+          "w": 320,
+          "h": 240,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 1.3333333333333333
+        }
+      ],
+      "controls": [
+        {
+          "name": "Selja Ker\u00e4nen",
+          "x": 20,
+          "y": 14.5,
+          "w": 224.8125,
+          "h": 35,
+          "font": 10,
+          "marginTop": 0,
+          "display": "flex"
+        },
+        {
+          "name": "Home",
+          "x": 20,
+          "y": 62,
+          "w": 50.4375,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Blog",
+          "x": 105.4375,
+          "y": 62,
+          "w": 38.328125,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Notes",
+          "x": 178.765625,
+          "y": 62,
+          "w": 50.421875,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Switch to dark mode",
+          "x": 257,
+          "y": 107.25,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        },
+        {
+          "name": "",
+          "x": 252,
+          "y": 12,
+          "w": 40,
+          "h": 40,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Switch to light mode",
+          "x": 257,
+          "y": 107.25,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        },
+        {
+          "name": "Search",
+          "x": 296,
+          "y": 12,
+          "w": 40,
+          "h": 40,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block"
+        }
+      ]
+    }
+  },
+  "390": {
+    "before": {
+      "width": 390,
+      "height": 844,
+      "dpr": 1,
+      "zoom": 1,
+      "scrollWidth": 390,
+      "root": "20px",
+      "nameLines": 1,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 135.25,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "brand": {
+        "x": 20,
+        "y": 21.5,
+        "w": 180.078125,
+        "h": 35,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "nav": {
+        "x": 20,
+        "y": 87,
+        "w": 350,
+        "h": 33.25,
+        "font": 16.25,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "prose": {
+        "x": 20,
+        "y": 186.25,
+        "w": 350,
+        "h": 3634.421875,
+        "font": 21.25,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "lead": {
+        "x": 20,
+        "y": 186.25,
+        "w": 350,
+        "h": 450,
+        "font": 25,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "heading": {
+        "x": 20,
+        "y": 956.1875,
+        "w": 350,
+        "h": 43.1875,
+        "font": 40,
+        "marginTop": 140,
+        "display": "block"
+      },
+      "footer": {
+        "x": 20,
+        "y": 6523.765625,
+        "w": 288.609375,
+        "h": 47.296875,
+        "font": 27.5,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "latest": {
+        "x": 20,
+        "y": 3941.671875,
+        "w": 350,
+        "h": 2328.84375,
+        "font": 10,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "columns": 1,
+      "links": [],
+      "art": [
+        {
+          "x": 20,
+          "y": 4050.171875,
+          "w": 350,
+          "h": 262.5,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 20,
+          "y": 4753.625,
+          "w": 350,
+          "h": 262.5,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 20,
+          "y": 5531.125,
+          "w": 350,
+          "h": 262.5,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 1.3333333333333333
+        }
+      ],
+      "controls": [
+        {
+          "name": "Selja Ker\u00e4nen",
+          "x": 20,
+          "y": 21.5,
+          "w": 180.078125,
+          "h": 35,
+          "font": 10,
+          "marginTop": 0,
+          "display": "flex"
+        },
+        {
+          "name": "Home",
+          "x": 20,
+          "y": 87,
+          "w": 50.4375,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Blog",
+          "x": 95.4375,
+          "y": 87,
+          "w": 38.328125,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Notes",
+          "x": 158.765625,
+          "y": 87,
+          "w": 50.421875,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Switch to dark mode",
+          "x": 240.078125,
+          "y": 135.25,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        },
+        {
+          "name": "",
+          "x": 239.078125,
+          "y": 19,
+          "w": 40,
+          "h": 40,
+          "font": 10,
+          "marginTop": 4,
+          "display": "block"
+        },
+        {
+          "name": "Switch to light mode",
+          "x": 240.078125,
+          "y": 135.25,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        }
+      ]
+    },
+    "after": {
+      "width": 390,
+      "height": 844,
+      "dpr": 1,
+      "zoom": 1,
+      "scrollWidth": 390,
+      "root": "20px",
+      "nameLines": 1,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 107.25,
+        "font": 10,
+        "marginTop": 0,
+        "display": "grid"
+      },
+      "brand": {
+        "x": 20,
+        "y": 14.5,
+        "w": 254.203125,
+        "h": 35,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "nav": {
+        "x": 20,
+        "y": 62,
+        "w": 350,
+        "h": 33.25,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "prose": {
+        "x": 20,
+        "y": 148.25,
+        "w": 350,
+        "h": 2109.140625,
+        "font": 17,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "lead": {
+        "x": 20,
+        "y": 148.25,
+        "w": 350,
+        "h": 180,
+        "font": 20,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "heading": {
+        "x": 20,
+        "y": 533.625,
+        "w": 350,
+        "h": 34.546875,
+        "font": 32,
+        "marginTop": 30,
+        "display": "block"
+      },
+      "footer": {
+        "x": 20,
+        "y": 4713.140625,
+        "w": 250.125,
+        "h": 47.296875,
+        "font": 27.5,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "latest": {
+        "x": 20,
+        "y": 2378.390625,
+        "w": 350,
+        "h": 2102.75,
+        "font": 10,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "columns": 1,
+      "links": [
+        {
+          "text": "Read the blog",
+          "x": 20,
+          "y": 355.25,
+          "w": 110.96875,
+          "h": 37.734375,
+          "font": 17,
+          "marginTop": 0,
+          "display": "inline-block"
+        },
+        {
+          "text": "How I work",
+          "x": 145.4375,
+          "y": 355.25,
+          "w": 90.359375,
+          "h": 37.734375,
+          "font": 17,
+          "marginTop": 0,
+          "display": "inline-block"
+        }
+      ],
+      "art": [
+        {
+          "x": 20,
+          "y": 2483.890625,
+          "w": 350,
+          "h": 262.5,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 20,
+          "y": 3132.453125,
+          "w": 350,
+          "h": 262.5,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 20,
+          "y": 3822.140625,
+          "w": 350,
+          "h": 262.5,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 1.3333333333333333
+        }
+      ],
+      "controls": [
+        {
+          "name": "Selja Ker\u00e4nen",
+          "x": 20,
+          "y": 14.5,
+          "w": 254.203125,
+          "h": 35,
+          "font": 10,
+          "marginTop": 0,
+          "display": "flex"
+        },
+        {
+          "name": "Home",
+          "x": 20,
+          "y": 62,
+          "w": 50.4375,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Blog",
+          "x": 105.4375,
+          "y": 62,
+          "w": 38.328125,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Notes",
+          "x": 178.765625,
+          "y": 62,
+          "w": 50.421875,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Switch to dark mode",
+          "x": 287,
+          "y": 107.25,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        },
+        {
+          "name": "",
+          "x": 282,
+          "y": 12,
+          "w": 40,
+          "h": 40,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Switch to light mode",
+          "x": 287,
+          "y": 107.25,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        },
+        {
+          "name": "Search",
+          "x": 326,
+          "y": 12,
+          "w": 40,
+          "h": 40,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block"
+        }
+      ]
+    }
+  },
+  "768": {
+    "before": {
+      "width": 768,
+      "height": 1024,
+      "dpr": 1,
+      "zoom": 1,
+      "scrollWidth": 768,
+      "root": "20px",
+      "nameLines": 1,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 768,
+        "h": 123.25,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "brand": {
+        "x": 38.390625,
+        "y": 21.5,
+        "w": 180.078125,
+        "h": 35,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "nav": {
+        "x": 38.390625,
+        "y": 75,
+        "w": 691.21875,
+        "h": 33.25,
+        "font": 16.25,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "prose": {
+        "x": 38.390625,
+        "y": 174.25,
+        "w": 691.21875,
+        "h": 2381.375,
+        "font": 21.25,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "lead": {
+        "x": 38.390625,
+        "y": 174.25,
+        "w": 536.21875,
+        "h": 300,
+        "font": 25,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "heading": {
+        "x": 38.390625,
+        "y": 721.09375,
+        "w": 691.21875,
+        "h": 43.1875,
+        "font": 40,
+        "marginTop": 140,
+        "display": "block"
+      },
+      "footer": {
+        "x": 38.390625,
+        "y": 5629.8125,
+        "w": 288.609375,
+        "h": 47.296875,
+        "font": 27.5,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "latest": {
+        "x": 38.390625,
+        "y": 2676.625,
+        "w": 691.21875,
+        "h": 2699.9375,
+        "font": 10,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "columns": 1,
+      "links": [],
+      "art": [
+        {
+          "x": 38.390625,
+          "y": 2785.125,
+          "w": 691.21875,
+          "h": 518.40625,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 38.390625,
+          "y": 3612.25,
+          "w": 691.21875,
+          "h": 518.40625,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 38.390625,
+          "y": 4490.9375,
+          "w": 691.21875,
+          "h": 518.40625,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 1.3333333333333333
+        }
+      ],
+      "controls": [
+        {
+          "name": "Selja Ker\u00e4nen",
+          "x": 38.390625,
+          "y": 21.5,
+          "w": 180.078125,
+          "h": 35,
+          "font": 10,
+          "marginTop": 0,
+          "display": "flex"
+        },
+        {
+          "name": "Home",
+          "x": 38.390625,
+          "y": 75,
+          "w": 50.4375,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Blog",
+          "x": 113.828125,
+          "y": 75,
+          "w": 38.328125,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Notes",
+          "x": 177.15625,
+          "y": 75,
+          "w": 50.421875,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Switch to dark mode",
+          "x": 258.46875,
+          "y": 123.25,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        },
+        {
+          "name": "",
+          "x": 257.46875,
+          "y": 19,
+          "w": 40,
+          "h": 40,
+          "font": 10,
+          "marginTop": 4,
+          "display": "block"
+        },
+        {
+          "name": "Switch to light mode",
+          "x": 258.46875,
+          "y": 123.25,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        }
+      ]
+    },
+    "after": {
+      "width": 768,
+      "height": 1024,
+      "dpr": 1,
+      "zoom": 1,
+      "scrollWidth": 768,
+      "root": "20px",
+      "nameLines": 1,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 768,
+        "h": 107.25,
+        "font": 10,
+        "marginTop": 0,
+        "display": "grid"
+      },
+      "brand": {
+        "x": 38.390625,
+        "y": 14.5,
+        "w": 587.859375,
+        "h": 35,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "nav": {
+        "x": 38.390625,
+        "y": 62,
+        "w": 691.21875,
+        "h": 33.25,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "prose": {
+        "x": 38.390625,
+        "y": 148.25,
+        "w": 691.21875,
+        "h": 1339.125,
+        "font": 17.536,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "lead": {
+        "x": 38.390625,
+        "y": 148.25,
+        "w": 691.21875,
+        "h": 90,
+        "font": 20,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "heading": {
+        "x": 38.390625,
+        "y": 418.09375,
+        "w": 691.21875,
+        "h": 34.546875,
+        "font": 32,
+        "marginTop": 30,
+        "display": "block"
+      },
+      "footer": {
+        "x": 38.390625,
+        "y": 3274.6875,
+        "w": 250.125,
+        "h": 47.296875,
+        "font": 27.5,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "latest": {
+        "x": 38.390625,
+        "y": 1608.375,
+        "w": 691.21875,
+        "h": 1431.65625,
+        "font": 10,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "columns": 2,
+      "links": [
+        {
+          "text": "Read the blog",
+          "x": 38.390625,
+          "y": 265.25,
+          "w": 114.328125,
+          "h": 38.890625,
+          "font": 17.536,
+          "marginTop": 0,
+          "display": "inline-block"
+        },
+        {
+          "text": "How I work",
+          "x": 167.625,
+          "y": 265.25,
+          "w": 93.109375,
+          "h": 38.890625,
+          "font": 17.536,
+          "marginTop": 0,
+          "display": "inline-block"
+        }
+      ],
+      "art": [
+        {
+          "x": 38.390625,
+          "y": 1708.875,
+          "w": 330.609375,
+          "h": 247.953125,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 399,
+          "y": 1708.875,
+          "w": 330.609375,
+          "h": 247.953125,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 38.390625,
+          "y": 2374.015625,
+          "w": 330.609375,
+          "h": 247.953125,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 1.3333333333333333
+        }
+      ],
+      "controls": [
+        {
+          "name": "Selja Ker\u00e4nen",
+          "x": 38.390625,
+          "y": 14.5,
+          "w": 587.859375,
+          "h": 35,
+          "font": 10,
+          "marginTop": 0,
+          "display": "flex"
+        },
+        {
+          "name": "Home",
+          "x": 38.390625,
+          "y": 62,
+          "w": 50.4375,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Blog",
+          "x": 123.828125,
+          "y": 62,
+          "w": 38.328125,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Notes",
+          "x": 197.15625,
+          "y": 62,
+          "w": 50.421875,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Switch to dark mode",
+          "x": 646.609375,
+          "y": 107.25,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        },
+        {
+          "name": "",
+          "x": 641.609375,
+          "y": 12,
+          "w": 40,
+          "h": 40,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Switch to light mode",
+          "x": 646.609375,
+          "y": 107.25,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        },
+        {
+          "name": "Search",
+          "x": 685.609375,
+          "y": 12,
+          "w": 40,
+          "h": 40,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block"
+        }
+      ]
+    }
+  },
+  "1024": {
+    "before": {
+      "width": 1024,
+      "height": 768,
+      "dpr": 1,
+      "zoom": 1,
+      "scrollWidth": 1024,
+      "root": "20px",
+      "nameLines": 2,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1024,
+        "h": 72,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "brand": {
+        "x": 51.1875,
+        "y": 9.125,
+        "w": 161.515625,
+        "h": 53.75,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "nav": {
+        "x": 242.703125,
+        "y": 19.375,
+        "w": 209.1875,
+        "h": 33.25,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "prose": {
+        "x": 51.1875,
+        "y": 134.4375,
+        "w": 880,
+        "h": 2225,
+        "font": 22.584,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "lead": {
+        "x": 51.1875,
+        "y": 134.4375,
+        "w": 536.21875,
+        "h": 300,
+        "font": 25,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "heading": {
+        "x": 51.1875,
+        "y": 685.84375,
+        "w": 880,
+        "h": 43.1875,
+        "font": 40,
+        "marginTop": 140,
+        "display": "block"
+      },
+      "footer": {
+        "x": 51.1875,
+        "y": 3633.703125,
+        "w": 288.609375,
+        "h": 47.296875,
+        "font": 27.5,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "latest": {
+        "x": 51.1875,
+        "y": 2483.3125,
+        "w": 921.625,
+        "h": 863.609375,
+        "font": 10,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "columns": 3,
+      "links": [],
+      "art": [
+        {
+          "x": 51.1875,
+          "y": 2586.8125,
+          "w": 286.71875,
+          "h": 215.03125,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 368.625,
+          "y": 2586.8125,
+          "w": 286.734375,
+          "h": 215.046875,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 686.078125,
+          "y": 2586.8125,
+          "w": 286.71875,
+          "h": 215.03125,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 1.3333333333333333
+        }
+      ],
+      "controls": [
+        {
+          "name": "Selja Ker\u00e4nen",
+          "x": 51.1875,
+          "y": 9.125,
+          "w": 161.515625,
+          "h": 53.75,
+          "font": 10,
+          "marginTop": 0,
+          "display": "flex"
+        },
+        {
+          "name": "Home",
+          "x": 242.703125,
+          "y": 19.375,
+          "w": 50.4375,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Blog",
+          "x": 328.140625,
+          "y": 19.375,
+          "w": 38.328125,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Notes",
+          "x": 401.46875,
+          "y": 19.375,
+          "w": 50.421875,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Switch to dark mode",
+          "x": 491.890625,
+          "y": 72,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        },
+        {
+          "name": "",
+          "x": 490.890625,
+          "y": 16,
+          "w": 40,
+          "h": 40,
+          "font": 10,
+          "marginTop": 4,
+          "display": "block"
+        },
+        {
+          "name": "Switch to light mode",
+          "x": 491.890625,
+          "y": 72,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        },
+        {
+          "name": "seljakeranen.github.io 00",
+          "x": 843.890625,
+          "y": 12,
+          "w": 178.40625,
+          "h": 48,
+          "font": 13,
+          "marginTop": 0,
+          "display": "block"
+        }
+      ]
+    },
+    "after": {
+      "width": 1024,
+      "height": 768,
+      "dpr": 1,
+      "zoom": 1,
+      "scrollWidth": 1024,
+      "root": "20px",
+      "nameLines": 1,
+      "header": {
+        "x": 0,
+        "y": 0,
+        "w": 1024,
+        "h": 72,
+        "font": 10,
+        "marginTop": 0,
+        "display": "grid"
+      },
+      "brand": {
+        "x": 51.1875,
+        "y": 18.5,
+        "w": 180.078125,
+        "h": 35,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "nav": {
+        "x": 485.625,
+        "y": 19.375,
+        "w": 189.1875,
+        "h": 33.25,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "prose": {
+        "x": 51.1875,
+        "y": 113.953125,
+        "w": 720,
+        "h": 1386.734375,
+        "font": 18.048,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "lead": {
+        "x": 51.1875,
+        "y": 113.953125,
+        "w": 693.9375,
+        "h": 90,
+        "font": 20,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "heading": {
+        "x": 51.1875,
+        "y": 388.125,
+        "w": 720,
+        "h": 37.59375,
+        "font": 34.816,
+        "marginTop": 30.72,
+        "display": "block"
+      },
+      "footer": {
+        "x": 51.1875,
+        "y": 3356.96875,
+        "w": 250.125,
+        "h": 47.296875,
+        "font": 27.5,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "latest": {
+        "x": 51.1875,
+        "y": 1624.5625,
+        "w": 921.625,
+        "h": 1468.3125,
+        "font": 10,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "columns": 2,
+      "links": [
+        {
+          "text": "Read the blog",
+          "x": 51.1875,
+          "y": 230.953125,
+          "w": 117.6875,
+          "h": 40.03125,
+          "font": 18.048,
+          "marginTop": 0,
+          "display": "inline-block"
+        },
+        {
+          "text": "How I work",
+          "x": 184.21875,
+          "y": 230.953125,
+          "w": 95.84375,
+          "h": 40.03125,
+          "font": 18.048,
+          "marginTop": 0,
+          "display": "inline-block"
+        }
+      ],
+      "art": [
+        {
+          "x": 51.1875,
+          "y": 1725.0625,
+          "w": 445.453125,
+          "h": 334.078125,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 527.359375,
+          "y": 1725.0625,
+          "w": 445.453125,
+          "h": 334.078125,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 51.1875,
+          "y": 2418.359375,
+          "w": 445.453125,
+          "h": 334.078125,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 1.3333333333333333
+        }
+      ],
+      "controls": [
+        {
+          "name": "Selja Ker\u00e4nen",
+          "x": 51.1875,
+          "y": 18.5,
+          "w": 180.078125,
+          "h": 35,
+          "font": 10,
+          "marginTop": 0,
+          "display": "flex"
+        },
+        {
+          "name": "Home",
+          "x": 485.625,
+          "y": 19.375,
+          "w": 50.4375,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Blog",
+          "x": 561.0625,
+          "y": 19.375,
+          "w": 38.328125,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Notes",
+          "x": 624.390625,
+          "y": 19.375,
+          "w": 50.421875,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Switch to dark mode",
+          "x": 699.8125,
+          "y": 72,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        },
+        {
+          "name": "",
+          "x": 694.8125,
+          "y": 16,
+          "w": 40,
+          "h": 40,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Switch to light mode",
+          "x": 699.8125,
+          "y": 72,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        }
+      ]
+    }
+  },
+  "1440": {
+    "before": {
+      "width": 1440,
+      "height": 900,
+      "dpr": 1,
+      "zoom": 1,
+      "scrollWidth": 1440,
+      "root": "20px",
+      "nameLines": 1,
+      "header": {
+        "x": 100,
+        "y": 0,
+        "w": 1240,
+        "h": 72,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "brand": {
+        "x": 172,
+        "y": 18.5,
+        "w": 180.078125,
+        "h": 35,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "nav": {
+        "x": 488.40625,
+        "y": 19.375,
+        "w": 209.1875,
+        "h": 33.25,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "prose": {
+        "x": 72,
+        "y": 159.390625,
+        "w": 880,
+        "h": 2546.0625,
+        "font": 23.75,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "lead": {
+        "x": 72,
+        "y": 159.390625,
+        "w": 536.21875,
+        "h": 300,
+        "font": 25,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "heading": {
+        "x": 72,
+        "y": 746.1875,
+        "w": 880,
+        "h": 52.859375,
+        "font": 48.96,
+        "marginTop": 171.36,
+        "display": "block"
+      },
+      "footer": {
+        "x": 172,
+        "y": 4057.796875,
+        "w": 288.609375,
+        "h": 47.296875,
+        "font": 27.5,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "latest": {
+        "x": 72,
+        "y": 2879.234375,
+        "w": 1240,
+        "h": 848.8125,
+        "font": 10,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "columns": 3,
+      "links": [],
+      "art": [
+        {
+          "x": 72,
+          "y": 2982.734375,
+          "w": 384.53125,
+          "h": 288.390625,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 499.71875,
+          "y": 2982.734375,
+          "w": 384.546875,
+          "h": 288.40625,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 927.453125,
+          "y": 2982.734375,
+          "w": 384.53125,
+          "h": 288.390625,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 1.3333333333333333
+        }
+      ],
+      "controls": [
+        {
+          "name": "Selja Ker\u00e4nen",
+          "x": 172,
+          "y": 18.5,
+          "w": 180.078125,
+          "h": 35,
+          "font": 10,
+          "marginTop": 0,
+          "display": "flex"
+        },
+        {
+          "name": "Home",
+          "x": 488.40625,
+          "y": 19.375,
+          "w": 50.4375,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Blog",
+          "x": 573.84375,
+          "y": 19.375,
+          "w": 38.328125,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Notes",
+          "x": 647.171875,
+          "y": 19.375,
+          "w": 50.421875,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Switch to dark mode",
+          "x": 737.59375,
+          "y": 72,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        },
+        {
+          "name": "",
+          "x": 736.59375,
+          "y": 16,
+          "w": 40,
+          "h": 40,
+          "font": 10,
+          "marginTop": 4,
+          "display": "block"
+        },
+        {
+          "name": "Switch to light mode",
+          "x": 737.59375,
+          "y": 72,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        },
+        {
+          "name": "seljakeranen.github.io 00",
+          "x": 1089.59375,
+          "y": 12,
+          "w": 178.40625,
+          "h": 48,
+          "font": 13,
+          "marginTop": 0,
+          "display": "block"
+        }
+      ]
+    },
+    "after": {
+      "width": 1440,
+      "height": 900,
+      "dpr": 1,
+      "zoom": 1,
+      "scrollWidth": 1440,
+      "root": "20px",
+      "nameLines": 1,
+      "header": {
+        "x": 100,
+        "y": 0,
+        "w": 1240,
+        "h": 72,
+        "font": 10,
+        "marginTop": 0,
+        "display": "grid"
+      },
+      "brand": {
+        "x": 172,
+        "y": 18.5,
+        "w": 180.078125,
+        "h": 35,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "nav": {
+        "x": 610.8125,
+        "y": 19.375,
+        "w": 189.1875,
+        "h": 33.25,
+        "font": 10,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "prose": {
+        "x": 172,
+        "y": 130.59375,
+        "w": 720,
+        "h": 1548.015625,
+        "font": 18.88,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "lead": {
+        "x": 172,
+        "y": 130.59375,
+        "w": 720,
+        "h": 97.171875,
+        "font": 21.6,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "heading": {
+        "x": 172,
+        "y": 432.390625,
+        "w": 720,
+        "h": 47.515625,
+        "font": 44,
+        "marginTop": 43.2,
+        "display": "block"
+      },
+      "footer": {
+        "x": 172,
+        "y": 3004.984375,
+        "w": 250.125,
+        "h": 47.296875,
+        "font": 27.5,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "latest": {
+        "x": 172,
+        "y": 1852.390625,
+        "w": 1096,
+        "h": 847.21875,
+        "font": 10,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "columns": 3,
+      "links": [
+        {
+          "text": "Read the blog",
+          "x": 172,
+          "y": 256.921875,
+          "w": 123.09375,
+          "h": 41.890625,
+          "font": 18.88,
+          "marginTop": 0,
+          "display": "inline-block"
+        },
+        {
+          "text": "How I work",
+          "x": 311.140625,
+          "y": 256.921875,
+          "w": 100.25,
+          "h": 41.890625,
+          "font": 18.88,
+          "marginTop": 0,
+          "display": "inline-block"
+        }
+      ],
+      "art": [
+        {
+          "x": 172,
+          "y": 1952.890625,
+          "w": 336.53125,
+          "h": 252.390625,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 551.71875,
+          "y": 1952.890625,
+          "w": 336.546875,
+          "h": 252.40625,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 931.453125,
+          "y": 1952.890625,
+          "w": 336.53125,
+          "h": 252.390625,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 1.3333333333333333
+        }
+      ],
+      "controls": [
+        {
+          "name": "Selja Ker\u00e4nen",
+          "x": 172,
+          "y": 18.5,
+          "w": 180.078125,
+          "h": 35,
+          "font": 10,
+          "marginTop": 0,
+          "display": "flex"
+        },
+        {
+          "name": "Home",
+          "x": 610.8125,
+          "y": 19.375,
+          "w": 50.4375,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Blog",
+          "x": 686.25,
+          "y": 19.375,
+          "w": 38.328125,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Notes",
+          "x": 749.578125,
+          "y": 19.375,
+          "w": 50.421875,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Switch to dark mode",
+          "x": 825,
+          "y": 72,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        },
+        {
+          "name": "",
+          "x": 820,
+          "y": 16,
+          "w": 40,
+          "h": 40,
+          "font": 10,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Switch to light mode",
+          "x": 825,
+          "y": 72,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        },
+        {
+          "name": "seljakeranen.github.io 00",
+          "x": 1118,
+          "y": 12,
+          "w": 150,
+          "h": 48,
+          "font": 13,
+          "marginTop": 0,
+          "display": "block"
+        }
+      ]
+    }
+  },
+  "1920": {
+    "before": {
+      "width": 1920,
+      "height": 1080,
+      "dpr": 1,
+      "zoom": 1,
+      "scrollWidth": 1920,
+      "root": "22px",
+      "nameLines": 1,
+      "header": {
+        "x": 340,
+        "y": 0,
+        "w": 1240,
+        "h": 72,
+        "font": 11,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "brand": {
+        "x": 412,
+        "y": 16.75,
+        "w": 197.953125,
+        "h": 38.5,
+        "font": 11,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "nav": {
+        "x": 650.515625,
+        "y": 17.265625,
+        "w": 230.109375,
+        "h": 37.46875,
+        "font": 11,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "prose": {
+        "x": 72,
+        "y": 172,
+        "w": 968,
+        "h": 2909.171875,
+        "font": 26.125,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "lead": {
+        "x": 72,
+        "y": 172,
+        "w": 617.65625,
+        "h": 345.5,
+        "font": 28.8,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "heading": {
+        "x": 72,
+        "y": 857.96875,
+        "w": 968,
+        "h": 65.328125,
+        "font": 60.5,
+        "marginTop": 211.75,
+        "display": "block"
+      },
+      "footer": {
+        "x": 412,
+        "y": 4647.984375,
+        "w": 317.46875,
+        "h": 52.015625,
+        "font": 30.25,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "latest": {
+        "x": 72,
+        "y": 3291.171875,
+        "w": 1240,
+        "h": 1010.1875,
+        "font": 11,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "columns": 3,
+      "links": [],
+      "art": [
+        {
+          "x": 72,
+          "y": 3404.921875,
+          "w": 374.9375,
+          "h": 281.203125,
+          "font": 11,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 504.53125,
+          "y": 3404.921875,
+          "w": 374.9375,
+          "h": 281.203125,
+          "font": 11,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 937.0625,
+          "y": 3404.921875,
+          "w": 374.9375,
+          "h": 281.203125,
+          "font": 11,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 1.3333333333333333
+        }
+      ],
+      "controls": [
+        {
+          "name": "Selja Ker\u00e4nen",
+          "x": 412,
+          "y": 16.75,
+          "w": 197.953125,
+          "h": 38.5,
+          "font": 11,
+          "marginTop": 0,
+          "display": "flex"
+        },
+        {
+          "name": "Home",
+          "x": 650.515625,
+          "y": 17.265625,
+          "w": 55.484375,
+          "h": 37.46875,
+          "font": 19.25,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Blog",
+          "x": 744.5,
+          "y": 17.265625,
+          "w": 42.15625,
+          "h": 37.46875,
+          "font": 19.25,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Notes",
+          "x": 825.15625,
+          "y": 17.265625,
+          "w": 55.46875,
+          "h": 37.46875,
+          "font": 19.25,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Switch to dark mode",
+          "x": 924.125,
+          "y": 72,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        },
+        {
+          "name": "",
+          "x": 923.515625,
+          "y": 14,
+          "w": 43.984375,
+          "h": 43.984375,
+          "font": 11,
+          "marginTop": 4.4,
+          "display": "block"
+        },
+        {
+          "name": "Switch to light mode",
+          "x": 924.125,
+          "y": 72,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        },
+        {
+          "name": "seljakeranen.github.io 00",
+          "x": 1311.78125,
+          "y": 9.59375,
+          "w": 196.21875,
+          "h": 52.796875,
+          "font": 14.3,
+          "marginTop": 0,
+          "display": "block"
+        }
+      ]
+    },
+    "after": {
+      "width": 1920,
+      "height": 1080,
+      "dpr": 1,
+      "zoom": 1,
+      "scrollWidth": 1920,
+      "root": "22px",
+      "nameLines": 1,
+      "header": {
+        "x": 340,
+        "y": 0,
+        "w": 1240,
+        "h": 72,
+        "font": 11,
+        "marginTop": 0,
+        "display": "grid"
+      },
+      "brand": {
+        "x": 412,
+        "y": 17.6875,
+        "w": 180.078125,
+        "h": 36.625,
+        "font": 11,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "nav": {
+        "x": 799.046875,
+        "y": 19.375,
+        "w": 194.1875,
+        "h": 33.25,
+        "font": 11,
+        "marginTop": 0,
+        "display": "flex"
+      },
+      "prose": {
+        "x": 412,
+        "y": 139,
+        "w": 720,
+        "h": 1651.765625,
+        "font": 19,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "lead": {
+        "x": 412,
+        "y": 139,
+        "w": 720,
+        "h": 144,
+        "font": 24,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "heading": {
+        "x": 412,
+        "y": 503.546875,
+        "w": 720,
+        "h": 47.515625,
+        "font": 44,
+        "marginTop": 55,
+        "display": "block"
+      },
+      "footer": {
+        "x": 412,
+        "y": 3239.859375,
+        "w": 250.125,
+        "h": 52.015625,
+        "font": 30.25,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "latest": {
+        "x": 412,
+        "y": 2000.765625,
+        "w": 1096,
+        "h": 928.09375,
+        "font": 11,
+        "marginTop": 0,
+        "display": "block"
+      },
+      "columns": 3,
+      "links": [
+        {
+          "text": "Read the blog",
+          "x": 412,
+          "y": 315.390625,
+          "w": 124.015625,
+          "h": 42.171875,
+          "font": 19,
+          "marginTop": 0,
+          "display": "inline-block"
+        },
+        {
+          "text": "How I work",
+          "x": 552.1875,
+          "y": 315.390625,
+          "w": 100.984375,
+          "h": 42.171875,
+          "font": 19,
+          "marginTop": 0,
+          "display": "inline-block"
+        }
+      ],
+      "art": [
+        {
+          "x": 412,
+          "y": 2109.265625,
+          "w": 326.9375,
+          "h": 245.203125,
+          "font": 11,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 796.53125,
+          "y": 2109.265625,
+          "w": 326.9375,
+          "h": 245.203125,
+          "font": 11,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 0.8
+        },
+        {
+          "x": 1181.0625,
+          "y": 2109.265625,
+          "w": 326.9375,
+          "h": 245.203125,
+          "font": 11,
+          "marginTop": 0,
+          "display": "block",
+          "ratio": 1.3333333333333333
+        }
+      ],
+      "controls": [
+        {
+          "name": "Selja Ker\u00e4nen",
+          "x": 412,
+          "y": 17.6875,
+          "w": 180.078125,
+          "h": 36.625,
+          "font": 11,
+          "marginTop": 0,
+          "display": "flex"
+        },
+        {
+          "name": "Home",
+          "x": 799.046875,
+          "y": 19.375,
+          "w": 50.4375,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Blog",
+          "x": 876.984375,
+          "y": 19.375,
+          "w": 38.328125,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Notes",
+          "x": 942.8125,
+          "y": 19.375,
+          "w": 50.421875,
+          "h": 33.25,
+          "font": 17.5,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Switch to dark mode",
+          "x": 1020.234375,
+          "y": 72,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        },
+        {
+          "name": "",
+          "x": 1015.234375,
+          "y": 14,
+          "w": 43.984375,
+          "h": 43.984375,
+          "font": 11,
+          "marginTop": 0,
+          "display": "block"
+        },
+        {
+          "name": "Switch to light mode",
+          "x": 1020.234375,
+          "y": 72,
+          "w": 0,
+          "h": 0,
+          "font": 13.3333,
+          "marginTop": 3,
+          "display": "block"
+        },
+        {
+          "name": "seljakeranen.github.io 00",
+          "x": 1343,
+          "y": 9.59375,
+          "w": 165,
+          "h": 52.796875,
+          "font": 14.3,
+          "marginTop": 0,
+          "display": "block"
+        }
+      ]
+    }
+  }
+}

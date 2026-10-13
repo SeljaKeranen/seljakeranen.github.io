@@ -24,6 +24,7 @@
    the md-grid max-width and gutters on the wrapper that holds it. */
 .md-main__inner:has(> .folio-home) {
   max-width: none;
+  width: 100%;
   margin-top: 0;
   padding: 0;
 }
@@ -43,17 +44,27 @@
   box-shadow: none;
   border-bottom-color: var(--border);
 }
-.folio-masthead {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  height: 72px;
-  max-width: var(--page-width);
-  margin: 0 auto;
-  padding: 0 var(--pad-x);
+.folio-masthead,
+.folio-home__inner,
+.folio-footer {
+  box-sizing: border-box;
   width: 100%;
+  max-width: var(--page-width);
+  margin-inline: auto;
+  padding-inline: var(--pad-x);
+}
+.folio-masthead {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "brand actions" "nav nav";
+  align-items: center;
+  gap: .5rem clamp(.25rem, 2vw, 1rem);
+  min-height: 72px;
+  padding-block: .6rem;
 }
 .folio-brand {
+  grid-area: brand;
+  white-space: nowrap;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,7 +75,7 @@
 .folio-brand__name {
   font-family: var(--font-sans);
   font-weight: 600;
-  font-size: .9375rem;
+  font-size: calc(.9375 * var(--type-unit));
   letter-spacing: .11em;
   text-transform: uppercase;
 }
@@ -76,10 +87,11 @@
   margin-top: .3em;
 }
 .folio-nav {
+  grid-area: nav;
   display: flex;
   align-items: center;
   gap: 1.75rem;
-  margin-left: auto;
+  margin-left: 0;
 }
 .folio-nav__link {
   position: relative;
@@ -115,28 +127,46 @@
   border-right: 3px solid transparent;
   border-bottom: 5px solid var(--accent);
 }
-/* Search + palette toggle sit after the nav. */
-.folio-masthead .md-header__option,
-.folio-masthead .md-search { margin-left: .25rem; }
-.folio-masthead .md-header__source { margin-left: .5rem; width: auto; }
+/* Keep the two controls together; the search panel keeps Material's layout. */
+.folio-actions {
+  grid-area: actions;
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+}
+.folio-actions .md-header__option,
+.folio-actions .md-search { margin: 0; }
+.folio-actions .md-header__button { margin: 0; }
+.folio-actions .folio-search-trigger:focus-visible {
+  outline: 2px solid var(--green-dark);
+  outline-offset: 2px;
+}
+.folio-masthead .md-header__source,
+.no-js .folio-actions .folio-search-trigger { display: none; }
 
-/* Narrow screens: the masthead grows to two rows and the sections wrap onto
-   their own full-width line — always reachable, never hidden behind a drawer. */
-@media (max-width: 60rem) {
+/* Search becomes an inline field at Material's own 60em breakpoint. */
+@media (min-width: 60em) {
+  .folio-actions .folio-search-trigger { display: none; }
+}
+/* Allow enough room for the unbroken name, navigation and search field. */
+@media (min-width: 64em) {
   .folio-masthead {
-    height: auto;
-    flex-wrap: wrap;
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-    row-gap: .6rem;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "brand nav actions";
+    padding-block: .4rem;
   }
-  .folio-nav {
-    order: 3;
-    flex-basis: 100%;
+  .folio-nav { justify-self: end; gap: 1.25rem; }
+}
+@media (min-width: 80em) {
+  .folio-masthead {
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas: "brand nav actions source";
+  }
+  .folio-masthead .md-header__source {
+    display: block;
+    grid-area: source;
+    width: 7.5rem;
     margin-left: 0;
-    gap: 1.25rem;
-    font-size: .8125rem;
-    overflow-x: auto;
   }
 }
 
@@ -186,11 +216,9 @@
 .folio-home {
   /* Opens with the greeting now (the old hero carried its own top padding), so
      give the prose room to breathe below the masthead. */
-  padding: clamp(2.5rem, 6vw, 4.5rem) var(--pad-x) var(--section-gap);
-}
-.folio-home__inner {
-  max-width: var(--page-width);
-  margin: 0 auto;
+  width: 100%;
+  min-width: 0;
+  padding-block: clamp(2rem, 4vw, 3rem) var(--section-gap);
 }
 
 /* ---- Section kicker (the mono eyebrow above "Latest writing") ------------- */
@@ -205,6 +233,8 @@
 .folio-prose {
   max-width: var(--article-width);
 }
+.folio-intro-links { margin-bottom: 1.35em; }
+.folio-intro-links a { display: inline-block; padding-block: .25em; }
 .folio-prose > h2:first-child { margin-top: 0; }
 
 /* ============================================================================
@@ -232,11 +262,6 @@
 .md-footer-meta__inner {
   padding-top: 2.5rem;
   padding-bottom: 3rem;
-}
-.folio-footer {
-  max-width: var(--page-width);
-  margin: 0 auto;
-  padding: 0 var(--pad-x);
 }
 .folio-footer__top { margin-top: clamp(5rem, 10vw, 8rem); }
 .folio-footer__grid {

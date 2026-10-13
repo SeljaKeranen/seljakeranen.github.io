@@ -4,7 +4,7 @@
   Material cannot place inline top-right section links without navigation.tabs,
   so we fork: a wordmark on the left (also linking home), the Home / Blog / Notes
   sections on the right, and we keep Material's palette toggle, search, and repo
-  source untouched. The nav wraps to a second row on narrow screens (it never
+  source integration. The nav wraps to a second row on narrow screens (it never
   hides behind an empty drawer).
 
   The active-section marker is set at build time here (aria-current) and
@@ -30,27 +30,33 @@
          {% if purl.startswith('notes') %}aria-current="page"{% endif %}>Notes</a>
     </nav>
 
-    {#- Palette toggle (kept as Material renders it) -#}
-    {% if config.theme.palette %}
+    <div class="folio-actions">
+      {#- Palette toggle (kept as Material renders it) -#}
+      {% if config.theme.palette %}
+        {% if not config.theme.palette is mapping %}
+          {% include "partials/palette.html" %}
+        {% endif %}
+      {% endif %}
       {% if not config.theme.palette is mapping %}
-        {% include "partials/palette.html" %}
+        {% include "partials/javascripts/palette.html" %}
       {% endif %}
-    {% endif %}
-    {% if not config.theme.palette is mapping %}
-      {% include "partials/javascripts/palette.html" %}
-    {% endif %}
 
-    {#- Search -#}
-    {% if "material/search" in config.plugins %}
-      {% set search = config.plugins["material/search"] | attr("config") %}
-      {% if search.enabled %}
-        <label class="md-header__button md-icon" for="__search">
-          {% set icon = config.theme.icon.search or "material/magnify" %}
-          {% include ".icons/" ~ icon ~ ".svg" %}
-        </label>
-        {% include "partials/search.html" %}
+      {#- Search -#}
+      {% if "material/search" in config.plugins %}
+        {% set search = config.plugins["material/search"] | attr("config") %}
+        {% if search.enabled %}
+          <button class="md-header__button md-icon folio-search-trigger" type="button"
+                  aria-label="{{ lang.t('search') }}" aria-controls="folio-search" aria-expanded="false">
+            {% set icon = config.theme.icon.search or "material/magnify" %}
+            {% include ".icons/" ~ icon ~ ".svg" %}
+          </button>
+          <div id="folio-search">
+            {% include "partials/search.html" %}
+          </div>
+        {% endif %}
       {% endif %}
-    {% endif %}
+
+    </div>
 
     {#- Repository source link -#}
     {% if config.repo_url %}

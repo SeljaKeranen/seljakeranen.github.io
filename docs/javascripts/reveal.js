@@ -59,3 +59,20 @@ document$.subscribe(function () {
     }
   });
 });
+
+// Give the compact search trigger native keyboard semantics while preserving
+// Material's checkbox-driven search panel and its input focus management.
+(function () {
+  var trigger = document.querySelector(".folio-search-trigger");
+  var toggle = document.getElementById("__search");
+  if (!trigger || !toggle) return;
+
+  trigger.addEventListener("click", function () {
+    toggle.click();
+    if (toggle.checked) document.querySelector(".md-search__input").focus();
+  });
+  toggle.addEventListener("change", function () {
+    trigger.setAttribute("aria-expanded", String(toggle.checked));
+    if (!toggle.checked && trigger.getClientRects().length) trigger.focus();
+  });
+})();

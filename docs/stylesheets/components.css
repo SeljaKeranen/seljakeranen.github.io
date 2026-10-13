@@ -85,7 +85,7 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(1.5rem, 3vw, 2.75rem);
 }
 .folio-card {
@@ -129,9 +129,13 @@
 }
 .folio-card:hover .folio-card__more { color: var(--green-dark); transform: translateX(4px); }
 
-@media (max-width: 60rem) {
+@media (max-width: 74.99em) {
+  .folio-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 39.99em) {
   .folio-cards { grid-template-columns: 1fr; gap: 0; }
   .folio-card { padding: 1.75rem 0; }
+  .folio-card__art { max-width: 20rem; }
 }
 
 /* ============================================================================
