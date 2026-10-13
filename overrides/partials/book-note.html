@@ -1,0 +1,18 @@
+<details class="book-note" id="{{ book.id | e }}" data-book-note data-kind="{{ book.kind | e }}" data-theme="{{ book.theme | e }}">
+  <summary>
+    <span class="book-note__title">{{ book.title | e }}</span>
+    {% if book.author %}<span class="book-note__author">{{ book.author | e }}</span>{% endif %}
+    <span class="book-note__status">{{ book.status | e }}</span>
+  </summary>
+  <div class="book-note__body">
+    {% if book.edition %}<p>Swedish edition: <span lang="sv">{{ book.edition | e }}</span>.</p>{% endif %}
+    <dl>
+      {% if book.takeaway %}<dt>Key takeaway</dt><dd>{{ book.takeaway | e }}</dd>{% endif %}
+      <dt>What I liked</dt><dd{% if not book.liked %} class="book-placeholder"{% endif %}>{{ (book.liked or 'Still to add.') | e }}</dd>
+      <dt>What I didn't</dt><dd{% if not book.disliked %} class="book-placeholder"{% endif %}>{{ (book.disliked or 'Still to add.') | e }}</dd>
+    </dl>
+    {% if book.url %}<p><a href="{{ book.url | e }}">Publisher's page<span class="folio-visually-hidden"> for {{ book.title | e }}</span></a></p>{% endif %}
+    {% if book.post %}<p>On the blog: <a href="{{ book.post_url | e }}">{{ book.post_title | e }}</a>.</p>{% endif %}
+    <a class="book-back" href="#connections">Back to connections</a>
+  </div>
+</details>

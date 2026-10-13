@@ -2,14 +2,14 @@
   Editorial masthead (forked from Material's partials/header.html).
 
   Material cannot place inline top-right section links without navigation.tabs,
-  so we fork: a wordmark on the left (also linking home), the Home / Blog / Notes
+  so we fork: a wordmark on the left (also linking home), the Home / Blog / Notes / Books
   sections on the right, and we keep Material's palette toggle, search, and repo
   source integration. The nav wraps to a second row on narrow screens (it never
   hides behind an empty drawer).
 
   The active-section marker is set at build time here (aria-current) and
   re-derived on instant navigation by docs/javascripts/reveal.js — keep the
-  data-section values (home / blog / notes) in sync with that script.
+  data-section values (home / blog / notes / books) in sync with that script.
 -#}
 {%- set purl = page.url if page else "" -%}
 <header class="md-header md-header--shadow" data-md-component="header">
@@ -28,6 +28,8 @@
          {% if purl.startswith('blog') %}aria-current="page"{% endif %}>Blog</a>
       <a class="folio-nav__link" data-section="notes" href="{{ 'notes/' | url }}"
          {% if purl.startswith('notes') %}aria-current="page"{% endif %}>Notes</a>
+      <a class="folio-nav__link" data-section="books" href="{{ 'books/' | url }}"
+         {% if purl.startswith('books') %}aria-current="page"{% endif %}>Books</a>
     </nav>
 
     <div class="folio-actions">

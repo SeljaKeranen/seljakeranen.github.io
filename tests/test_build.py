@@ -72,6 +72,7 @@ def test_expected_pages_built(site: Path):
         "index.html",  # the Home landing (greeting + prose + latest writing)
         "blog/index.html",
         "notes/index.html",
+        "books/index.html",
         "notes/evals-before-prompts/index.html",
         "404.html",
     ]:
@@ -118,11 +119,10 @@ def test_home_opens_with_greeting_then_latest(site: Path):
     assert h1 and "Selja Keränen" in h1.group(1), "homepage needs a semantic <h1>"
 
 
-def test_header_nav_lists_home_blog_notes_in_order(site: Path):
+def test_header_nav_lists_sections_in_order(site: Path):
     nav = _folio_nav((site / "index.html").read_text(encoding="utf-8"))
-    assert nav.index(">Home<") < nav.index(">Blog<") < nav.index(">Notes<"), (
-        "the top nav must list Home, then Blog, then Notes"
-    )
+    positions = [nav.index(f">{label}<") for label in ("Home", "Blog", "Notes", "Books")]
+    assert positions == sorted(positions), "the top nav must list Home, Blog, Notes, Books"
 
 
 def test_active_nav_marker_follows_the_page(site: Path):
@@ -133,17 +133,16 @@ def test_active_nav_marker_follows_the_page(site: Path):
         "index.html": "Home",
         "blog/index.html": "Blog",
         "notes/index.html": "Notes",
+        "books/index.html": "Books",
         "404.html": None,  # no page context off-map → no link is current
     }.items():
         nav = _folio_nav((site / rel).read_text(encoding="utf-8"))
-        for label in ("Home", "Blog", "Notes"):
+        for label in ("Home", "Blog", "Notes", "Books"):
             link = _nav_link(nav, label)
             if label == active:
                 assert "aria-current" in link, f"{rel}: {label} should be current"
             else:
-                assert "aria-current" not in link, (
-                    f"{rel}: {label} must not be marked current"
-                )
+                assert "aria-current" not in link, f"{rel}: {label} must not be marked current"
 
 
 def test_notes_category_page_exists(site: Path):

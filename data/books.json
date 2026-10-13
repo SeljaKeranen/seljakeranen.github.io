@@ -1,0 +1,431 @@
+{
+  "themes": [
+    {
+      "id": "tech",
+      "title": "Tech, security & AI"
+    },
+    {
+      "id": "science",
+      "title": "Science"
+    },
+    {
+      "id": "fiction",
+      "title": "Fiction"
+    },
+    {
+      "id": "mind",
+      "title": "Mind & habits"
+    },
+    {
+      "id": "society",
+      "title": "History, society & economics"
+    },
+    {
+      "id": "memoir",
+      "title": "Memoir & resilience"
+    },
+    {
+      "id": "body",
+      "title": "Health & body"
+    },
+    {
+      "id": "parenting",
+      "title": "Parenting"
+    }
+  ],
+  "entries": [
+    {
+      "id": "the-thinking-machine",
+      "title": "The Thinking Machine",
+      "author": "Stephen Witt",
+      "theme": "tech",
+      "kind": "book",
+      "status": "Read",
+      "takeaway": "The history left me thinking about how accidents and luck shape what we later call a strategy.",
+      "liked": "I enjoyed the history of GPUs alongside the portrait of Jensen Huang. The technical history made the company story more interesting for me.",
+      "disliked": null,
+      "url": "https://www.penguinrandomhouse.com/books/757558/the-thinking-machine-by-stephen-witt/",
+      "post": "blog/2026/10/13/the-thinking-machine-and-making-room-for-luck/",
+      "post_title": "The Thinking Machine, and making room for luck"
+    },
+    {
+      "id": "the-elements",
+      "title": "The Elements: A Visual Exploration of Every Known Atom in the Universe",
+      "short_title": "The Elements",
+      "author": "Theodore Gray",
+      "theme": "science",
+      "kind": "book",
+      "status": "Read",
+      "takeaway": null,
+      "liked": "The surprising everyday facts, such as the zinc roofs of Paris, and many others.",
+      "disliked": null,
+      "url": "https://www.hachettebookgroup.com/titles/theodore-gray/elements/9781579128142/"
+    },
+    {
+      "id": "lessons-in-chemistry",
+      "title": "Lessons in Chemistry",
+      "author": "Bonnie Garmus",
+      "theme": "fiction",
+      "kind": "book",
+      "status": "Read in Swedish",
+      "edition": "Lektioner i kemi",
+      "takeaway": null,
+      "liked": "I loved it!",
+      "disliked": null,
+      "url": "https://www.wwd.se/nyheter/bonnie-garmus-och-lektioner-i-kemi-prisas/"
+    },
+    {
+      "id": "atomic-habits",
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "theme": "mind",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Clear connects small, repeatable actions with the identity and habits they build.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "think-faster-talk-smarter",
+      "title": "Think Faster, Talk Smarter",
+      "author": "Matt Abrahams",
+      "theme": "mind",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Abrahams offers structures for speaking when there is no time to prepare.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "think-like-a-monk",
+      "title": "Think Like a Monk",
+      "author": "Jay Shetty",
+      "theme": "mind",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Shetty brings ideas from monastic practice into questions about attention, identity and purpose.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "12-rules-for-life",
+      "title": "12 Rules for Life",
+      "author": "Jordan B. Peterson",
+      "theme": "mind",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Peterson frames responsibility and meaning as responses to uncertainty and suffering.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "surrounded-by-idiots",
+      "title": "Surrounded by Idiots",
+      "author": "Thomas Erikson",
+      "theme": "mind",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Erikson uses a four-colour personality model to discuss communication differences.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "algorithms-to-live-by",
+      "title": "Algorithms to Live By",
+      "author": "Brian Christian and Tom Griffiths",
+      "theme": "mind",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Computer-science problems offer ways to think about decisions with limited time and information.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "breath",
+      "title": "Breath",
+      "author": "James Nestor",
+      "theme": "body",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Nestor explores breathing through reporting, history and personal experiments.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "glucose-revolution",
+      "title": "Glucose Revolution",
+      "author": "Jessie Inchauspé",
+      "theme": "body",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Inchauspé examines how everyday eating patterns relate to changes in blood glucose.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "high-on-life",
+      "title": "High on Life",
+      "author": "David JP Phillips",
+      "theme": "body",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Phillips presents a neurochemical framework for thinking about mood and motivation.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "the-ageless-brain",
+      "title": "The Ageless Brain",
+      "author": "Dale E. Bredesen",
+      "theme": "body",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Bredesen sets out his approach to brain ageing and prevention.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "bringing-up-bebe",
+      "title": "Bringing Up Bébé",
+      "author": "Pamela Druckerman",
+      "theme": "parenting",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Druckerman compares approaches to parenting through her observations of French family life.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "hunt-gather-parent",
+      "title": "Hunt, Gather, Parent",
+      "author": "Michaeleen Doucleff",
+      "theme": "parenting",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Doucleff explores cooperation and learning through observations of parenting across cultures.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "the-book-you-wish-your-parents-had-read",
+      "title": "The Book You Wish Your Parents Had Read",
+      "author": "Philippa Perry",
+      "theme": "parenting",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Perry places relationships, understanding feelings and repairing mistakes at the centre of parenting.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "sapiens",
+      "title": "Sapiens",
+      "author": "Yuval Noah Harari",
+      "theme": "society",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Harari traces how shared stories make large-scale human cooperation possible.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "guns-germs-and-steel",
+      "title": "Guns, Germs, and Steel",
+      "author": "Jared Diamond",
+      "theme": "society",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Diamond argues that geography and environments shaped the unequal development of societies.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "humankind",
+      "title": "Humankind",
+      "author": "Rutger Bregman",
+      "theme": "society",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Bregman asks what changes when institutions begin with a more hopeful view of people.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "nexus",
+      "title": "Nexus",
+      "author": "Yuval Noah Harari",
+      "theme": "society",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Harari distinguishes the power of information networks from their ability to produce truth.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "invisible-women",
+      "title": "Invisible Women",
+      "author": "Caroline Criado Perez",
+      "theme": "society",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Criado Perez examines what happens when data and design treat men as the default.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "the-end-of-capitalism",
+      "title": "The End of Capitalism",
+      "author": "Ulrike Herrmann",
+      "theme": "society",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Herrmann questions whether continued economic growth can fit within environmental limits.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "talous-ja-humanismi",
+      "title": "Talous ja humanismi",
+      "author": "Sixten Korkman",
+      "theme": "society",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Korkman places economics alongside humanist questions about values and society.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "ai-engineering",
+      "title": "AI Engineering",
+      "author": "Chip Huyen",
+      "theme": "tech",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Huyen puts evaluation at the centre of building applications with foundation models.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "the-worlds-i-see",
+      "title": "The Worlds I See",
+      "author": "Fei-Fei Li",
+      "theme": "tech",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Li connects the history of computer vision and ImageNet with the case for human-centred AI.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "if-its-smart-its-vulnerable",
+      "title": "If It's Smart, It's Vulnerable",
+      "author": "Mikko Hyppönen",
+      "theme": "tech",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Hyppönen examines the security and privacy trade-offs of connecting everyday things to the internet.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "we-are-bellingcat",
+      "title": "We Are Bellingcat",
+      "author": "Eliot Higgins",
+      "theme": "tech",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Higgins explains how public information and verifiable evidence support open-source investigations.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "permanent-record",
+      "title": "Permanent Record",
+      "author": "Edward Snowden",
+      "theme": "tech",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Snowden recounts his work inside intelligence systems and his decision to expose mass surveillance.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "elon-musk-ashlee-vance",
+      "title": "Elon Musk",
+      "author": "Ashlee Vance",
+      "theme": "tech",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Vance follows Musk's companies and the risks involved in building them.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "cant-hurt-me",
+      "title": "Can't Hurt Me",
+      "author": "David Goggins",
+      "theme": "memoir",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Goggins connects his life story with his ideas about discipline and endurance.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "the-happiest-man-on-earth",
+      "title": "The Happiest Man on Earth",
+      "author": "Eddie Jaku",
+      "theme": "memoir",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Jaku reflects on kindness, friendship and gratitude in his memoir of survival.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "i-may-be-wrong",
+      "title": "I May Be Wrong",
+      "author": "Björn Natthiko Lindeblad",
+      "theme": "memoir",
+      "kind": "book",
+      "status": "Reading list · completion not recorded",
+      "takeaway": "Lindeblad reflects on uncertainty and learning to let go of thoughts.",
+      "liked": null,
+      "disliked": null
+    },
+    {
+      "id": "empire-of-ai",
+      "title": "Empire of AI",
+      "author": "Karen Hao",
+      "theme": "tech",
+      "kind": "book",
+      "status": "Reading · completion not recorded",
+      "takeaway": "The race towards AGI, the economic incentives and the labour behind AI stood out to me.",
+      "liked": "I really like this book.",
+      "disliked": "I found it depressing."
+    },
+    {
+      "id": "how-to-talk-to-ai-and-how-not-to",
+      "title": "How to Talk to AI (and How Not To)",
+      "author": "Jamie Bartlett",
+      "theme": "tech",
+      "kind": "book",
+      "status": "Reading notes · completion not recorded",
+      "takeaway": "An introduction aimed at people who are less immersed in AI.",
+      "liked": "A nice book.",
+      "disliked": "Quite high level for me. A summary might have been enough.",
+      "url": "https://www.penguin.co.uk/books/475950/how-to-talk-to-ai-by-bartlett-jamie/9780753561997"
+    },
+    {
+      "id": "llm-evals-video",
+      "title": "LLM evals — video notes",
+      "author": null,
+      "theme": "tech",
+      "kind": "video",
+      "status": "Watched · original video link still to add",
+      "takeaway": "I want to keep developing my own judgement by looking at the outputs, rather than automating that work away.",
+      "liked": null,
+      "disliked": null
+    }
+  ]
+}

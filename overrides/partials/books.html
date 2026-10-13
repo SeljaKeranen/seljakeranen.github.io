@@ -1,0 +1,46 @@
+<div class="books-shelf" data-books-shelf>
+  <h2 id="connections">Connections</h2>
+  <p>Books meet here through shared themes. Follow a title to its note, or <a href="#reading-notes">browse the shelf</a>.</p>
+  <div class="books-filter" hidden>
+    <label for="book-theme">Show a theme</label>
+    <select id="book-theme" aria-controls="book-map book-notes">
+      <option value="all">All themes</option>
+      {% for theme in shelf.themes %}<option value="{{ theme.id | e }}">{{ theme.title | e }}</option>{% endfor %}
+    </select>
+    <p class="books-count" role="status" aria-live="polite" aria-atomic="true"></p>
+  </div>
+  <nav id="book-map" class="book-map" aria-label="Books connected by theme">
+    {% for theme in shelf.themes %}
+    <section class="book-cluster" data-book-theme="{{ theme.id | e }}" aria-labelledby="map-{{ theme.id | e }}">
+      <h3 id="map-{{ theme.id | e }}" class="book-hub"><a href="#theme-{{ theme.id | e }}">{{ theme.title | e }}</a></h3>
+      <ul class="book-branches">
+        {% for book in shelf.entries if book.theme == theme.id %}
+        <li>
+          <svg class="book-edge" viewBox="0 0 40 48" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M40 0V48 M40 24H0"/></svg>
+          <a class="book-node" data-book-link aria-label="{{ book.title | e }}{% if book.kind == 'video' %} (video){% endif %}" href="#{{ book.id | e }}">{{ (book.short_title or book.title) | e }}{% if book.kind == 'video' %} <span class="book-node__kind">(video)</span>{% endif %}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endfor %}
+  </nav>
+
+  <div id="book-notes">
+    <h2 id="reading-notes" tabindex="-1">Reading notes</h2>
+    <p>Open a title for the takeaway and my reactions. “Still to add” means I haven't recorded that part yet.</p>
+    {% for theme in shelf.themes %}
+    <section class="book-note-group" data-book-theme="{{ theme.id | e }}" aria-labelledby="theme-{{ theme.id | e }}">
+      <h3 id="theme-{{ theme.id | e }}" tabindex="-1">{{ theme.title | e }}</h3>
+      {% for book in shelf.entries if book.theme == theme.id and book.kind == 'book' %}
+      {% include 'partials/book-note.html' %}
+      {% endfor %}
+    </section>
+    {% endfor %}
+    <section class="book-note-group" data-book-theme="tech" aria-labelledby="other-media">
+      <h2 id="other-media">Video notes</h2>
+      {% for book in shelf.entries if book.kind == 'video' %}
+      {% include 'partials/book-note.html' %}
+      {% endfor %}
+    </section>
+  </div>
+</div>
