@@ -78,6 +78,8 @@ def _card(post) -> dict:
         "url": getattr(post, "url", ""),
         "date": created,
         "date_iso": _iso(created),
+        "notebook_date": (getattr(post, "meta", {}) or {}).get("notebook_date", False),
+        "written": (getattr(post, "meta", {}) or {}).get("written"),
         "summary": (getattr(post, "meta", {}) or {}).get("description"),
         "categories": cats,
         "art": art_for(getattr(post, "categories", None)),

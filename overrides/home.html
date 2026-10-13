@@ -41,8 +41,9 @@
                loading="lazy" width="480" height="360">
           {% endif %}
           <p class="card__meta">
-            {% if item.date %}<time datetime="{{ item.date_iso }}">{{ item.date | date }}</time>{% endif %}
+            {% if item.notebook_date %}Notebook: {% endif %}{% if item.date %}<time datetime="{{ item.date_iso }}">{{ item.date | date }}</time>{% endif %}
             {%- for name, curl in item.categories %} · {{ name }}{% endfor %}
+            {% if item.written %}<br>Written {{ item.written | date }}{% endif %}
           </p>
           <h2 class="folio-card__title">
             <a href="{{ item.url | url }}">{{ item.title }}</a>

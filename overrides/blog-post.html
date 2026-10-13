@@ -21,11 +21,12 @@
         {%- for category in page.categories -%}
           {{ category.title }}{% if not loop.last %} · {% endif %}
         {%- endfor %} · {% endif -%}
-      <time datetime="{{ page.config.date.created }}">{{ page.config.date.created | date }}</time>
+      {% if page.meta.notebook_date %}Notebook: {% endif %}<time datetime="{{ page.config.date.created }}">{{ page.config.date.created | date }}</time>
       {%- if page.config.readtime %} ·
         {%- if page.config.readtime == 1 %} 1 min read
         {%- else %} {{ page.config.readtime }} min read{% endif -%}
       {%- endif -%}
+      {% if page.meta.written %} · Written <time datetime="{{ page.meta.written }}">{{ page.meta.written | date }}</time>{% endif %}
     </p>
 
     {% block content %}
