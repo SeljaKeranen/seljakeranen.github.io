@@ -142,9 +142,7 @@ def test_active_nav_marker_follows_the_page(site: Path):
             if label == active:
                 assert "aria-current" in link, f"{rel}: {label} should be current"
             else:
-                assert "aria-current" not in link, (
-                    f"{rel}: {label} must not be marked current"
-                )
+                assert "aria-current" not in link, f"{rel}: {label} must not be marked current"
 
 
 def test_notes_category_page_exists(site: Path):
